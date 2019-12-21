@@ -1,4 +1,4 @@
-body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#FFFFFF; background-color:rgb(202, 202, 202);}
+body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#FFFFFF; background-color:rgb(223, 223, 223);}
 
 .clear:after{content:"."; display:block; height:0; clear:both; visibility:hidden; line-height:0;}
 .clear{display:block; width:100%; clear:both;}
@@ -12,7 +12,7 @@ a{outline:none; text-decoration:none;}
 
 div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 
-.row1, .row1 a{color:#C0BAB6; background-color:#838383;}
+.row1, .row1 a{color:#C0BAB6; background-color:rgb(223, 223, 223);}
 
 
 /*----------------------------------------------Generalise-------------------------------------*/
