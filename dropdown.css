@@ -8,40 +8,36 @@ nav ul li
 nav ul li a
 {
   display: block;
-  /*font-family: ariel
-  color: #222;
-  font-size: 20px;
-  padding: 21px 14px;
-  text-decoration: none;*/
 }
 
 nav ul li ul
 {
 display: none;
 position: absolute;
-background-color: #fff;
-padding :5px;
 border-radius: 0px 0px 4px 4px;
 }
 
 nav ul li:hover ul
 {
 display: block;
-background-color: lightgrey;
+top: -5px;
 }
 
 nav ul li ul li
 {
 width: 230px;
 border-radius: 4px;
+margin-top: 0px;
+top: 10px;
 }
 
 nav ul li ul li a
 {
-padding: 8px 14px;
+padding: 20px 0px;
+margin-top: 0px;
 }
 
 nav ul li ul li a:hover
 {
-background-color:none;
+background-color: none;
 }
