@@ -1,12 +1,17 @@
 
 /*--------------------------------------------------------------------------------------------------------------- */
 
-.one_quarter{display:inline-block; float:left; margin:0 0 0 4.21052%; list-style:none;}
+.one_quarter{display:inline-block; float:left; margin:0 0 0 4.21052%; list-style:none; width:21.8421%;}
 
 .first{margin-left:0; clear:left;}
 
-.one_quarter{width:21.8421%;}
-
-#gallery{display:block; width:100%; margin-bottom:50px;}
-#gallery figure figcaption{display:block; width:100%; clear:both;}
+#gallery{display:block;  margin-bottom:50px;}
+#gallery figure figcaption{display:block; clear:both;}
 #gallery li{margin-bottom:30px;}
+
+div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
+
+.row2{color:#979797; background-color:#FFFFFF;}
+.row2 a{color:#FF9900; background-color:#FFFFFF;}
+
+.col3{color:#666666;background-color:#FFFFFF;}
