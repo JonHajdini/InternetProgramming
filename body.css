@@ -87,7 +87,7 @@ img{margin:0; padding:0; border:none;}
 .imgl{margin:0 15px 0 0; clear:left;}
 .imgr{margin:0 0 15px 15px; clear:right;}
 
-#intro{padding:30px 437px 30px; border-bottom:0px solid #CCCCCC; margin: auto;}
+#intro{padding:30px 275px 30px; border-bottom:1px solid #CCCCCC;}
 #intro ul{margin:0; padding:0; list-style:none;}
 #intro li{display:block; float:left; width:234px; margin:0 8px 0 0;}
 #intro li.last{margin-right:0;}
