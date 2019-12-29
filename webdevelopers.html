@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+/*:nth-child ju lejon të zgjidhni një ose më shumë elemente bazuar në renditjen e tyre*/
+
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+<title>Homepage</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="body.css" type="text/css">
+<link rel="stylesheet" href="footeri.css" type="text/css">
+<link rel="stylesheet" href="dropdown.css" type="text/css">
+</head>
+<body>
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="index.html">AUTONOMOUS</a></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#">STYLE DEMO</a></li>
+          <li><a href="#">FULL WIDTH</a></li>
+          <li><a href="#">DROPDOWN</a>
+            <ul>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#">WEB DEVELOPMENT</a></li>
+            </ul>
+          </li>
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
+          <li class="last"><a href="gallery.html">GALLERY</a></li>
+        </ul>
+      </nav>
+      <div class="clear"></div>
+    </header>
+  </div>
+  <div class="wrapper col3">
+    <div id="intro">
+
+<h2>Credit</h2>
+
+<table>
+  <tr>
+    <th>Emri</th>
+    <th>Mbiemri</th>
+    <th>ID</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<br>
+
+<table id="t01">
+  <tr>
+    <th>Emri</th>
+    <th>Mbiemri</th>
+    <th>Mosha</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+</body>
+</html>
