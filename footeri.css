@@ -92,7 +92,7 @@ a img{
 
 .footer-box ul{
   margin-top:3px;
-
+  padding-inline-start: 0px;
 }
 .footer-box ul li{
   list-style-type:none;
