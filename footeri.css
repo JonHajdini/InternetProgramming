@@ -18,7 +18,7 @@ a img{
   height:auto;
   margin:auto;
   background-color:rgb(223, 223, 223);
-  padding:30px 150px;
+  padding:30px 310px;
   box-sizing:border-box;
 
 }
@@ -50,7 +50,7 @@ a img{
   margin-bottom:25px;
   margin-top: 10px;
   font-weight:bold;
-  
+
 }
 .footer-box h4{
   font-family:"open Sans";
@@ -60,7 +60,7 @@ a img{
   margin-bottom:5px;
   margin-top: 20px;
   font-weight:bold;
-  
+
 }
 .footer-box p{
   font-family:"open Sans";
@@ -92,12 +92,12 @@ a img{
 
 .footer-box ul{
   margin-top:3px;
-  
+
 }
 .footer-box ul li{
   list-style-type:none;
   margin-top:5px;
-  
+
 }
 .footer-box ul li a{
   font-family: "open Sans";
@@ -161,6 +161,5 @@ a img{
 }
 .footer-box form textarea::placeholder{
     color:rgb(182, 182, 182);
-    
+
   }
-  

@@ -6,3 +6,7 @@
 .first{margin-left:0; clear:left;}
 
 .one_quarter{width:21.8421%;}
+
+#gallery{display:block; width:100%; margin-bottom:50px;}
+#gallery figure figcaption{display:block; width:100%; clear:both;}
+#gallery li{margin-bottom:30px;}
