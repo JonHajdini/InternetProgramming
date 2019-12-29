@@ -31,6 +31,12 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:normal; 
 
 #header #hgroup h1{font-size:36px;font-weight: normal;}
 
+#header #hgroup li.last{margin-right:0;}
+#header #hgroup img{display:block; width:210px; height: 370px; margin:0 0 8px 0;  color:#666666; background-color:#FFFFFF; border:1px solid #E9E9E9;}
+#header #hgroup ul{margin:0; padding:0; list-style:none;}
+#header #hgroup li{display:block; float:left; width:234px; margin:0 8px 0 0;}
+
+
 
 #header nav{float:right; padding:20px 0;}
 #header nav ul{margin-top:20px;}
