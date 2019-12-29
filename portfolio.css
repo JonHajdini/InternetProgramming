@@ -7,3 +7,5 @@
 #portfolio article figure a img{display:block; border:10px solid #B7B7B7;}
 #portfolio article figure a:hover img{border-color:#FF9900;}
 #portfolio article figure figcaption{padding:8px; color:#000000; background-color:#CCCCCC; text-align:center; border:1px solid #CCCCCC; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+
+.row2{color:#979797; background-color:#FFFFFF;}
