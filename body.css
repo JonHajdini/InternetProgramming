@@ -21,7 +21,7 @@ q:after{content:' �'; font-size:26px; line-height:0;}
 div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 
 .row2{color:#979797; background-color:#FFFFFF;}
-.row2 a{color:#FF9900; background-color:#FFFFFF;}
+
 
 .col3{color:#666666;background-color:#FFFFFF;}
 
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
 
 .one_quarter{display:block; float:left; margin:0 20px 0 0;}
 .one_quarter{width:225px;}
-
+.one_quarter a{color:#FF9900; background-color:#FFFFFF;}
 
 .one_third{display:block; float:left; margin:0 30px 0 0;}
 .one_third{width:300px;}
@@ -92,3 +92,74 @@ img{margin:0; padding:0; border:none;}
 #intro li{display:block; float:left; width:234px; margin:0 8px 0 0;}
 #intro li.last{margin-right:0;}
 #intro img{display:block; width:210px; height: 370px; margin:0 0 8px 0;  color:#666666; background-color:#FFFFFF; border:1px solid #E9E9E9;}
+
+.icons {
+    float: left;
+    padding-right: 2%;
+    height: 50px;
+    width: 400px;
+  }
+ .icons a{color:#FFFFFF; background-color:rgb(87, 85, 85);}
+  
+  .fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  
+  .fa-linkedin {
+    background: gray;
+    color: white;
+    border-radius: 100%;
+    margin-right: 10px;
+  }
+  .fa-linkedin:hover {
+    background: #cb2027;
+  }
+  .fa-twitter {
+    background: gray;
+    color: white;
+    border-radius: 100%;
+    margin-right: 10px;
+  }
+  .fa-twitter:hover {
+    background: #cb2027;
+  }
+  
+  .fa-pinterest {
+    background: gray;
+    color: white;
+    border-radius: 100%;
+    margin-right: 10px;
+  }
+  .fa-pinterest:hover {
+    background: #cb2027;
+  }
+  
+  .fa-google {
+    background: gray;
+    color: white;
+    border-radius: 100%;
+    margin-right: 10px;
+  }
+  .fa-google:hover {
+    background: #cb2027;
+  }
+  
+  .fa-facebook {
+    background: gray;
+    color: white;
+    border-radius: 100%;
+    margin-right: 10px;
+  }
+  .fa-facebook:hover {
+    background: #cb2027;
+  }
+  *{
+    margin:0px;
+    padding:0px;
+  }
