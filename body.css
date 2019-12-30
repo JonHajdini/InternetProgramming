@@ -52,11 +52,69 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
 #container section{display:block; width:100%; margin:0 0 50px 0; padding:0;}
 #container .last{margin:0;}
 #container .more{text-align:left;}
+#container .more a{color:rgb(254, 0, 42); background-color:#FFFFFF;}
 
 
 /* ------Main Content-----*/
 
 #container #homepage{display:block; width:100%; line-height:1.6em;}
+#container .icons a{color:#FFFFFF; background-color:rgb(87, 85, 85);}
+#container .icons { float: left; padding-right: 2%; height: 70px; width: 400px;}
+
+#container .fa {padding: 10px; font-size: 17px; width: 15px; height: 15px; text-align: center; text-decoration: none; margin-top: 40px;}
+
+#container .fa-linkedin {
+  background: gray;
+  color: white;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+#container .fa-linkedin:hover {
+  background: #cb2027;
+}
+#container .fa-twitter {
+  background: gray;
+  color: white;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+#container .fa-twitter:hover {
+  background: #cb2027;
+}
+
+#container .fa-pinterest {
+  background: gray;
+  color: white;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+#container .fa-pinterest:hover {
+  background: #cb2027;
+}
+
+#container .fa-google {
+  background: gray;
+  color: white;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+#container .fa-google:hover {
+  background: #cb2027;
+}
+
+#container .fa-facebook {
+  background: gray;
+  color: white;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+#container .fa-facebook:hover {
+  background: #cb2027;
+}
+*{
+  margin:0px;
+  padding:0px;
+}
 
 #container #homepage #services{}
 #container #homepage #services article{width: 212px; padding-right: 5px; }
@@ -79,7 +137,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
 #container #homepage #latest{}
 #container #homepage #latest article{}
 #container #homepage #latest article figure{}
-#container #homepage #latest article figure img{margin:0; padding:4px; /* border:1px solid #D6D6D6; */}
+#container #homepage #latest article figure img{margin:0; padding:0px; /* border:1px solid #D6D6D6; */}
 #container #homepage #latest article figure figcaption{}
 #container #homepage #latest article figure h2{font-size:14px;}
 #container #homepage #latest article figure footer{padding: 0;}
@@ -95,77 +153,3 @@ img{margin:0; padding:0; border:none;}
 #intro li.last{margin-right:0;}
 #intro img{display:block; width:210px; height: 370px; margin:0 0 8px 0;  color:#666666; background-color:#FFFFFF; border:1px solid #E9E9E9;}
 
-.icons {
-    float: left;
-    padding-right: 2%;
-    height: 50px;
-    width: 400px;
-  }
-
-  .icons a{
-    color:#FFFFFF; 
-    background-color:rgb(87, 85, 85);
-  }
-  
-  .fa {
-    padding: 10px;
-    font-size: 20px;
-    width: 15px;
-    height: 15px;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 20px;
-  }
-  
-  .fa-linkedin {
-    background: gray;
-    color: white;
-    border-radius: 100%;
-    margin-right: 10px;
-  }
-  .fa-linkedin:hover {
-    background: #cb2027;
-  }
-  .fa-twitter {
-    background: gray;
-    color: white;
-    border-radius: 100%;
-    margin-right: 10px;
-  }
-  .fa-twitter:hover {
-    background: #cb2027;
-  }
-  
-  .fa-pinterest {
-    background: gray;
-    color: white;
-    border-radius: 100%;
-    margin-right: 10px;
-  }
-  .fa-pinterest:hover {
-    background: #cb2027;
-  }
-  
-  .fa-google {
-    background: gray;
-    color: white;
-    border-radius: 100%;
-    margin-right: 10px;
-  }
-  .fa-google:hover {
-    background: #cb2027;
-  }
-  
-  .fa-facebook {
-    background: gray;
-    color: white;
-    border-radius: 100%;
-    margin-right: 10px;
-  }
-  .fa-facebook:hover {
-    background: #cb2027;
-  }
-  *{
-    margin:0px;
-    padding:0px;
-  }
