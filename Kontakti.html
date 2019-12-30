@@ -1,15 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="]" dir="ltr">
 <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Homepage</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css" type="text/css">
-  <link rel="stylesheet" href="dropdown.css" type="text/css">
+  <link rel="stylesheet" href="body.css" type="text/css">
   <link rel="stylesheet" href="footeri.css" type="text/css">
-  <link rel="stylesheet" href="portfolio.css" type="text/css">
+  <link rel="stylesheet" href="dropdown.css" type="text/css">
+  <link rel="stylesheet" href="Kontakti.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
   <div class="wrapper row1">
     <header id="header" class="clear">
       <div id="hgroup">
@@ -19,91 +22,50 @@
         <ul>
           <li><a href="index.html">HOME</a></li>
           <li><a href="Artikujt.html">Artikujt</a></li>
-            <li><a href="Kontakti.html">Kontakti</a></li>
+          <li><a href="#">Kontakti</a></li>
           <li><a href="#">MENU</a>
             <ul>
               <li><a href="Chooselanguage.html">LANGUAGE</a></li>
               <li><a href="webdevelopers.html" target="_blank">WEB DEVELOPMENT</a></li>
             </ul>
           </li>
-          <li><a href="#">PORTFOLIO</a></li>
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
           <li class="last"><a href="gallery.html">GALLERY</a></li>
         </ul>
       </nav>
       <div class="clear"></div>
     </header>
   </div>
-
-<div class="wrapper row2">
-  <div id="container" class="clear">
-    <section id="portfolio" class="clear">
-      <ul>
-        <li>
-          <article>
-            <figure><a href="#"><img src="images/spacer.gif" alt=""></a>
-              <figcaption>Pershkrim</figcaption>
-            </figure>
-          </article>
-        </li>
-        <li>
-          <article>
-            <figure><a href="#"><img src="images/spacer.gif" alt=""></a>
-              <figcaption>Pershkrim</figcaption>
-            </figure>
-          </article>
-        </li>
-        <li class="last">
-          <article>
-            <figure><a href="#"><img src="images/spacer.gif" alt=""></a>
-              <figcaption>Pershkrim</figcaption>
-            </figure>
-          </article>
-        </li>
-        <li>
-          <article>
-            <figure><a href="#"><img src="images/spacer.gif" alt=""></a>
-              <figcaption>Pershkrim</figcaption>
-            </figure>
-          </article>
-        </li>
-        <li>
-          <article>
-            <figure><a href="#"><img src="images/spacer.gif" alt=""></a>
-              <figcaption>Pershkrim</figcaption>
-            </figure>
-          </article>
-        </li>
-        <li class="last">
-          <article>
-            <figure><a href="#"><img src="images/spacer.gif" alt=""></a>
-              <figcaption>Pershkrim</figcaption>
-            </figure>
-          </article>
-        </li>
-        <li>
-          <article>
-            <figure><a href="#"><img src="images/spacer.gif" alt=""></a>
-              <figcaption>Pershkrim</figcaption>
-            </figure>
-          </article>
-        </li>
-        <li>
-          <article>
-            <figure><a href="#"><img src="images/spacer.gif" alt=""></a>
-              <figcaption>Pershkrim</figcaption>
-            </figure>
-          </article>
-        </li>
-        <li class="last">
-          <article>
-            <figure><a href="#"><img src="images/spacer.gif" alt=""></a>
-              <figcaption>Pershkrim</figcaption>
-            </figure>
-          </article>
-        </li>
-      </ul>
-    </section>
+  <div class="wrapper col3">
+    <header id="header" class="clear">
+      <div id="hgroup">
+<div class="container">
+  <form id="contact" action="" method="post">
+    <h3>Kontakti</h3>
+    <h4>Jepni te dhenat e meposhtme</h4>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3">
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Web Site (optional)" type="url" tabindex="4">
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
 </div>
+</div>
+</div>
+
 <footer>
   <div class="footer-main">
     <div class="footer-inner">
@@ -179,7 +141,8 @@
     </div>
     <div class="clr"></div>
   </div>
-  </div>
+
 </footer>
 </body>
+
 </html>
