@@ -1,13 +1,13 @@
 
 /*--------------------------------------------------------------------------------------------------------------- */
 
-.one_quarter{display:inline-block; float:left; margin:0 0 0 4.21052%; list-style:none; width:21.8421%;}
+.one_quarter{display:inline-block; float:left; margin:15px; list-style:none; }
 
-.first{margin-left:0; clear:left;}
+.first{margin-left:190px; clear:left;}
 
 #gallery{display:block;  margin-bottom:50px;}
 #gallery figure figcaption{display:block; clear:both;}
-#gallery li{margin-bottom:30px;}
+#gallery li{margin-bottom:10px;}
 
 div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 
