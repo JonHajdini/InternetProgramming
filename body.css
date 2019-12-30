@@ -33,13 +33,14 @@ nav ul{margin:0; padding:0; list-style:none;}
 h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; font-style:normal; line-height:normal; /*text-transform:uppercase;*/}
 
 
-.one_quarter{display:block; float:left; margin:0 20px 0 0;}
-.one_quarter{width:225px;}
+.one_quarter{display:block; float:left; margin:0 16px 0;}
+.one_quarter{width:210px;}
 .one_quarter a{color:rgb(254, 0, 42); background-color:#FFFFFF;}
 .one_quarter h2{margin-bottom: 15px;}
+.one_quarter p{margin:10px 0 6px 0;}
 
-.one_third{display:block; float:left; margin:0 30px 0 0;}
-.one_third{width:300px;}
+.one_third{display:block; float:left; margin:0 26px 0 0;}
+.one_third{width:210px;}
 
 
 .lastbox{margin-right:0;}
@@ -49,7 +50,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
 /*----------------------------------------------Content Area-------------------------------------*/
 
 #container{padding:30px 0;}
-#container section{display:block; width:100%; margin:0 0 50px 0; padding:0;}
+#container section{display:block; width:100%; margin:0 16px 40px; padding:0;}
 #container .last{margin:0;}
 #container .more{text-align:left;}
 #container .more a{color:rgb(254, 0, 42); background-color:#FFFFFF;}
@@ -61,7 +62,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
 #container .icons a{color:#FFFFFF; background-color:rgb(87, 85, 85);}
 #container .icons { float: left; padding-right: 2%; height: 70px; width: 400px;}
 
-#container .fa {padding: 10px; font-size: 17px; width: 15px; height: 15px; text-align: center; text-decoration: none; margin-top: 40px;}
+#container .fa {padding: 10px; font-size: 17px; width: 15px; height: 15px; text-align: center; text-decoration: none; margin-top: 30px;}
 
 #container .fa-linkedin {
   background: gray;
