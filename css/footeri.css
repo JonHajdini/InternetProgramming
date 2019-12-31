@@ -2,6 +2,8 @@ footer{
   font-family:"open Sans";
   width:100%;
   box-sizing:border-box;
+  position: relative;
+
 }
 a{
   text-decoration:none;
@@ -18,7 +20,7 @@ a img{
   height:auto;
   margin:auto;
   background-color:rgb(223, 223, 223);
-  padding:30px 150px;
+  padding:70px 150px;
   box-sizing:border-box;
 
 }

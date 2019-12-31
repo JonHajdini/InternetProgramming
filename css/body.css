@@ -18,15 +18,10 @@ q:after{content:' �'; font-size:26px; line-height:0;}
 
 /* ----------------------------------------------Wrapper-------------------------------------*/
 
-div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 
-.row2{color:#979797; background-color:#FFFFFF;}
-
-
-.col3{color:#666666;background-color:#FFFFFF;}
 
 /*----------------------------------------------Generalise-------------------------------------*/
-#container{display:block; width:960px; margin:0 auto;}
+#container{display:block; width:970px; margin:0 auto; margin-bottom: -60px; position: relative; z-index: 999; background-color: #FFFFFF;}
 
 nav ul{margin:0; padding:0; list-style:none;}
 
@@ -62,7 +57,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
 #container .icons a{color:#FFFFFF; background-color:rgb(87, 85, 85);}
 #container .icons { float: left; padding-right: 2%; height: 70px; width: 400px;}
 
-#container .fa {padding: 10px; font-size: 17px; width: 15px; height: 15px; text-align: center; text-decoration: none; margin-top: 30px;}
+#container .fa {padding: 10px; font-size: 17px; width: 15px; height: 15px; text-align: center; text-decoration: none; margin-top: 50px;}
 
 #container .fa-linkedin {
   background: gray;
@@ -108,6 +103,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
   color: white;
   border-radius: 100%;
   margin-right: 10px;
+  margin-left: 10px;
 }
 #container .fa-facebook:hover {
   background: #cb2027;
@@ -118,7 +114,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
 }
 
 #container #homepage #services{}
-#container #homepage #services article{width: 212px; padding-right: 5px; }
+#container #homepage #services article{width: 210px; padding-right: 4px; }
 #container #homepage #services article h2{font-size:14px; margin-bottom:15px; color: red;}
 #container #homepage #services article p{margin:0px; padding:0;}
 #container #homepage #services article img{float:left; width:48px; height:48px; margin:0 8px 8px 0; padding:1px; /*border:1px solid #DEDEDE;*/}

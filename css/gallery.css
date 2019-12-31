@@ -1,17 +1,13 @@
 
 /*--------------------------------------------------------------------------------------------------------------- */
 
-.one_quarter{display:inline-block; float:left; margin:15px; list-style:none; }
+.one_quarter{display:inline-block; float: left; margin:6px; list-style:none; }
 
-.first{margin-left:190px; clear:left;}
+.first{margin-left:2px; clear:left;}
 
-#gallery{display:block;  margin-bottom:50px;}
+#gallery{position: relative; width:970px; display:block; margin-left: 280px; margin-top: -70px; margin-bottom: -60px; position: relative; z-index: 999; background-color: #FFFFFF;}
 #gallery figure figcaption{display:block; clear:both;}
-#gallery li{margin-bottom:10px;}
+#gallery ul{padding-inline-start: 0px; }
+#gallery li{margin-bottom:30px;}
 
-div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 
-.row2{color:#979797; background-color:#FFFFFF;}
-.row2 a{color:#FF9900; background-color:#FFFFFF;}
-
-.col3{color:#666666;background-color:#FFFFFF;}

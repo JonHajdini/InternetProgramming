@@ -10,10 +10,17 @@ a{outline:none; text-decoration:none;}
 
 /* ----------------------------------------------Wrapper-------------------------------------*/
 
-div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
+div.wrapper{display:block;  padding:0; text-align:left;}
 
+.row1{width:100%; position: relative;}
 .row1, .row1 a{color:#C0BAB6; background-color:rgb(223, 223, 223);}
 
+
+
+.row2{color:#979797; background-color:#FFFFFF;}
+
+
+.col3{width: 100%; color: #666666  ; background-color:#FFFFFF;}
 
 /*----------------------------------------------Generalise-------------------------------------*/
 
@@ -25,9 +32,9 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:normal; 
 
 /*----------------------------------------------Header-------------------------------------*/
 
-#header, #header a{color:rgb(34, 33, 33); }
+#header{padding: 60px;} #header a{color:rgb(34, 33, 33); }
 
-#header #hgroup{float:left; padding:20px 0;}
+#header #hgroup{float:left;  margin-top: -30px;}
 
 #header #hgroup h1{font-size:36px;font-weight: normal;}
 
@@ -39,8 +46,19 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:normal; 
 
 
 #header nav{float:right; padding:20px 0;}
-#header nav ul{margin-top:20px;}
+#header nav ul{margin-top:-30px;}
 #header nav li{display:inline; margin-right:25px; text-transform:uppercase;}
 #header nav li.last{margin-right:0;}
 #header nav a{font-size: 14px; color:rgb(34, 33, 33);}
 #header nav a:hover{color:rgb(255, 0, 34); }
+
+#slider {width: 970px; position: relative ;margin-left: 270px; margin-top: -60px; color: #FFFFFF; background-color: #FFFFFF;}
+#slider #sgroup{float: left; padding:20px 0; }
+
+#slider #sgroup h1{font-size:36px;font-weight: normal;}
+
+#slider #sgroup li.last{margin-right:0;}
+#slider #sgroup img{display:block; width:210px; height: 370px; margin:-8px 0 8px 0;  color:#666666; background-color:#FFFFFF; border:1px solid #E9E9E9;}
+#slider #sgroup ul{margin:0; padding:0; list-style:none;}
+#slider #sgroup li{display:block; float:left; width:210px; margin:30 16px 0;}
+
