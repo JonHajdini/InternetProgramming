@@ -10,17 +10,13 @@ a{outline:none; text-decoration:none;}
 
 /* ----------------------------------------------Wrapper-------------------------------------*/
 
-div.wrapper{display:block;  padding:0; text-align:left;}
+.wrapper{display:block;  padding:0; text-align:left; background-color: #FFFFFF; color: #FFFFFF;}
 
 .row1{width:100%; position: relative;}
 .row1, .row1 a{color:#C0BAB6; background-color:rgb(223, 223, 223);}
 
 
-
-.row2{color:#979797; background-color:#FFFFFF;}
-
-
-.col3{width: 100%; color: #666666  ; background-color:#FFFFFF;}
+.col3{width: 970px; position: relative ;margin-left: 270px; margin: -60px auto; color: #FFFFFF; background-color: #FFFFFF; z-index: 999;}
 
 /*----------------------------------------------Generalise-------------------------------------*/
 
@@ -37,7 +33,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:normal; 
 #header #hgroup{float:left;  margin-top: -30px;}
 
 #header #hgroup h1{font-size:36px;font-weight: normal;}
-#header #hgroup h1:hover{transform: perspective(200px) translate3d(20px, 20px, 50px);}
+
 
 #header #hgroup li.last{margin-right:0;}
 #header #hgroup img{display:block; width:210px; height: 370px; margin:0 0 8px 0;  color:#666666; background-color:#FFFFFF; border:1px solid #E9E9E9;}
@@ -54,7 +50,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:normal; 
 #header nav a:hover{color:rgb(255, 0, 34); }
 #header nav a.active{color:rgb(255, 0, 34); }
 
-#slider {width: 970px; position: relative ;margin-left: 270px; margin: -60px auto; color: #FFFFFF; background-color: #FFFFFF;}
+#slider {}
 #slider #sgroup{float: left; padding:20px 0; }
 
 #slider #sgroup h1{font-size:36px;font-weight: normal;}
