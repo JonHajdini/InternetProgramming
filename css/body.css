@@ -54,9 +54,9 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
 /* ------Main Content-----*/
 
 #container #homepage{display:block; width:100%; line-height:1.6em;}
-#container .icons a{color:#FFFFFF; background-color:rgb(87, 85, 85);}
+#container .icons a{color:#FFFFFF; background-color:rgb(87, 85, 85); }
 #container .icons { float: left; padding-right: 2%; height: 70px; width: 400px;}
-
+#container .icons a:hover{transform: skewX(15deg)}
 #container .fa {padding: 10px; font-size: 17px; width: 15px; height: 15px; text-align: center; text-decoration: none; margin-top: 50px;}
 
 #container .fa-linkedin {
@@ -115,6 +115,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
 
 #container #homepage #services{}
 #container #homepage #services article{width: 210px; padding-right: 4px; }
+#container #homepage #services article:hover {transform: scale(1.2,1.2);}
 #container #homepage #services article h2{font-size:14px; margin-bottom:15px; color: red;}
 #container #homepage #services article p{margin:0px; padding:0;}
 #container #homepage #services article img{float:left; width:48px; height:48px; margin:0 8px 8px 0; padding:1px; /*border:1px solid #DEDEDE;*/}
@@ -172,7 +173,7 @@ img{margin:0; padding:0; border:none;}
 }
 #back-to-top-btn:hover, #back-to-top-btn:focus {
   background-color: #333;
-  color: #fff;  
+  color: #fff;
 }
 
 
@@ -199,7 +200,7 @@ img{margin:0; padding:0; border:none;}
 
 .btnExit {
   animation-duration: 0.25s;
-  animation-fill-mode: both;  
+  animation-fill-mode: both;
   animation-name: btnExit;
 }
 /* zoomOut */
@@ -215,4 +216,3 @@ img{margin:0; padding:0; border:none;}
     transform: translate3d(0, 100%, 0);
   }
 }
-
