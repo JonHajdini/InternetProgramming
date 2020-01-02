@@ -51,6 +51,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:normal; 
 #header nav li.last{margin-right:0;}
 #header nav a{font-size: 14px; color:rgb(34, 33, 33);}
 #header nav a:hover{color:rgb(255, 0, 34); }
+#header nav a.active{color:rgb(255, 0, 34); }
 
 #slider {width: 970px; position: relative ;margin-left: 270px; margin: -60px auto; color: #FFFFFF; background-color: #FFFFFF;}
 #slider #sgroup{float: left; padding:20px 0; }
