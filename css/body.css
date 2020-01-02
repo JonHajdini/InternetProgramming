@@ -56,8 +56,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
 #container #homepage{display:block; width:100%; line-height:1.6em;}
 #container .icons a{color:#FFFFFF; background-color:rgb(87, 85, 85); }
 #container .icons { float: left; padding-right: 2%; height: 70px; width: 400px;}
-#container .icons a:hover{transform: skewX(15deg)}
-#container .fa {padding: 10px; font-size: 17px; width: 15px; height: 15px; text-align: center; text-decoration: none; margin-top: 50px;}
+#container .fab {padding: 10px; font-size: 17px; width: 15px; height: 15px; text-align: center; text-decoration: none; margin-top: 50px;}
 
 #container .fa-linkedin {
   background: gray;
@@ -98,14 +97,14 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
   background: #cb2027;
 }
 
-#container .fa-facebook {
+#container .fa-facebook-f {
   background: gray;
   color: white;
   border-radius: 100%;
   margin-right: 10px;
   margin-left: 10px;
 }
-#container .fa-facebook:hover {
+#container .fa-facebook-f:hover {
   background: #cb2027;
 }
 *{
@@ -215,4 +214,24 @@ img{margin:0; padding:0; border:none;}
     opacity: 0;
     transform: translate3d(0, 100%, 0);
   }
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  margin-top: -5px;
+  padding: 16px;
+  color: rgb(250, 8, 8);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+ 
+  user-select: none;
+}
+
+.next {
+  right: 30px;
+}
+.prev {
+  right:55px
 }

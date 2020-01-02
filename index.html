@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="css/body.css" type="text/css">
   <link rel="stylesheet" href="css/footeri.css" type="text/css">
   <link rel="stylesheet" href="css/dropdown.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+  <script src="https://kit.fontawesome.com/af9a262f2e.js" crossorigin="anonymous"></script>
+  
+  
 </head>
 
 <body>
@@ -39,7 +39,7 @@
     </header>
   </div>
   <div class="wrapper col3">
-    <slider id="slider" class="clear">
+    <slider id="slider" class="clear">  
       <div id="sgroup">
       <ul>
         <li><img src="images/dogi.jpg" alt="" /> </li>
@@ -49,8 +49,10 @@
       </ul>
       <br class="clear" />
       </div>
+      <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-angle-left"></i></a>
+      <a class="next" onclick="plusSlides(1)"><i class="fas fa-angle-right"></i></a>
     </slider>
-
+    
      <div id="container" class="clear">
         <!-- main content -->
         <div id="homepage">
@@ -136,11 +138,11 @@
 
         </div>
         <div class="icons">
-          <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
-          <a href="https://www.pinterest.com/" target="_blank" class="fa fa-pinterest"></a>
-          <a href="https://www.linkedin.com/" target="_blank" class="fa fa-linkedin"></a>
-          <a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a>
-          <a href="https://plus.google.com/discover" target="_blank" class="fa fa-google"></a>
+          <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+          <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
+          <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+          <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
+          <a href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a>
         </div>
         <!-- / content body -->
     </div>
@@ -223,6 +225,7 @@
     </div>
   </footer>
   <script src="js/backtotop.js"></script>
+  
 </body>
 
 </html>
