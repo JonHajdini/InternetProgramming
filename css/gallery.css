@@ -6,6 +6,7 @@
 .first{margin-left:2px; clear:left;}
 
 #gallery{position: relative; width:970px; display:block; margin-left: 280px; margin-top: -70px; margin-bottom: -60px; position: relative; z-index: 999; background-color: #FFFFFF;}
+#gallery ul li:hover{transform: scale(1.2,1.2) rotateX(30deg) rotateY(30deg) translate(-20px); }
 #gallery figure figcaption{display:block; clear:both;}
 #gallery ul{padding-inline-start: 0px; }
 #gallery li{margin-bottom:30px;}
@@ -32,10 +33,10 @@
   }
   #back-to-top-btn:hover, #back-to-top-btn:focus {
     background-color: #333;
-    color: #fff;  
+    color: #fff;
   }
-  
-  
+
+
   /* Animations */
   .btnEntrance {
     animation-duration: 0.5s;
@@ -43,8 +44,8 @@
     animation-name: btnEntrance;
   }
   /* zoomIn */
-  
-  
+
+
   /* fadeInUp */
   @keyframes btnEntrance {
     from {
@@ -56,15 +57,15 @@
       transform: translate3d(0, 0, 0);
     }
   }
-  
+
   .btnExit {
     animation-duration: 0.25s;
-    animation-fill-mode: both;  
+    animation-fill-mode: both;
     animation-name: btnExit;
   }
   /* zoomOut */
-  
-  
+
+
   /* fadeOutDown */
   @keyframes btnExit {
     from {
@@ -75,5 +76,3 @@
       transform: translate3d(0, 100%, 0);
     }
   }
-  
-  

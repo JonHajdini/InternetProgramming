@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:normal; 
 #header #hgroup{float:left;  margin-top: -30px;}
 
 #header #hgroup h1{font-size:36px;font-weight: normal;}
+#header #hgroup h1:hover{transform: perspective(200px) translate3d(20px, 20px, 50px);}
 
 #header #hgroup li.last{margin-right:0;}
 #header #hgroup img{display:block; width:210px; height: 370px; margin:0 0 8px 0;  color:#666666; background-color:#FFFFFF; border:1px solid #E9E9E9;}
@@ -60,6 +61,5 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:20px; font-weight:normal; 
 
 #slider #sgroup li.last{margin-right:0;}
 #slider #sgroup img{display:block; width:210px; height: 370px; margin:-8px 0 8px 0;  color:#666666; background-color:#FFFFFF; border:1px solid #E9E9E9;}
-#slider #sgroup img:hover{transform: scale(1.2,1.2) rotateX(30deg) rotateY(30deg) translate(-20px); }
 #slider #sgroup ul{margin:0; padding:0; list-style:none;}
 #slider #sgroup li{display:block; float:left; width:210px; margin:30 16px 0;}
