@@ -19,8 +19,26 @@
   margin: 0px 150px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   width: 50%;
+  -webkit-animation: myframe1 2s ease-in-out 0s 1;
+  -webkit-animation-fill-mode: forwards;
 }
-
+#contact:hover
+{
+  -webkit-animation: myframe2 2s ease-in-out 0s 1;
+  -webkit-animation-fill-mode: forwards;
+}
+@-webkit-keyframes myframe1
+{
+  0% {  background: lightblue;}
+    30% {margin: 0px 180px;}
+  100% {background: #F9F9F9;  margin: 0px 200px 20px;}
+}
+@-webkit-keyframes myframe2
+{
+  0% {  background: #F9F9F9; margin: 0px 200px 20px;}
+  70%{ margin: 0px 180px; }
+  100% {background: lightblue;}
+}
 
 #contact h3 {
   display: block;
