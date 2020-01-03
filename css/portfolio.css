@@ -1,10 +1,10 @@
 #portfolio{display:block; width:100%; line-height:1.6em;}
 #portfolio ul{margin:0; padding:0; list-style:none;}
-#portfolio li{display:block; float:left; width:250px; margin:30px 35px 30px; padding:0;}
+#portfolio li{display:block; float:left; width:440px; margin:40px 20px 10px; padding:0;}
 #portfolio li.last{margin-right:0;}
 #portfolio article, #portfolio article figure{display:block; width:100%;}
-#portfolio article figure img{width:230px; height:130px; margin-bottom:8px;}
-#portfolio article figure a img{display:block; border:10px solid #B7B7B7;}
+#portfolio article figure img{width:430px; height:200px; margin-bottom:8px;}
+#portfolio article figure a img{display:block; border:5px solid #B7B7B7;}
 #portfolio article figure a:hover img{border-color:#FF9900;}
 #portfolio article figure figcaption{padding:8px; color:#000000; background-color:#CCCCCC; text-align:center; border:1px solid #CCCCCC; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 
