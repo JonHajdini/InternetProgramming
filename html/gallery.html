@@ -8,7 +8,54 @@
   <link rel="stylesheet" href="../css/footeri.css" type="text/css">
   <link rel="stylesheet" href="../css/gallery.css" type="text/css">
   <script src="https://kit.fontawesome.com/af9a262f2e.js" crossorigin="anonymous"></script>
+  <script src="../js/jquery.min.js"></script>
 
+  <script>
+  //JQuery qe mundeson sliderin
+  $(document).ready(function(){
+    $("button").click(function(){
+      $(".one_quarter").slideToggle();
+    });
+  });
+  </script>
+<!--JQuery qe mundeson "Fade to" te imazhave-->
+  <script>
+$(document).ready(function(){
+  $("#img1").click(function(){
+    $("#img1").fadeTo(1000, 0.7);
+  }),
+  $("#img2").click(function(){
+    $("#img2").fadeTo(1000, 0.7);
+  }),
+  $("#img3").click(function(){
+    $("#img3").fadeTo(1000, 0.7);
+  }),
+  $("#img4").click(function(){
+    $("#img4").fadeTo(1000, 0.7);
+  }),
+  $("#img5").click(function(){
+    $("#img5").fadeTo(1000, 0.7);
+  }),
+  $("#img6").click(function(){
+    $("#img6").fadeTo(1000, 0.7);
+  }),
+  $("#img7").click(function(){
+    $("#img7").fadeTo(1000, 0.7);
+  }),
+  $("#img8").click(function(){
+    $("#img8").fadeTo(1000, 0.7);
+  }),
+  $("#img9").click(function(){
+    $("#img9").fadeTo(1000, 0.7);
+  }),
+  $("#img10").click(function(){
+    $("#img10").fadeTo(1000, 0.7);
+  }),
+    $("#img11").click(function(){
+      $("#img11").fadeTo(1000, 0.7);
+    });
+  });
+</script>
 
   <style>
     .heading {
@@ -32,14 +79,19 @@
       padding-bottom: 40px;
 
     }
+  .description #highlight
+  {
+    text-shadow: 10px 10px 2px gray;
+  }
 
     #highlight {
       background-color: #fff2ac;
-      background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%)
+      background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
     }
 
-    ;
+
   </style>
+  <!--JQuery qe mundeson Drag and drop, pjesa e dyte e JQueryt e zhvendosur ne body-->
   <script>
 function allowDrop(ev) {
   ev.preventDefault();
@@ -91,25 +143,28 @@ function drag(ev) {
       <div id="gallery">
         <figure>
           <header class="heading">Gallery</header>
+
+<button style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px;">Slide</button>
+
           <ul class="nospace clear">
-            <li class="one_quarter first"><a href="#"><img src="../images/2.jpg" width="210" height="210" alt=""></a>
+            <li class="one_quarter first"><a href="#"><img id="img1" src="../images/2.jpg" width="210" height="210" alt=""></a>
             </li>
-            <li class="one_quarter"><a href="#"><img src="../images/3.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/4.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/5.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter first"><a href="#"><img src="../images/6.jpg" width="210" height="210" alt=""></a>
+            <li class="one_quarter"><a href="#"><img id="img2" src="../images/3.jpg" width="210" height="210" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img id="img3" src="../images/4.jpg" width="210" height="210" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img id="img4" src="../images/5.jpg" width="210" height="210" alt=""></a></li>
+            <li class="one_quarter first"><a href="#"><img id="img5" src="../images/6.jpg" width="210" height="210" alt=""></a>
             </li>
-            <li class="one_quarter"><a href="#"><img src="../images/dubai.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/italy.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="../images/grecce.jpg" width="210" height="210" alt="Imazhi nuk mund te shfaqet"></a></li>
-            <li class="one_quarter first"><a href="#"><img src="../images/paris.jpg" width="210" height="210" alt=""></a>
+            <li class="one_quarter"><a href="#"><img id="img6" src="../images/dubai.jpg" width="210" height="210" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img id="img7" src="../images/italy.jpg" width="210" height="210" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img id="img8" src="../images/grecce.jpg" width="210" height="210" alt="Imazhi nuk mund te shfaqet"></a></li>
+            <li class="one_quarter first"><a href="#"><img id="img9" src="../images/paris.jpg" width="210" height="210" alt=""></a>
             </li>
-            <li class="one_quarter"><a href="#"><img src="../images/barcelona.jpg" width="210" height="210" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img id="img10" src="../images/barcelona.jpg" width="210" height="210" alt=""></a></li>
             <li style= "border: 1px solid black; width:210px; height:210px;
             display:inline-block; margin:6px; float: left;"ondrop="drop(event)" ondragover="allowDrop(event)">
-            <a href="#">
-            <img src="../images/square.jpg" width="210" height="210" id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" alt="">
-            </a></li>
+            <a href="#"><abbr title="Fotojo qe mund te zhvendoset">
+            <img id="img11" src="../images/square.jpg" width="210" height="210" id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" alt="">
+          </abbr></a></li>
             <li style= "border: 0.2px solid black; width:210px; height:210px;
              display:inline-block; margin:6px; float: left;" ondrop="drop(event)" ondragover="allowDrop(event)"
             ><a href="#"></a></li>
