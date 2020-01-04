@@ -147,6 +147,7 @@
           </div>
           <!-- / content body -->
       </div>
+      
     </div>
     <footer>
       <div class="footer-main">
@@ -225,6 +226,27 @@
       </div>
       </div>
     </footer>
+    <div id="counter" style="text-align: center; color:black; font-size: 18px; padding-bottom: 30px;"></div>
+
+<script>
+var visits = localStorage.getItem('on_load_counter');
+var sessionVisits = sessionStorage.getItem('session_counter');
+
+if (visits === null) {
+    visits = 0;
+}
+if (sessionVisits === null) {
+  sessionVisits = 0;
+}
+
+sessionVisits++;
+visits++;
+
+localStorage.setItem("on_load_counter", visits);
+sessionStorage.setItem("session_counter", sessionVisits)
+
+document.getElementById('counter').innerHTML = "Ju e keni vizituar kete faqe " + visits + " here (" + sessionVisits + " here ne kete sesion). ";
+</script>
   </div>
   <script src="js/backtotop.js"></script>
 
