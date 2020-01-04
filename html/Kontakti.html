@@ -19,7 +19,7 @@
     <div class="wrapper row1">
       <header id="header" class="clear">
         <div id="hgroup">
-          <h1><a href="../index.html" >AUTONOMOUS</a></h1>
+          <h1><a href="../index.html">AUTONOMOUS</a></h1>
         </div>
         <nav>
           <ul>
@@ -41,47 +41,119 @@
       </header>
     </div>
     <div class="wrapper col3">
-    <div id="container" class="clear">
+      <div id="container" class="clear">
 
-            <form id="contact" action="" method="post">
-              <h3>Kontakti</h3>
-              <h4>Jepni te dhenat e meposhtme</h4>
-              <fieldset>
-                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-              </fieldset>
-              <fieldset>
-                <input placeholder="Your Email Address" type="email" tabindex="2" required>
-              </fieldset>
-              <fieldset>
-                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3">
-              </fieldset>
-              <fieldset>
-                <input placeholder="Your Web Site (optional)" type="url" tabindex="4">
-              </fieldset>
-              <fieldset>
-                <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-              </fieldset>
-              <fieldset>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-              </fieldset>
-            </form>
-            <div class="icons">
-              <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
-              <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
-              <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
-              <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
-              <a href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a>
-            </div>
-            </div>
+        <form id="contact" action="" method="post" autocomplete="on">
+          <h3>Kontakti</h3>
+          <h4>Jepni te dhenat e meposhtme</h4>
+          <fieldset>
+            <input placeholder="Your firstname" type="text" name="emri" tabindex="1" required autofocus>
+            <input placeholder="Your lastname" type="text" name="mbiemri" tabindex="1" required>
+          </fieldset>
+          <fieldset>
+            Gjinia: &nbsp;&nbsp;
+            <input type="radio" name="gender" value="male" checked> Male &nbsp;
+            <input type="radio" name="gender" value="female"> Female &nbsp;
+            <input type="radio" name="gender" value="other"> Other
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Email Address" type="email" name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ju lutem shenojeni emailin ne formatin e duhur"
+              tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+          </fieldset>
+          <fieldset>
+            Birthday: <input type="date" tabindex="4">
+
+          </fieldset>
+          <fieldset>
+            Nisja nga: <input list="nisja" name="nis" tabindex="5">
+            <datalist id="nisja">
+              <option value="Prishtina">
+              <option value="Shkupi">
+              <option value="Tirana">
+            </datalist>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            N&euml;: <input list="ne" name="vendi" tabindex="6">
+            <datalist id="ne">
+              <option value="Dubai">
+              <option value="Stambolli">
+              <option value="Daho">
+              <option value="Barcelona">
+              <option value="Paris">
+              <option value="Amsterdam">
+            </datalist>
+          </fieldset>
+
+          <fieldset>
+            <input placeholder="Shenoni regjionin ose hotelin" type="text" tabindex="7">
+          </fieldset>
+          <fieldset>
+            Net&euml;: <input type="number" name="nata" min="1" max="8">&nbsp;&nbsp;&nbsp;&nbsp;
+            Numri i dhomave: <input type="number" name="dhoma" min="0" max="3">&nbsp;&nbsp;&nbsp;&nbsp;
+            Numri i f&euml;mij&euml;ve: <input type="number" name="femija" min="0" max="4">
+          </fieldset>
+          <fieldset>
+            Data e nisjes: <input type="date" tabindex="8">
+          </fieldset>
+          <fieldset>
+            Udhetimi: <br />
+            <input type="checkbox" name="udhetimi" value="aeroplan"> Aeroplan<br />
+            <input type="checkbox" name="udhetimi" value="autobus"> Autobus<br />
+            <input type="checkbox" name="udhetimi" value="anije"> Anije
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="Type your message here...." tabindex="9" required></textarea>
+          </fieldset>
+          <fieldset>
+            <h4><span style="color:blue">Gjeni lokacionin tuaj. Shtyp butonin </span></h4>
+
+            <button onclick="getLocation()"> Lokacioni im</button>
+
+            <p id="demo "><br /></p>
+
+            <script>
+              var x = document.getElementById("demo");
+
+              function getLocation() {
+                if (navigator.geolocation) {
+                  navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                  x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+              }
+
+              function showPosition(position) {
+                x.innerHTML = "<br /> Latitude:" + position.coords.latitude +
+                  "<br>Longitude: " + position.coords.longitude; 
+              }
+            </script>
+
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+          </fieldset>
+        </form>
+        <div class="icons">
+          <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+          <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
+          <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+          <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
+          <a href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a>
         </div>
-      </header>
-      <div class="icons">
-        <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
-        <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
-        <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
-        <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
-        <a href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a>
       </div>
+    </div>
+    </header>
+    <div class="icons">
+      <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+      <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
+      <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+      <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
+      <a href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a>
+    </div>
 
 
     <footer>
