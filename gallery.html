@@ -40,6 +40,21 @@
 
     ;
   </style>
+  <script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
 </head>
 
 <body>
@@ -87,8 +102,14 @@
             <li class="one_quarter first"><a href="#"><img src="images/square.jpg" width="210" height="210" alt=""></a>
             </li>
             <li class="one_quarter"><a href="#"><img src="images/square.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="images/square.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="images/square.jpg" width="210" height="210" alt=""></a></li>
+            <li style= "border: 1px solid black; width:210px; height:210px;
+            display:inline-block; margin:6px; float: left;"ondrop="drop(event)" ondragover="allowDrop(event)">
+            <a href="#">
+            <img src="images/square.jpg" width="210" height="210" id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" alt="">
+            </a></li>
+            <li style= "border: 0.2px solid black; width:210px; height:210px;
+             display:inline-block; margin:6px; float: left;" ondrop="drop(event)" ondragover="allowDrop(event)"
+            ><a href="#"></a></li>
           </ul>
           <div class="description"><span id="highlight"><abbr title="Gallery description">Gallery D.</abbr></span>
             <div class="icons">
