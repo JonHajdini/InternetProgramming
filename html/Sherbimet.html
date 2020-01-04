@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="../css/footeri.css" type="text/css">
   <link rel="stylesheet" href="../css/dropdown.css" type="text/css">
   <script src="https://kit.fontawesome.com/af9a262f2e.js" crossorigin="anonymous"></script>
+  <script src="../js/jquery.min.js"></script>
+
+
   <style>
   .row {
 
@@ -74,10 +77,19 @@ p
 {
   color: black;
   font-size: 14px;
- 
+
 }
   </style>
-
+  <script>
+  $(document).ready(function(){
+    $(".btn1").click(function(){
+      $(".service-box").hide();
+    });
+    $(".btn2").click(function(){
+      $(".service-box").show();
+    });
+  });
+  </script>
 </head>
 
 <body>
@@ -190,6 +202,8 @@ p
           <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
           <a href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a>
         </div>
+        <button class="btn1">Fsheh</button>
+        <button class="btn2">Shfaq</button>
       </div>
     </div>
 

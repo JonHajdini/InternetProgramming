@@ -11,6 +11,19 @@
   <link rel="stylesheet" href="../css/dropdown.css" type="text/css">
   <link rel="stylesheet" href="../css/Kontakti.css" type="text/css">
   <script src="https://kit.fontawesome.com/af9a262f2e.js" crossorigin="anonymous"></script>
+  <script src="../js/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "yellow");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "#F08080");
+  });
+});
+</script>
+
 </head>
 
 <body>
@@ -128,7 +141,7 @@
 
               function showPosition(position) {
                 x.innerHTML = "<br /> Latitude:" + position.coords.latitude +
-                  "<br>Longitude: " + position.coords.longitude; 
+                  "<br>Longitude: " + position.coords.longitude;
               }
             </script>
 
