@@ -1,78 +1,31 @@
-﻿<html>
+<!DOCTYPE html>
+<html lang="]" dir="ltr">
 
 <head>
-  <title>Gallery</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Kontakti</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-  <link rel="stylesheet" href="css/dropdown.css" type="text/css">
-  <link rel="stylesheet" href="css/footeri.css" type="text/css">
-  <link rel="stylesheet" href="css/gallery.css" type="text/css">
+  <link rel="stylesheet" href="../css/style.css" type="text/css">
+  <link rel="stylesheet" href="../css/body.css" type="text/css">
+  <link rel="stylesheet" href="../css/footeri.css" type="text/css">
+  <link rel="stylesheet" href="../css/dropdown.css" type="text/css">
+  <link rel="stylesheet" href="../css/Kontakti.css" type="text/css">
   <script src="https://kit.fontawesome.com/af9a262f2e.js" crossorigin="anonymous"></script>
-
-
-  <style>
-    .heading {
-      font-size: 22px;
-      font-family: Georgia, "Times New Roman", Times, serif;
-      color: darkblue;
-      font-style: italic;
-      text-decoration: underline;
-      text-align: center;
-      padding-left: 20px;
-      padding-top: 10px;
-
-    }
-
-    .description {
-      font-size: 22px;
-      font-family: Georgia, "Times New Roman", Times, serif;
-      color: darkblue;
-      font-style: bold;
-      padding-left: 0px;
-      padding-bottom: 40px;
-
-    }
-
-    #highlight {
-      background-color: #fff2ac;
-      background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%)
-    }
-
-    ;
-  </style>
-  <script>
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-
-</script>
 </head>
 
 <body>
-  <script>
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-  }
-  </script>
   <button id="back-to-top-btn"><i class="fa fa-chevron-circle-up"></i></button>
   <div class="wrapper">
     <div class="wrapper row1">
       <header id="header" class="clear">
         <div id="hgroup">
-          <h1><a href="index.html">AUTONOMOUS</a></h1>
+          <h1><a href="../index.html" >AUTONOMOUS</a></h1>
         </div>
         <nav>
           <ul>
-            <li><a href="index.html">HOME</a></li>
+            <li><a href="../index.html">HOME</a></li>
             <li><a href="Sherbimet.html">SHERBIMET</a></li>
-            <li><a href="Kontakti.html">KONTAKTI</a></li>
+            <li><a href="Kontakti.html" class="active">KONTAKTI</a></li>
             <li><a href="#">MENU</a>
               <ul>
                 <li><a href="Chooselanguage.html">LANGUAGE</a></li>
@@ -80,41 +33,38 @@ function drag(ev) {
               </ul>
             </li>
             <li><a href="portfolio.html">PORTFOLIO</a></li>
-            <li><a href="gallery.html" class="active">GALLERY</a></li>
-            </ul>
+            <li><a href="gallery.html">GALLERY</a></li>
+
+          </ul>
         </nav>
         <div class="clear"></div>
       </header>
     </div>
     <div class="wrapper col3">
+    <div id="container" class="clear">
 
-      <div id="gallery">
-        <figure>
-          <header class="heading">Gallery</header>
-          <ul class="nospace clear">
-            <li class="one_quarter first"><a href="#"><img src="images/2.jpg" width="210" height="210" alt=""></a>
-            </li>
-            <li class="one_quarter"><a href="#"><img src="images/3.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="images/4.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="images/5.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter first"><a href="#"><img src="images/6.jpg" width="210" height="210" alt=""></a>
-            </li>
-            <li class="one_quarter"><a href="#"><img src="images/dubai.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="images/italy.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img src="images/grecce.jpg" width="210" height="210" alt="Imazhi nuk mund te shfaqet"></a></li>
-            <li class="one_quarter first"><a href="#"><img src="images/paris.jpg" width="210" height="210" alt=""></a>
-            </li>
-            <li class="one_quarter"><a href="#"><img src="images/barcelona.jpg" width="210" height="210" alt=""></a></li>
-            <li style= "border: 1px solid black; width:210px; height:210px;
-            display:inline-block; margin:6px; float: left;"ondrop="drop(event)" ondragover="allowDrop(event)">
-            <a href="#">
-            <img src="images/square.jpg" width="210" height="210" id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" alt="">
-            </a></li>
-            <li style= "border: 0.2px solid black; width:210px; height:210px;
-             display:inline-block; margin:6px; float: left;" ondrop="drop(event)" ondragover="allowDrop(event)"
-            ><a href="#"></a></li>
-          </ul>
-          <div class="description"><span id="highlight"><abbr title="Gallery description">Gallery D.</abbr></span>
+            <form id="contact" action="" method="post">
+              <h3>Kontakti</h3>
+              <h4>Jepni te dhenat e meposhtme</h4>
+              <fieldset>
+                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+              </fieldset>
+              <fieldset>
+                <input placeholder="Your Email Address" type="email" tabindex="2" required>
+              </fieldset>
+              <fieldset>
+                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3">
+              </fieldset>
+              <fieldset>
+                <input placeholder="Your Web Site (optional)" type="url" tabindex="4">
+              </fieldset>
+              <fieldset>
+                <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+              </fieldset>
+              <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+              </fieldset>
+            </form>
             <div class="icons">
               <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
               <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
@@ -122,13 +72,18 @@ function drag(ev) {
               <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
               <a href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a>
             </div>
-          </div>
-
-
-        </figure>
-
+            </div>
+        </div>
+      </header>
+      <div class="icons">
+        <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+        <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
+        <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+        <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
+        <a href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a>
       </div>
-    </div>
+
+
     <footer>
       <div class="footer-main">
         <div class="footer-inner">
@@ -136,7 +91,7 @@ function drag(ev) {
             <div class="footer-box">
 
               <h6>ABOUT US</h6>
-              <img src="images/372.jpg" width="215px" height="90px" />
+              <img src="../images/372.jpg" width="215px" height="90px" />
 
 
               <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium et obcaecati soluta
@@ -207,7 +162,8 @@ function drag(ev) {
 
     </footer>
   </div>
-  <script src="js/backtotop.js"></script>
+  <script src="../js/backtotop.js"></script>
+
 </body>
 
 </html>
