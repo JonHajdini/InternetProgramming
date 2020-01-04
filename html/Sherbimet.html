@@ -61,6 +61,7 @@
 }
  h2.h-bold,  h5.h-bold {
   font-weight: 600;
+  font-size: 20px;
 
 }
 h5
@@ -90,6 +91,58 @@ p
     });
   });
   </script>
+
+  <script>
+$(document).ready(function(){
+  $("#14").hover(
+function(){
+  $("#14").filter(':not(:animated)').animate({
+     width:"90%"
+  },'slow');
+// Animacioni per Hover efekte do te pres derisa te perfundoje animacioni paraprak
+},
+function() {
+  $("#14").animate({
+     width:"100%"
+  },'slow');
+});
+});
+</script>
+
+<script>
+$(document).ready(function(){
+$("#16").hover(
+function(){
+$("#16").filter(':not(:animated)').animate({
+   width:"90%"
+},'slow');
+// Animacioni per Hover efekte do te pres derisa te perfundoje animacioni paraprak
+},
+function() {
+$("#16").animate({
+   width:"100%"
+},'slow');
+});
+});
+</script>
+
+<script>
+$(document).ready(function(){
+$("#15").hover(
+function(){
+$("#15").filter(':not(:animated)').animate({
+   width:"90%"
+},'slow');
+// Animacioni per Hover efekte do te pres derisa te perfundoje animacioni paraprak
+},
+function() {
+$("#15").animate({
+   width:"100%"
+},'slow');
+});
+});
+</script>
+
 </head>
 
 <body>
@@ -139,7 +192,7 @@ p
           <div>
             <div class="service-box">
               <div class="service-icon">
-                  <span><img style="width: 100%;" src="../images/Akomodim.jpg" alt="Imazhi nuk eshte ende ne dispozicion!" /></span>
+                  <span><img id="14" style="width: 100%;" src="../images/Akomodim.jpg" alt="Imazhi nuk eshte ende ne dispozicion!" /></span>
               </div>
               <div >
                 <h5>Akomodim</h5>
@@ -158,7 +211,7 @@ p
           <div>
             <div class="service-box">
               <div class="service-icon">
-                <span><img style="width: 100%;" src="../images/Travelinsurance.jpg" alt="Imazhi nuk eshte ende ne dispozicion!" /></span>
+                <span><img id="15" style="width: 100%;" src="../images/Travelinsurance.jpg" alt="Imazhi nuk eshte ende ne dispozicion!" /></span>
               </div>
               <div>
                 <h5 style="margin-top: -15px;">Siguri Udhetimi</h5>
@@ -174,7 +227,7 @@ p
           <div>
             <div class="service-box">
               <div class="service-icon">
-                    <span><img style="width: 100%;" src="../images/Linja.jpg" alt="Imazhi nuk eshte ende ne dispozicion!" /></span>
+                    <span><img id="16" style="width: 100%;" src="../images/Linja.jpg" alt="Imazhi nuk eshte ende ne dispozicion!" /></span>
               </div>
               <div>
                 <h5>Linja Ajrore dhe rezervimet </h5>
@@ -202,8 +255,8 @@ p
           <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
           <a href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a>
         </div>
-        <button class="btn1">Fsheh</button>
-        <button class="btn2">Shfaq</button>
+        <button style="float:left; margin-right: 20px" class="btn1">Fsheh</button>
+        <button style="float:left" class="btn2">Shfaq</button>
       </div>
     </div>
 
