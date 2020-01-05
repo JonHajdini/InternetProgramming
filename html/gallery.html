@@ -10,10 +10,19 @@
   <script src="https://kit.fontawesome.com/af9a262f2e.js" crossorigin="anonymous"></script>
   <script src="../js/jquery.min.js"></script>
 
+  <!--jQuery Get()-->
+		<script>
+		$(document).ready(function(){
+		  $("#butoni2").click(function(){
+		    alert("HTML Head Kodi: " + $("head").html());
+		  });
+		});
+		</script>
   <script>
+
   //JQuery qe mundeson sliderin
   $(document).ready(function(){
-    $("button").click(function(){
+    $("#butoni1").click(function(){
       $(".one_quarter").slideToggle();
     });
   });
@@ -143,7 +152,8 @@ function drag(ev) {
       <div id="gallery">
         <figure>
           <h1 style="text-align: center; color:steelblue; font-size: 30px; padding-top: 35px;"><strong>Disa foto fantastike</strong></h1>
-          <button style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px;">Slide</button>
+          <button id="butoni1"  style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; margin-right: 20px;">Slide</button>
+          <button id="butoni2"  style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px;">Shfaq Html Kodin per Head Section</button>
           <ul class="nospace clear">
             <li class="one_quarter first"><a href="#"><img id="img1" src="../images/f1.jpg" width="210" height="210" alt=""></a>
             </li>
