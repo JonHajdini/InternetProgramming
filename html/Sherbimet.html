@@ -83,12 +83,16 @@ p
   </style>
   <!--JQuery qe mundeson hide and show, JQuery effects-->
   <script>
-  $(document).ready(function(){
-    $(".btn1").click(function(){
-      $(".service-box").hide();
+  jQuery(document).ready(function(){
+    jQuery(".btn1").click(function(){
+      jQuery(".service-box").hide("slow", function(){ //Callback JQuery efekt qe mundeson qe efekti i pare te kompletohet pastaj te thirret efekti i dyte
+    alert("Lista e sherbimeve u fsheh");
+  });
     });
-    $(".btn2").click(function(){
-      $(".service-box").show();
+  jQuery(".btn2").click(function(){
+      jQuery(".service-box").show("slow", function(){
+    alert("Lista e sherbimeve  u shfaq");
+  });
     });
   });
   </script>
