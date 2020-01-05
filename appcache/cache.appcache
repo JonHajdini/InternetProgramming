@@ -1,0 +1,31 @@
+CACHE MANIFEST
+# 2012-02-21 v1.0.0
+../css/bg.jpg
+../css/body.css
+../css/dropdown.css
+../css/footeri.css
+../css/style.css
+../images/2.jpg
+../images/3.jpg
+../images/4.jpg
+../images/5.jpg
+../images/6.jpg
+../images/372.jpg
+../images/bansko.jpg
+../images/blonde.jpg
+../images/bus.jpg
+../images/grecce.jpg
+../images/italy.jpg
+../images/plane.jpg
+../images/ship.jpg
+../js/backtotop.js
+../js/jquery.js
+../js/jquery.min.js
+../js/rregullat.js
+
+
+NETWORK:
+*
+
+FALLBACK:
+/html/ /../index.html
