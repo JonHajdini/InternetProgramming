@@ -84,7 +84,7 @@
     background: gray;
     color: white;
     border-radius: 100%;
-    margin-right: 10px;
+    margin-right: 5px;
   }
   #gallery .fa-linkedin:hover {
     background: #cb2027;
@@ -93,7 +93,7 @@
     background: gray;
     color: white;
     border-radius: 100%;
-    margin-right: 10px;
+    margin-right: 5px;
   }
   #gallery .fa-twitter:hover {
     background: #cb2027;
@@ -103,7 +103,7 @@
     background: gray;
     color: white;
     border-radius: 100%;
-    margin-right: 10px;
+    margin-right: 5px;
   }
   #gallery .fa-pinterest:hover {
     background: #cb2027;
@@ -113,7 +113,7 @@
     background: gray;
     color: white;
     border-radius: 100%;
-    margin-right: 10px;
+    
   }
   #gallery .fa-google:hover {
     background: #cb2027;
@@ -123,8 +123,8 @@
     background: gray;
     color: white;
     border-radius: 100%;
-    margin-right: 10px;
-    margin-left: -10px;
+    margin-right: 5px;
+    margin-left: 10px;
   }
   #gallery .fa-facebook-f:hover {
     background: #cb2027;
