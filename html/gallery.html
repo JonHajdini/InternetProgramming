@@ -100,6 +100,16 @@ $(document).ready(function(){
 
 
   </style>
+
+<!--JQuery set() qe mundeson ndryshimin e atributit-->
+  <script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#hrefvalue").attr("href", "https://gmail.com");
+  });
+});
+</script>
+
   <!--JQuery qe mundeson Drag and drop, pjesa e dyte e JQueryt e zhvendosur ne body-->
   <script>
 function allowDrop(ev) {
@@ -153,7 +163,8 @@ function drag(ev) {
         <figure>
           <h1 style="text-align: center; color:steelblue; font-size: 30px; padding-top: 35px;"><strong>Disa foto fantastike</strong></h1>
           <button id="butoni1"  style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; margin-right: 20px;">Slide</button>
-          <button id="butoni2"  style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px;">Shfaq Html Kodin per Head Section</button>
+          <button id="butoni2"  style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; margin-right: 20px;">Shfaq Html Kodin per Head Section</button>
+          <button id="butoni3"  style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; ">Ndrysho href linkun tek G+!!</button>
           <ul class="nospace clear">
             <li class="one_quarter first"><a href="#"><img id="img1" src="../images/f1.jpg" width="210" height="210" alt=""></a>
             </li>
@@ -184,8 +195,8 @@ function drag(ev) {
               <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
               <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
               <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
-              <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
-              <a href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a>
+              <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a><abbr title="Ketu do te ndryshohet atributi">
+              <a id="hrefvalue" href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a></abbr>
             </div>
           </div>
 
