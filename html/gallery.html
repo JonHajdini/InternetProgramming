@@ -1,4 +1,4 @@
-﻿<html  manifest="../appcache/cache.appcache">
+﻿<html manifest="../appcache/cache.appcache">
 
 <head>
   <title>Gallery</title>
@@ -11,60 +11,60 @@
   <script src="../js/jquery.min.js"></script>
 
   <!--jQuery Get()-->
-		<script>
-		$(document).ready(function(){
-		  $("#butoni2").click(function(){
-		    alert("HTML Head Kodi: " + $("head").html());
-		  });
-		});
-		</script>
+  <script>
+    $(document).ready(function () {
+      $("#butoni2").click(function () {
+        alert("HTML Head Kodi: " + $("head").html());
+      });
+    });
+  </script>
   <script>
 
-  //JQuery qe mundeson sliderin
-  $(document).ready(function(){
-    $("#butoni1").click(function(){
-      $(".one_quarter").slideToggle();
+    //JQuery qe mundeson sliderin
+    $(document).ready(function () {
+      $("#butoni1").click(function () {
+        $(".one_quarter").slideToggle();
+      });
     });
-  });
   </script>
-<!--JQuery qe mundeson "Fade to" te imazhave-->
+  <!--JQuery qe mundeson "Fade to" te imazhave-->
   <script>
-$(document).ready(function(){
-  $("#img1").click(function(){
-    $("#img1").fadeTo(1000, 0.7);
-  }),
-  $("#img2").click(function(){
-    $("#img2").fadeTo(1000, 0.7);
-  }),
-  $("#img3").click(function(){
-    $("#img3").fadeTo(1000, 0.7);
-  }),
-  $("#img4").click(function(){
-    $("#img4").fadeTo(1000, 0.7);
-  }),
-  $("#img5").click(function(){
-    $("#img5").fadeTo(1000, 0.7);
-  }),
-  $("#img6").click(function(){
-    $("#img6").fadeTo(1000, 0.7);
-  }),
-  $("#img7").click(function(){
-    $("#img7").fadeTo(1000, 0.7);
-  }),
-  $("#img8").click(function(){
-    $("#img8").fadeTo(1000, 0.7);
-  }),
-  $("#img9").click(function(){
-    $("#img9").fadeTo(1000, 0.7);
-  }),
-  $("#img10").click(function(){
-    $("#img10").fadeTo(1000, 0.7);
-  }),
-    $("#img11").click(function(){
-      $("#img11").fadeTo(1000, 0.7);
+    $(document).ready(function () {
+      $("#img1").click(function () {
+        $("#img1").fadeTo(1000, 0.7);
+      }),
+        $("#img2").click(function () {
+          $("#img2").fadeTo(1000, 0.7);
+        }),
+        $("#img3").click(function () {
+          $("#img3").fadeTo(1000, 0.7);
+        }),
+        $("#img4").click(function () {
+          $("#img4").fadeTo(1000, 0.7);
+        }),
+        $("#img5").click(function () {
+          $("#img5").fadeTo(1000, 0.7);
+        }),
+        $("#img6").click(function () {
+          $("#img6").fadeTo(1000, 0.7);
+        }),
+        $("#img7").click(function () {
+          $("#img7").fadeTo(1000, 0.7);
+        }),
+        $("#img8").click(function () {
+          $("#img8").fadeTo(1000, 0.7);
+        }),
+        $("#img9").click(function () {
+          $("#img9").fadeTo(1000, 0.7);
+        }),
+        $("#img10").click(function () {
+          $("#img10").fadeTo(1000, 0.7);
+        }),
+        $("#img11").click(function () {
+          $("#img11").fadeTo(1000, 0.7);
+        });
     });
-  });
-</script>
+  </script>
 
   <style>
     .heading {
@@ -88,49 +88,47 @@ $(document).ready(function(){
       padding-bottom: 40px;
 
     }
-  .description #highlight
-  {
-    text-shadow: 10px 10px 2px gray;
-  }
+
+    .description #highlight {
+      text-shadow: 10px 10px 2px gray;
+    }
 
     #highlight {
       background-color: #fff2ac;
       background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
     }
-
-
   </style>
 
-<!--JQuery set() qe mundeson ndryshimin e atributit-->
+  <!--JQuery set() qe mundeson ndryshimin e atributit-->
   <script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $("#hrefvalue").attr("href", "https://gmail.com");
-  });
-});
-</script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("#hrefvalue").attr("href", "https://gmail.com");
+      });
+    });
+  </script>
 
   <!--JQuery qe mundeson Drag and drop, pjesa e dyte e JQueryt e zhvendosur ne body-->
   <script>
-function allowDrop(ev) {
-  ev.preventDefault();
-}
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
 
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
 
 
-</script>
+  </script>
 </head>
 
 <body>
   <script>
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-  }
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
   </script>
   <button id="back-to-top-btn"><i class="fa fa-chevron-circle-up"></i></button>
   <div class="wrapper">
@@ -152,58 +150,76 @@ function drag(ev) {
             </li>
             <li><a href="portfolio.html">PORTFOLIO</a></li>
             <li><a href="gallery.html" class="active">GALLERY</a></li>
-            </ul>
+          </ul>
         </nav>
         <div class="clear"></div>
       </header>
     </div>
-     <div class="wrapper col3">
+    <div class="wrapper col3">
 
       <div id="gallery">
         <figure>
-          <h1 style="text-align: center; color:steelblue; font-size: 30px; padding-top: 35px;"><strong>Disa foto fantastike</strong></h1>
-          <button id="butoni1"  style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; margin-right: 20px;">Slide</button>
-          <button id="butoni2"  style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; margin-right: 20px;">Shfaq Html Kodin per Head Section</button>
-          <button id="butoni3"  style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; ">Ndrysho href linkun tek G+!!</button>
+          <h1 style="text-align: center; color:steelblue; font-size: 30px; padding-top: 35px;"><strong>Disa foto
+              fantastike</strong></h1>
+          <button id="butoni1"
+            style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; margin-right: 20px;">Slide</button>
+          <button id="butoni2"
+            style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; margin-right: 20px;">Shfaq
+            Html Kodin per Head Section</button>
+          <button id="butoni3"
+            style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; ">Ndrysho href linkun
+            tek G+!!</button>
           <ul class="nospace clear">
-            <li class="one_quarter first"><a href="#"><img id="img1" src="../images/f1.jpg" width="210" height="210" alt=""></a>
+            <li class="one_quarter first"><a href="#"><img id="img1" src="../images/f1.jpg" width="210" height="210"
+                  alt=""></a>
             </li>
-            <li class="one_quarter"><a href="#"><img id="img2" src="../images/f2.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img id="img3" src="../images/f3.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img id="img4" src="../images/f4.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter first"><a href="#"><img id="img5" src="../images/f5.jpg" width="210" height="210" alt=""></a>
+            <li class="one_quarter"><a href="#"><img id="img2" src="../images/f2.jpg" width="210" height="210"
+                  alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img id="img3" src="../images/f3.jpg" width="210" height="210"
+                  alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img id="img4" src="../images/f4.jpg" width="210" height="210"
+                  alt=""></a></li>
+            <li class="one_quarter first"><a href="#"><img id="img5" src="../images/f5.jpg" width="210" height="210"
+                  alt=""></a>
             </li>
-            <li class="one_quarter"><a href="#"><img id="img6" src="../images/f6.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img id="img7" src="../images/italy.jpg" width="210" height="210" alt=""></a></li>
-            <li class="one_quarter"><a href="#"><img id="img8" src="../images/grecce.jpg" width="210" height="210" alt="Imazhi nuk mund te shfaqet"></a></li>
-            <li class="one_quarter first"><a href="#"><img id="img9" src="../images/f7.jpg" width="210" height="210" alt=""></a>
+            <li class="one_quarter"><a href="#"><img id="img6" src="../images/f6.jpg" width="210" height="210"
+                  alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img id="img7" src="../images/italy.jpg" width="210" height="210"
+                  alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img id="img8" src="../images/grecce.jpg" width="210" height="210"
+                  alt="Imazhi nuk mund te shfaqet"></a></li>
+            <li class="one_quarter first"><a href="#"><img id="img9" src="../images/f7.jpg" width="210" height="210"
+                  alt=""></a>
             </li>
-            <li class="one_quarter"><a href="#"><img id="img10" src="../images/f8.jpg" width="210" height="210" alt=""></a></li>
-            <li style= "border: 1px solid black; width:210px; height:210px;
-            display:inline-block; margin:6px; float: left;"ondrop="drop(event)" ondragover="allowDrop(event)">
-            <a href="#"><abbr title="Fotojo qe mund te zhvendoset">
-            <img id="img11" src="../images/f9.jpg" width="210" height="210" id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" alt="">
-          </abbr></a></li>
-            <li style= "border: 0.2px solid black; width:210px; height:210px;
-             display:inline-block; margin:6px; float: left;" ondrop="drop(event)" ondragover="allowDrop(event)"
-            ><a href="#"></a></li>
+            <li class="one_quarter"><a href="#"><img id="img10" src="../images/f8.jpg" width="210" height="210"
+                  alt=""></a></li>
+            <li style="border: 1px solid black; width:210px; height:210px;
+            display:inline-block; margin:6px; float: left;" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <a href="#"><abbr title="Fotojo qe mund te zhvendoset">
+                  <img id="img11" src="../images/f9.jpg" width="210" height="210" id="drag1" src="img_logo.gif"
+                    draggable="true" ondragstart="drag(event)" alt="">
+                </abbr></a></li>
+            <li style="border: 0.2px solid black; width:210px; height:210px;
+             display:inline-block; margin:6px; float: left;" ondrop="drop(event)" ondragover="allowDrop(event)"><a
+                href="#"></a></li>
 
           </ul>
         </figure>
-          <div class="description"><span id="highlight"><abbr style= "border: none;
-text-decoration: none;"title="Gallery description">Gallery D.</abbr></span>
-            <div class="icons">
-              <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
-              <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
-              <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
-              <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a><abbr style="border: none;
-text-decoration: none; "title="Ketu do te ndryshohet atributi">
-              <a id="hrefvalue" href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a></abbr>
-            </div>
+        <div class="description"><span id="highlight"><abbr style="border: none;
+text-decoration: none;" title="Gallery description">Gallery D.</abbr></span>
+          <div class="icons">
+            <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+            <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
+            <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+            <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a><abbr style="border: none;
+text-decoration: none; " title="Ketu do te ndryshohet atributi">
+              <a id="hrefvalue" href="https://plus.google.com/discover" target="_blank"
+                class="fab fa-google"></a></abbr>
           </div>
+        </div>
 
-       </div>
-     </div>
+      </div>
+    </div>
     <footer>
       <div class="footer-main">
         <div class="footer-inner">
@@ -215,8 +231,8 @@ text-decoration: none; "title="Ketu do te ndryshohet atributi">
 
 
               <p> JOLILU travel është një udhëzues gjithëpërfshirës për destinacionet
-                 më të mira të udhëtimit në botë.Ne ofrojmë përmbajtje të detajuar
-               dhe të saktë të udhëtimit, të dizajnuara për të frymëzuar udhëtarët globalë.</p>
+                më të mira të udhëtimit në botë.Ne ofrojmë përmbajtje të detajuar
+                dhe të saktë të udhëtimit, të dizajnuara për të frymëzuar udhëtarët globalë.</p>
               <a style="float: left" href="Sherbimet.html">Read more &raquo</a>
             </div>
           </div>
@@ -224,21 +240,28 @@ text-decoration: none; "title="Ketu do te ndryshohet atributi">
             <div class="footer-box">
               <h6>LINK BLOCK</h6>
               <ul>
-                <li style="border-bottom: 1px solid #919090"><a href="https://aria-travel.com/">&raquo AriaTravelAlbania</a>
+                <li style="border-bottom: 1px solid #919090"><a href="https://aria-travel.com/">&raquo
+                    AriaTravelAlbania</a>
                 </li>
                 <li style="border-bottom: 1px solid #919090"><a href="https://travel.com/">&raquo Travel</a>
                 </li>
-                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyfrontier.com/">&raquo FlyFrontier</a>
+                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyfrontier.com/">&raquo
+                    FlyFrontier</a>
                 </li>
-                <li style="border-bottom: 1px solid #919090"><a href="https://www.skyscanner.co.in/airlines-all.html">&raquo AirlineInformation</a>
+                <li style="border-bottom: 1px solid #919090"><a
+                    href="https://www.skyscanner.co.in/airlines-all.html">&raquo AirlineInformation</a>
                 </li>
-                <li style="border-bottom: 1px solid #919090"><a href="https://www.expedia.com/Flights">&raquo CheapFlights</a>
+                <li style="border-bottom: 1px solid #919090"><a href="https://www.expedia.com/Flights">&raquo
+                    CheapFlights</a>
                 </li>
-                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyksa.com/Fr/">&raquo KosovaAirline</a>
+                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyksa.com/Fr/">&raquo
+                    KosovaAirline</a>
                 </li>
                 <li style="border-bottom: 1px solid #919090"><a href="https://wizzair.com/en-gb">&raquo Wizzair</a>
                 </li>
-                <li style="border-bottom: 1px solid #919090"><a href="https://www.booking.com/index.en.html?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB">&raquo Hotels and More</a>
+                <li style="border-bottom: 1px solid #919090"><a
+                    href="https://www.booking.com/index.en.html?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB">&raquo
+                    Hotels and More</a>
                 </li>
                 <li style="border-bottom: 1px solid #919090"><a href="../README.md">&raquo Readme</a>
                 </li>
@@ -247,20 +270,26 @@ text-decoration: none; "title="Ketu do te ndryshohet atributi">
           </div>
           <div class="footer-left">
             <div class="footer-box">
-              <h6>FROM THE BLOG</h6>
+              <h6>ME TE REJAT</h6>
+
               <h4>Dubai - 6 ditë - €629</h4>
 
-              <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e..
-                  <a style="float: left" href="lavdatat.html">Read more &raquo</a>
-                  <br>
-                  <br>
+              <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e Dubait.It was popularised in the 1960s with
+                the release of </p>
+              <a style="float: left" href="lavdatat.html">Read more &raquo</a>
+              <br>
 
-                  <div class="latestb">
-                      <h4>Datat e Nisjeve</h4>
-                      <p>Datat e nisjeve – Me poshte gjeni cmimet per cdo date nisjeje:
-► 21, dhe 28 Gusht</p>
-                      <a style="float: left" href="lavdata2.html">Read more &raquo</a>
-                  </div>
+
+              <div class="latestb">
+                <h4>Dubai - 6 ditë - €629</h4>
+
+                <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e Shkupit . It was popularised in the 1960s
+                  with the release otaining</p>
+                <a style="float: left" href="lavdata2.html">Read more &raquo</a>
+                <br>
+                <br>
+
+              </div>
             </div>
           </div>
         </div>
