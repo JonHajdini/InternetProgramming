@@ -39,11 +39,34 @@
       </header>
     </div>
     <div class="wrapper col3">
+      
+      <script>
+        var w;
+        
+        window.onload = function() {
+          if(typeof(Worker) !== "undefined") {
+            if(typeof(w) == "undefined") {
+              w = new Worker("../js/timeCounter.js");
+            }
+            w.onmessage = function(event) {
+              document.getElementById("result").innerHTML = event.data;
+            };
+          } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+          }
+        }
+        
+        function stopWorker() {
+          w.terminate();
+          w = undefined;
+        }
+        </script>
         <div id="game1">
             <h1 id="snake">You are playing Snake Game. Good Luck!</h1>
           <canvas width="400" height="400" id="game"></canvas>
 
             <div id="score1">Score: <span id="score"></span></div>
+            <p style="color: red; text-align: center;">Time spent: <output id="result"></output></p>
           </div>
     </div>
 
