@@ -79,11 +79,11 @@ $(document).ready(function(){
             <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
           </fieldset>
           <fieldset>
-            Birthday: <input type="date" tabindex="4">
+            Birthday: <input type="date" tabindex="4" required>
 
           </fieldset>
           <fieldset>
-            Nisja nga: <input list="nisja" name="nis" tabindex="5">
+            Nisja nga: <input list="nisja" name="nis" tabindex="5" required>
             <datalist id="nisja">
               <option value="Prishtina">
               <option value="Shkupi">
@@ -91,7 +91,7 @@ $(document).ready(function(){
             </datalist>
 
             &nbsp;&nbsp;&nbsp;&nbsp;
-            N&euml;: <input list="ne" name="vendi" tabindex="6">
+            N&euml;: <input list="ne" name="vendi" tabindex="6" required>
             <datalist id="ne">
               <option value="Dubai">
               <option value="Stambolli">
@@ -106,12 +106,12 @@ $(document).ready(function(){
             <input placeholder="Shenoni regjionin ose hotelin" type="text" tabindex="7">
           </fieldset>
           <fieldset>
-            Net&euml;: <input type="number" name="nata" min="1" max="8">&nbsp;&nbsp;&nbsp;&nbsp;
+            Net&euml;: <input type="number" name="nata" min="1" max="8" required>&nbsp;&nbsp;&nbsp;&nbsp;
             Numri i dhomave: <input type="number" name="dhoma" min="0" max="3">&nbsp;&nbsp;&nbsp;&nbsp;
-            Numri i f&euml;mij&euml;ve: <input type="number" name="femija" min="0" max="4">
+            Numri i f&euml;mij&euml;ve: <input type="number" name="femija" min="0" max="4" required>
           </fieldset>
           <fieldset>
-            Data e nisjes: <input type="date" tabindex="8">
+            Data e nisjes: <input type="date" tabindex="8" required>
           </fieldset>
           <fieldset>
             Udhetimi: <br />
@@ -120,7 +120,7 @@ $(document).ready(function(){
             <input type="checkbox" name="udhetimi" value="anije"> Anije
           </fieldset>
           <fieldset>
-            <textarea placeholder="Type your message here...." tabindex="9" required></textarea>
+            <textarea placeholder="Type your message here...." tabindex="9"></textarea>
           </fieldset>
           <fieldset>
             <h4><span style="color:blue">Gjeni lokacionin tuaj. Shtyp butonin </span></h4>
@@ -242,7 +242,10 @@ $(document).ready(function(){
 
     </footer>
   </div>
+  
   <script src="../js/backtotop.js"></script>
+  <script src="../js/rregullat.js"></script>
+
 
 </body>
 
