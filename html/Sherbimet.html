@@ -13,11 +13,7 @@
 
 
   <style>
-  .row {
-
-  margin-left: 15px;
-}
-
+.row {margin-left: 15px;}
 .kontaineri {
   padding-right: 15px;
   padding-left: 15px;
@@ -72,13 +68,63 @@ h5
 h2
 {
   color:red;
-  padding-bottom: 20px;
+  padding: 10px 0;
+  
 }
 p
 {
   color: black;
   font-size: 14px;
 
+}
+.column {
+  float: left;
+  width: 31%;
+  margin-bottom: 16px;
+  padding: 0 9px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bashkimi {
+  padding: 0 16px;
+}
+
+.bashkimi::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+  margin: 10px 0;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: rgb(67, 180, 67);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  margin:10px 0;
+}
+
+.button:hover {
+  background-color: rgba(67, 180, 67, 0.7);
 }
   </style>
   <!--JQuery qe mundeson hide and show, JQuery effects-->
@@ -249,6 +295,47 @@ $("#15").animate({
         </div>
         </div>
     </div>
+    <h1 style="text-align: center; font-size: 28px; margin-bottom: 30px;" >Ekipa e jon&euml;</h1>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="../images/profile-pic.png" alt="Jane" style="width:100%">
+          <div class="bashkimi">
+            <h2>Jane Doe</h2>
+            <p class="title">CEO & Founder</p>
+            <p>Some text that describes me</p>
+            <a href="https://web.facebook.com/infotech.ks" target="_blank" style="margin-top:25px" class="fab fa-facebook-f"></a>
+            <p><a href="mailto:infotech-ks@hotmail.com"><button class="button">Contact</button></a></p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="column">
+        <div class="card">
+          <img src="../images/profile-pic.png" alt="Mike" style="width:100%">
+          <div class="bashkimi">
+            <h2>Mike Ross</h2>
+            <p class="title">Art Director</p>
+            <p>Some text that describes me </p>
+            <a href="https://web.facebook.com/SarcasmLol/" target="_blank" style="margin-top:25px;" class="fab fa-facebook-f"></a>
+            <p><a href="mailto:sarcasm@hotmail.com"><button class="button">Contact</button></a></p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <img src="../images/profile-pic.png" alt="John" style="width:100%">
+          <div class="bashkimi">
+            <h2>John Doe</h2>
+            <p class="title">Designer</p>
+            <p>Some text that describes me </p>
+              <a href="https://web.facebook.com/goal" target="_blank" style="margin-top:25px" class="fab fa-facebook-f"></a>
+            <p><a href="mailto:goal@hotmail.com"><button class="button">Contact</button></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </div>
 </section>
 
