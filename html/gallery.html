@@ -98,6 +98,28 @@
       background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
     }
   </style>
+  <!--JQuery qe mundeson indertimin e nje teksti-->
+  <script>
+$(document).ready(function(){
+  $("#butoni6").click(function(){
+    $("img").before("<b>Figure e bukur</b>");
+  });
+
+  $("#butoni5").click(function(){
+    $("img").after("<i>Figure e bukur</i>");
+  });
+});
+</script>
+
+
+<!--jQuery qe mundeson heqjen e ndonje elemnti-->
+<script>
+$(document).ready(function(){
+  $("#butoni4").click(function(){
+    $("#img3").remove();
+  });
+});
+</script>
 
   <!--JQuery set() qe mundeson ndryshimin e atributit-->
   <script>
@@ -167,8 +189,11 @@
             style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; margin-right: 20px;">Shfaq
             Html Kodin per Head Section</button>
           <button id="butoni3"
-            style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; ">Ndrysho href linkun
+            style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; margin-right: 20px;">Ndrysho href linkun
             tek G+!!</button>
+            <button id="butoni4"
+              style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; ">Heqe foton e trete!
+            </button>
           <ul class="nospace clear">
             <li class="one_quarter first"><a href="#"><img id="img1" src="../images/f1.jpg" width="210" height="210"
                   alt=""></a>
