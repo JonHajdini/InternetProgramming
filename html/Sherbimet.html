@@ -1,4 +1,4 @@
-<html  manifest="../appcache/cache.appcache">
+<html manifest="../appcache/cache.appcache">
 
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -13,188 +13,197 @@
 
 
   <style>
-.row {margin-left: 15px;}
-.kontaineri {
-  padding-right: 15px;
-  padding-left: 15px;
-  display: inline;
+    .row {
+      margin-left: 15px;
+    }
 
-}
+    .kontaineri {
+      padding-right: 15px;
+      padding-left: 15px;
+      display: inline;
 
-.text-center {
-  text-align: center;
-}
+    }
 
-.service-box {
-  background: #fff;
-  border: 1px solid gray;
-  padding: 20px;
+    .text-center {
+      text-align: center;
+    }
 
-}
+    .service-box {
+      background: #fff;
+      border: 1px solid gray;
+      padding: 20px;
 
-.service-icon {
-  margin-bottom: 100px;
-}
+    }
 
-.service-box {
-  margin-bottom: 150px;
-  height:500px;
-}
+    .service-icon {
+      margin-bottom: 100px;
+    }
 
-.col-md-3 {
+    .service-box {
+      margin-bottom: 150px;
+      height: 500px;
+    }
 
-  position: relative;
-  min-height: 1px;
-  padding-right: 35px;
-  padding-left: 15px;
+    .col-md-3 {
 
-}
-  .col-md-3 {float : left;}
+      position: relative;
+      min-height: 1px;
+      padding-right: 35px;
+      padding-left: 15px;
 
-.col-md-3
-{
-  width: 28%;
-}
- h2.h-bold,  h5.h-bold {
-  font-weight: 600;
-  font-size: 20px;
+    }
 
-}
-h5
-{
-    color:red;
-    padding-bottom: 20px;
-}
-h2
-{
-  color:red;
-  padding: 10px 0;
+    .col-md-3 {
+      float: left;
+    }
 
-}
-p
-{
-  color: black;
-  font-size: 14px;
-  margin: 0 auto;
+    .col-md-3 {
+      width: 28%;
+    }
 
-}
-.column {
-  float: left;
-  width: 31%;
-  margin-bottom: 16px;
-  padding: 0 9px;
-}
+    h2.h-bold,
+    h5.h-bold {
+      font-weight: 600;
+      font-size: 20px;
 
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
+    }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
+    h5 {
+      color: red;
+      padding-bottom: 20px;
+    }
 
-.bashkimi {
-  padding: 0 16px;
-}
+    h2 {
+      color: red;
+      padding: 10px 0;
 
-.bashkimi::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+    }
 
-.title {
-  color: grey;
-  margin: 10px 0;
-}
+    p {
+      color: black;
+      font-size: 14px;
+      margin: 0 auto;
 
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: rgb(67, 180, 67);
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  margin:10px 0;
-}
+    }
 
-.button:hover {
-  background-color: rgba(67, 180, 67, 0.7);
-}
+    .column {
+      float: left;
+      width: 31%;
+      margin-bottom: 16px;
+      padding: 0 9px;
+    }
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .bashkimi {
+      padding: 0 16px;
+    }
+
+    .bashkimi::after,
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: grey;
+      margin: 10px 0;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: rgb(67, 180, 67);
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .button:hover {
+      background-color: rgba(67, 180, 67, 0.7);
+    }
   </style>
   <!--JQuery qe mundeson hide and show, JQuery effects-->
   <script>
-  jQuery(document).ready(function(){
-    jQuery(".btn1").click(function(){
-      jQuery(".service-box").hide("slow", function(){ //Callback JQuery efekt qe mundeson qe efekti i pare te kompletohet pastaj te thirret efekti i dyte
-    alert("Lista e sherbimeve u fsheh");
-  });
+    jQuery(document).ready(function () {
+      jQuery(".btn1").click(function () {
+        jQuery(".service-box").hide("slow", function () { //Callback JQuery efekt qe mundeson qe efekti i pare te kompletohet pastaj te thirret efekti i dyte
+          alert("Lista e sherbimeve u fsheh");
+        });
+      });
+      jQuery(".btn2").click(function () {
+        jQuery(".service-box").show("slow", function () {
+          alert("Lista e sherbimeve  u shfaq");
+        });
+      });
     });
-  jQuery(".btn2").click(function(){
-      jQuery(".service-box").show("slow", function(){
-    alert("Lista e sherbimeve  u shfaq");
-  });
-    });
-  });
   </script>
 
-<!--JQuery effect per animacion-->
+  <!--JQuery effect per animacion-->
   <script>
-$(document).ready(function(){
-  $("#14").hover(
-function(){
-  $("#14").filter(':not(:animated)').animate({
-     width:"90%"
-  },'slow');
-// Animacioni per Hover efekte do te pres derisa te perfundoje animacioni paraprak
-},
-function() {
-  $("#14").animate({
-     width:"100%"
-  },'slow');
-});
-});
-</script>
+    $(document).ready(function () {
+      $("#14").hover(
+        function () {
+          $("#14").filter(':not(:animated)').animate({
+            width: "90%"
+          }, 'slow');
+          // Animacioni per Hover efekte do te pres derisa te perfundoje animacioni paraprak
+        },
+        function () {
+          $("#14").animate({
+            width: "100%"
+          }, 'slow');
+        });
+    });
+  </script>
 
-<script>
-$(document).ready(function(){
-$("#16").hover(
-function(){
-$("#16").filter(':not(:animated)').animate({
-   width:"90%"
-},'slow');
-// Animacioni per Hover efekte do te pres derisa te perfundoje animacioni paraprak
-},
-function() {
-$("#16").animate({
-   width:"100%"
-},'slow');
-});
-});
-</script>
+  <script>
+    $(document).ready(function () {
+      $("#16").hover(
+        function () {
+          $("#16").filter(':not(:animated)').animate({
+            width: "90%"
+          }, 'slow');
+          // Animacioni per Hover efekte do te pres derisa te perfundoje animacioni paraprak
+        },
+        function () {
+          $("#16").animate({
+            width: "100%"
+          }, 'slow');
+        });
+    });
+  </script>
 
-<script>
-$(document).ready(function(){
-$("#15").hover(
-function(){
-$("#15").filter(':not(:animated)').animate({
-   width:"90%"
-},'slow');
-// Animacioni per Hover efekte do te pres derisa te perfundoje animacioni paraprak
-},
-function() {
-$("#15").animate({
-   width:"100%"
-},'slow');
-});
-});
-</script>
+  <script>
+    $(document).ready(function () {
+      $("#15").hover(
+        function () {
+          $("#15").filter(':not(:animated)').animate({
+            width: "90%"
+          }, 'slow');
+          // Animacioni per Hover efekte do te pres derisa te perfundoje animacioni paraprak
+        },
+        function () {
+          $("#15").animate({
+            width: "100%"
+          }, 'slow');
+        });
+    });
+  </script>
 
 </head>
 
@@ -214,12 +223,12 @@ $("#15").animate({
             <li><a href="#">MENU</a>
               <ul>
                 <li><a href="Chooselanguage.html">LANGUAGE</a></li>
-                  <li><a href="game.html">GAME</a></li>
+                <li><a href="game.html">GAME</a></li>
               </ul>
             </li>
             <li><a href="portfolio.html">PORTFOLIO</a></li>
             <li><a href="gallery.html">GALLERY</a></li>
-            </ul>
+          </ul>
         </nav>
         <div class="clear"></div>
       </header>
@@ -232,117 +241,135 @@ $("#15").animate({
         <!-- main content -->
         <div id="homepage">
           <!-- services area -->
-          <section id="service" style="display: inline" >
-    <div class="text-center">
-            <h2 class="h-bold">Sherbimet</h2>
-            <p>Me poshte jane disa nga sherbimet te cilat mundesohen nga kompania jone!</p>
-          </div>
-
-  <div class="text-center">
-    <div class="kontaineri">
-
-      <div class="row">
-        <div class="col-md-3">
-          <div>
-            <div class="service-box">
-              <div class="service-icon">
-                  <span><img id="14" style="width: 100%;" src="../images/Akomodim.jpg" alt="Imazhi nuk eshte ende ne dispozicion!" /></span>
-              </div>
-              <div >
-                <h5>Akomodim</h5>
-                <p>
-
-                Jolilu Travel krenohet duke u dhënë klientëve një zgjedhje të
-                 nevojave specifike të akomodimit, pa marrë parasysh se ku - në aspektin rajonal,
-                  kombëtar dhe ndërkombëtar.Duke ju ofruar akomodim sa me te mire dhe te rahatshem per familjen dhe miqte tuaj,
-                  ne ju sjellim ofertat tona me te mira dhe me te sigurta!
-
-                 </p>
-
-              </div>
+          <section id="service" style="display: inline">
+            <div class="text-center">
+              <h2 class="h-bold">Sherbimet</h2>
+              <p>Me poshte jane disa nga sherbimet te cilat mundesohen nga kompania jone!</p>
             </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div>
-            <div class="service-box">
-              <div class="service-icon">
-                <span><img id="15" style="width: 100%;" src="../images/Travelinsurance.jpg" alt="Imazhi nuk eshte ende ne dispozicion!" /></span>
-              </div>
-              <div>
-                <h5 style="margin-top: -15px;">Siguri Udhetimi</h5>
-                <p>
-                Jolilu Travel siguron ligjet e sigurimit të udhëtimit të mbikqyrura nga AIG, Hollard dhe TIC.
-                Me një policë të shëndetit në udhëtim, Scardian, jua kompenson shpenzimet që mund të rezultojnë për shërim apo hospitalizim emergjent gjatë qëndrimit tuaj në ndonjë shtet të huaj.
-              </p>
 
+            <div class="text-center">
+              <div class="kontaineri">
+
+                <div class="row">
+                  <div class="col-md-3">
+                    <div>
+                      <div class="service-box">
+                        <div class="service-icon">
+                          <span><img id="14" style="width: 100%;" src="../images/Akomodim.jpg"
+                              alt="Imazhi nuk eshte ende ne dispozicion!" /></span>
+                        </div>
+                        <div>
+                          <h5>Akomodim</h5>
+                          <p>
+
+                            Jolilu Travel krenohet duke u dhënë klientëve një zgjedhje të
+                            nevojave specifike të akomodimit, pa marrë parasysh se ku - në aspektin rajonal,
+                            kombëtar dhe ndërkombëtar.Duke ju ofruar akomodim sa me te mire dhe te rahatshem per
+                            familjen dhe miqte tuaj,
+                            ne ju sjellim ofertat tona me te mira dhe me te sigurta!
+
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div>
+                      <div class="service-box">
+                        <div class="service-icon">
+                          <span><img id="15" style="width: 100%;" src="../images/Travelinsurance.jpg"
+                              alt="Imazhi nuk eshte ende ne dispozicion!" /></span>
+                        </div>
+                        <div>
+                          <h5 style="margin-top: -15px;">Siguri Udhetimi</h5>
+                          <p>
+                            Jolilu Travel siguron ligjet e sigurimit të udhëtimit të mbikqyrura nga AIG, Hollard dhe
+                            TIC.
+                            Me një policë të shëndetit në udhëtim, Scardian, jua kompenson shpenzimet që mund të
+                            rezultojnë për shërim apo hospitalizim emergjent gjatë qëndrimit tuaj në ndonjë shtet të
+                            huaj.
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div>
+                      <div class="service-box">
+                        <div class="service-icon">
+                          <span><img id="16" style="width: 100%;" src="../images/Linja.jpg"
+                              alt="Imazhi nuk eshte ende ne dispozicion!" /></span>
+                        </div>
+                        <div>
+                          <h5>Linja Ajrore dhe rezervimet </h5>
+                          <p>
+                            JOLILU Travel ofron rezervime me kosto efektive të fluturimit për të gjitha destinacionet.
+                            Preferenca për çdo linjë të veçantë ajrore sigurisht që merret në konsideratë sa herë që
+                            bëhen rezervime.
+                            Bashkpunimi e Jolilu Travel me Aria Travel i jep Julilu Travel një përfaqësim me të fortë në
+                            arenën ndërkombëtare.
+                          </p>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <h1 style="text-align: center; font-size: 28px; margin-bottom: 30px;">Ekipa e jon&euml;</h1>
+              <div class="row">
+                <div class="column">
+                  <div class="card">
+                    <img
+                      src="https://scontent.fprn3-1.fna.fbcdn.net/v/t1.0-9/70349862_2877915908904493_2950854458923286528_n.jpg?_nc_cat=105&_nc_ohc=IJW5Iu_eyp8AQn9dEJ6KPhbaAElZ2qlIY_mtHQMQmp_JQbuQJ89O7dXgg&_nc_ht=scontent.fprn3-1.fna&oh=9337ee3b5c94989eb4ce3fe6b8fca910&oe=5EA59BB0"
+                      alt="Jane" style="width:100%">
+                    <div class="bashkimi">
+                      <h2>Lum Pireva</h2>
+                      <p class="title">Student and part time Web Developer</p>
+                      <p>Lenda Interneti</p>
+                      <a href="https://www.facebook.com/lumprv" target="_blank" style="margin-top:25px"
+                        class="fab fa-facebook-f"></a>
+                      <p><a href="mailto:pireva.lum@hotmail.com"><button class="button">Contact</button></a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <div class="card">
+                    <img
+                      src="https://scontent.fprn3-1.fna.fbcdn.net/v/t1.0-9/44336071_2389549424405498_7189547813510840320_n.jpg?_nc_cat=106&_nc_ohc=BGMjpETRNnkAQkM0deiye6vRlps6nwSnSF2UyEJms6k_k0XzZRn_FzcTA&_nc_ht=scontent.fprn3-1.fna&oh=ff2542c8c5355f6a54bfdcf8259e6370&oe=5EA051D9"
+                      alt="Mike" style="width:100%">
+                    <div class="bashkimi">
+                      <h2>Jon Hajdini</h2>
+                      <p class="title">Student and part time Web Developer</p>
+                      <p>Lenda Interneti </p>
+                      <a href="https://www.facebook.com/jonhajdini" target="_blank" style="margin-top:25px;"
+                        class="fab fa-facebook-f"></a>
+                      <p><a href="mailto:jonhajdini99@gmail.com"><button class="button">Contact</button></a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="card">
+                    <img
+                      src="https://scontent.fprn3-1.fna.fbcdn.net/v/t1.0-1/p960x960/46489541_497845484061394_3819596995669000192_o.jpg?_nc_cat=106&_nc_ohc=G-rDkrTB9u4AQkAgbeOpl3L_UuD_ddw9GWHlbhpsrdtUtXMcIPta_QdEw&_nc_ht=scontent.fprn3-1.fna&oh=72066ec1e0887df6ebc650a18bf83bd0&oe=5E9ABCF7"
+                      alt="John" style="width:100%">
+                    <div class="bashkimi">
+                      <h2>Lirim Beka</h2>
+                      <p class="title">Student and part time Web Developer</p>
+                      <p>Lenda Interneti </p>
+                      <a href="https://www.facebook.com/lirim.beka.4000" target="_blank" style="margin-top:25px"
+                        class="fab fa-facebook-f"></a>
+                      <p><a href="mailto:beka.lirim@gmail.com"><button class="button">Contact</button></a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div>
-            <div class="service-box">
-              <div class="service-icon">
-                    <span><img id="16" style="width: 100%;" src="../images/Linja.jpg" alt="Imazhi nuk eshte ende ne dispozicion!" /></span>
-              </div>
-              <div>
-                <h5>Linja Ajrore dhe rezervimet </h5>
-                <p>
-                  JOLILU Travel ofron rezervime me kosto efektive të fluturimit për të gjitha destinacionet.
-                  Preferenca për çdo linjë të veçantë ajrore sigurisht që merret në konsideratë sa herë që bëhen rezervime.
-                  Bashkpunimi e Jolilu Travel me Aria Travel i jep Julilu Travel një përfaqësim  me të fortë në arenën ndërkombëtare.
-                </p>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-    </div>
-    <h1 style="text-align: center; font-size: 28px; margin-bottom: 30px;" >Ekipa e jon&euml;</h1>
-    <div class="row">
-      <div class="column">
-        <div class="card">
-          <img src="https://scontent.fprn3-1.fna.fbcdn.net/v/t1.0-9/70349862_2877915908904493_2950854458923286528_n.jpg?_nc_cat=105&_nc_ohc=IJW5Iu_eyp8AQn9dEJ6KPhbaAElZ2qlIY_mtHQMQmp_JQbuQJ89O7dXgg&_nc_ht=scontent.fprn3-1.fna&oh=9337ee3b5c94989eb4ce3fe6b8fca910&oe=5EA59BB0" alt="Jane" style="width:100%">
-          <div class="bashkimi">
-            <h2>Lum Pireva</h2>
-            <p class="title">Student and part time Web Developer</p>
-            <p>Lenda Interneti</p>
-            <a href="https://www.facebook.com/lumprv" target="_blank" style="margin-top:25px" class="fab fa-facebook-f"></a>
-            <p><a href="mailto:pireva.lum@hotmail.com"><button class="button">Contact</button></a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <img src="https://scontent.fprn3-1.fna.fbcdn.net/v/t1.0-9/44336071_2389549424405498_7189547813510840320_n.jpg?_nc_cat=106&_nc_ohc=BGMjpETRNnkAQkM0deiye6vRlps6nwSnSF2UyEJms6k_k0XzZRn_FzcTA&_nc_ht=scontent.fprn3-1.fna&oh=ff2542c8c5355f6a54bfdcf8259e6370&oe=5EA051D9" alt="Mike" style="width:100%">
-          <div class="bashkimi">
-            <h2>Jon Hajdini</h2>
-            <p class="title">Student and part time Web Developer</p>
-            <p>Lenda Interneti </p>
-            <a href="https://www.facebook.com/jonhajdini" target="_blank" style="margin-top:25px;" class="fab fa-facebook-f"></a>
-            <p><a href="mailto:jonhajdini99@gmail.com"><button class="button">Contact</button></a></p>
-          </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="card">
-          <img src="https://scontent.fprn3-1.fna.fbcdn.net/v/t1.0-1/p960x960/46489541_497845484061394_3819596995669000192_o.jpg?_nc_cat=106&_nc_ohc=G-rDkrTB9u4AQkAgbeOpl3L_UuD_ddw9GWHlbhpsrdtUtXMcIPta_QdEw&_nc_ht=scontent.fprn3-1.fna&oh=72066ec1e0887df6ebc650a18bf83bd0&oe=5E9ABCF7" alt="John" style="width:100%">
-          <div class="bashkimi">
-            <h2>Lirim Beka</h2>
-            <p class="title">Student and part time Web Developer</p>
-            <p>Lenda Interneti </p>
-              <a href="https://www.facebook.com/lirim.beka.4000" target="_blank" style="margin-top:25px" class="fab fa-facebook-f"></a>
-            <p><a href="mailto:beka.lirim@gmail.com"><button class="button">Contact</button></a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+          </section>
 
 
         </div>
@@ -370,8 +397,8 @@ $("#15").animate({
 
 
               <p> JOLILU travel është një udhëzues gjithëpërfshirës për destinacionet
-                 më të mira të udhëtimit në botë.Ne ofrojmë përmbajtje të detajuar
-               dhe të saktë të udhëtimit, të dizajnuara për të frymëzuar udhëtarët globalë.</p>
+                më të mira të udhëtimit në botë.Ne ofrojmë përmbajtje të detajuar
+                dhe të saktë të udhëtimit, të dizajnuara për të frymëzuar udhëtarët globalë.</p>
               <a style="float: left" href="Sherbimet.html">Read more &raquo</a>
             </div>
           </div>
@@ -379,21 +406,28 @@ $("#15").animate({
             <div class="footer-box">
               <h6>LINK BLOCK</h6>
               <ul>
-                <li style="border-bottom: 1px solid #919090"><a href="https://aria-travel.com/">&raquo AriaTravelAlbania</a>
+                <li style="border-bottom: 1px solid #919090"><a href="https://aria-travel.com/">&raquo
+                    AriaTravelAlbania</a>
                 </li>
                 <li style="border-bottom: 1px solid #919090"><a href="https://travel.com/">&raquo Travel</a>
                 </li>
-                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyfrontier.com/">&raquo FlyFrontier</a>
+                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyfrontier.com/">&raquo
+                    FlyFrontier</a>
                 </li>
-                <li style="border-bottom: 1px solid #919090"><a href="https://www.skyscanner.co.in/airlines-all.html">&raquo AirlineInformation</a>
+                <li style="border-bottom: 1px solid #919090"><a
+                    href="https://www.skyscanner.co.in/airlines-all.html">&raquo AirlineInformation</a>
                 </li>
-                <li style="border-bottom: 1px solid #919090"><a href="https://www.expedia.com/Flights">&raquo CheapFlights</a>
+                <li style="border-bottom: 1px solid #919090"><a href="https://www.expedia.com/Flights">&raquo
+                    CheapFlights</a>
                 </li>
-                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyksa.com/Fr/">&raquo KosovaAirline</a>
+                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyksa.com/Fr/">&raquo
+                    KosovaAirline</a>
                 </li>
                 <li style="border-bottom: 1px solid #919090"><a href="https://wizzair.com/en-gb">&raquo Wizzair</a>
                 </li>
-                <li style="border-bottom: 1px solid #919090"><a href="https://www.booking.com/index.en.html?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB">&raquo Hotels and More</a>
+                <li style="border-bottom: 1px solid #919090"><a
+                    href="https://www.booking.com/index.en.html?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB">&raquo
+                    Hotels and More</a>
                 </li>
                 <li style="border-bottom: 1px solid #919090"><a href="../README.md">&raquo Readme</a>
                 </li>
@@ -402,20 +436,26 @@ $("#15").animate({
           </div>
           <div class="footer-left">
             <div class="footer-box">
-              <h6>FROM THE BLOG</h6>
+              <h6>ME TE REJAT</h6>
+
               <h4>Dubai - 6 ditë - €629</h4>
 
-              <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e..
-                  <a style="float: left" href="lavdatat.html">Read more &raquo</a>
-                  <br>
-                  <br>
+              <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e Dubait.It was popularised in the 1960s with
+                the release of </p>
+              <a style="float: left" href="lavdatat.html">Read more &raquo</a>
+              <br>
 
-                  <div class="latestb">
-                      <h4>Datat e Nisjeve</h4>
-                      <p>Datat e nisjeve – Me poshte gjeni cmimet per cdo date nisjeje:
-► 21, dhe 28 Gusht</p>
-                      <a style="float: left" href="lavdata2.html">Read more &raquo</a>
-                  </div>
+
+              <div class="latestb">
+                <h4>Barcelona - 6 ditë - €829</h4>
+
+                <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e Shkupit . It was popularised in the 1960s
+                  with the release otaining</p>
+                <a style="float: left" href="lavdata3.html">Read more &raquo</a>
+                <br>
+                <br>
+
+              </div>
             </div>
           </div>
         </div>
@@ -432,8 +472,7 @@ $("#15").animate({
         </div>
         <div class="clr"></div>
       </div>
-  </div>
-  </footer>
+    </footer>
   </div>
   <script src="../js/backtotop.js"></script>
   <script src="../js/rregullat.js"></script>
