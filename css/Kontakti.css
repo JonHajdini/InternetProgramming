@@ -1,9 +1,3 @@
-
-
-
-
-
-
 #contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="tel"],
@@ -76,6 +70,7 @@ fieldset {
   background: #FFF;
   margin: 0 0 5px;
   padding: 10px;
+  color: black;
 }
 
 #contact input[type="text"]:hover,

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="../appcache/cache.appcache">
+<html>
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -94,14 +94,15 @@
                     <ul>
                         <li><a href="../index.html">HOME</a></li>
                         <li><a href="Sherbimet.html">SHERBIMET</a></li>
-                        <li><a href="Kontakti.html">KONTAKTI</a></li>
+                        <li><a href="#kontakti">KONTAKTONI</a></li>
+                        <li><a href="Kontakti.html">REZERVO</a></li>
                         <li><a href="#">MENU</a>
                             <ul>
                                 <li><a href="Chooselanguage.html">LANGUAGE</a></li>
-                                <li><a href="game.html">GAME</a></li>
+                                <li><a href="game.html">FUN</a></li>
                             </ul>
                         </li>
-                        <li><a href="portfolio.html" class="active">PORTFOLIO</a></li>
+                        <li><a href="portfolio.html" class="active">OFERTA</a></li>
                         <li><a href="gallery.html">GALLERY</a></li>
 
                     </ul>
@@ -347,9 +348,20 @@
             <br />
             <hr />
             <br />
-            <p><iframe width="950px" height="450" src="https://www.youtube.com/embed/DHGNQUfcgEE" frameborder="0"
-                    allowfullscreen></iframe></p>
-            </br>
+            <br />
+            <div style="text-align: center;"><span style="color:#000080;"><span style="text-align: right;"><span
+                            style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif"><strong>Pamje te
+                                    Amsterdamit
+                                </strong></span></span></span></span></div>
+            <br />
+
+            <div style="text-align: center;"><video width="640" height="370" controls>
+                    <source src="../audio/amsterdam.mp4" type="video/mp4">
+                    <source src="../audio/amsterdam.mp4" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <br />
             <br />
             <div style="text-align: center;"><span style="color:#000080;"><span style="text-align: right;"><span
                             style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif"><strong>Himni i
@@ -420,6 +432,43 @@
                         </dl>
                     </span>
             </div>
+            <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
+                        style="font-size: 18px;">
+                        <p>Klikoni butonin per te bere nje global search tekstin "Ky eshte nje qytet i nje shteti"</p>
+
+                        <button onclick="myFunction()">Kerko</button>
+
+                        <p id="demo"></p>
+
+                        <script>
+                            function myFunction() {
+                                var str = "Ky eshte nje qytet i nje shteti";
+                                var patt1 = /nje/g;
+                                var result = str.match(patt1);
+                                document.getElementById("demo").innerHTML = result;
+                            }
+                        </script>
+            </div>
+            <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
+                        style="font-size: 18px;">
+
+                        <p>Klikoni butonin per te bere nje case sensitive search per "nje" ne tekstin "Ky eshte nje qytet i nje shteti"</p>
+
+
+                        <button onclick="myFunction1()">Try it</button>
+
+                        <p id="demo1"></p>
+
+                        <script>
+                            function myFunction1() {
+                                var str = "Ky eshte nje qytet i nje shteti";
+                                var patt1 = /nje/i;
+                                var result = str.match(patt1);
+                                document.getElementById("demo1").innerHTML = result;
+                            }
+                        </script>
+
+            </div>
 
         </div>
         <footer>
@@ -442,33 +491,41 @@
                         <div class="footer-box">
                             <h6>LINK BLOCK</h6>
                             <ul>
-                                <li style="border-bottom: 1px solid #919090"><a href="https://aria-travel.com/">&raquo
+                                <li style="border-bottom: 1px solid #919090"><a href="https://aria-travel.com/"
+                                        target="_blank">&raquo
                                         AriaTravelAlbania</a>
                                 </li>
-                                <li style="border-bottom: 1px solid #919090"><a href="https://travel.com/">&raquo
+                                <li style="border-bottom: 1px solid #919090"><a href="https://travel.com/"
+                                        target="_blank">&raquo
                                         Travel</a>
                                 </li>
-                                <li style="border-bottom: 1px solid #919090"><a
-                                        href="https://www.flyfrontier.com/">&raquo FlyFrontier</a>
+                                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyfrontier.com/"
+                                        target="_blank">&raquo
+                                        FlyFrontier</a>
                                 </li>
                                 <li style="border-bottom: 1px solid #919090"><a
-                                        href="https://www.skyscanner.co.in/airlines-all.html">&raquo
+                                        href="https://www.skyscanner.co.in/airlines-all.html" target="_blank">&raquo
                                         AirlineInformation</a>
                                 </li>
-                                <li style="border-bottom: 1px solid #919090"><a
-                                        href="https://www.expedia.com/Flights">&raquo CheapFlights</a>
+                                <li style="border-bottom: 1px solid #919090"><a href="https://www.expedia.com/Flights"
+                                        target="_blank">&raquo
+                                        CheapFlights</a>
                                 </li>
-                                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyksa.com/Fr/">&raquo
+                                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyksa.com/Fr/"
+                                        target="_blank">&raquo
                                         KosovaAirline</a>
                                 </li>
-                                <li style="border-bottom: 1px solid #919090"><a href="https://wizzair.com/en-gb">&raquo
+                                <li style="border-bottom: 1px solid #919090"><a href="https://wizzair.com/en-gb"
+                                        target="_blank">&raquo
                                         Wizzair</a>
                                 </li>
                                 <li style="border-bottom: 1px solid #919090"><a
-                                        href="https://www.booking.com/index.en.html?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB">&raquo
+                                        href="https://www.booking.com/index.en.html?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB"
+                                        target="_blank">&raquo
                                         Hotels and More</a>
                                 </li>
-                                <li style="border-bottom: 1px solid #919090"><a href="../README.md">&raquo Readme</a>
+                                <li style="border-bottom: 1px solid #919090"><a href="../README.md"
+                                        target="_blank">&raquo Readme</a>
                                 </li>
                             </ul>
                         </div>

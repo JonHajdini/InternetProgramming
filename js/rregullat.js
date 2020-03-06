@@ -1,21 +1,3 @@
-function EshteZbrazet(inputi) {
-    if (inputi.type == "checkbox") {
-        if (inputi.checked) {
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
-    else {
-        if (inputi.value == "") {
-            return true;
-        }
-        return false;
-    }
-}
-
-
 function VendosiNgjyre(elementi) {
     elementi.style.backgroundColor = "#FA8072";
 }
@@ -40,7 +22,6 @@ function name() {
 
 window.onload = function () {
     var forma = document.getElementById("contact-form");
-    var elementetRequired = document.querySelectorAll(".required");
     var reg = /^([A-Za-z0-9_\-\.]){1,}\@([A-Za-z0-9_\-\.]){1,}\.([A-Za-z]{2,4})$/;
 
     forma.onsubmit = function (e) {

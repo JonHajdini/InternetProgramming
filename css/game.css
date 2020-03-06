@@ -11,6 +11,8 @@
     margin-top: 2%; 
     border: 4px groove rgb(187, 124, 7);
     background: rgb(168, 23, 132);
+    outline: 4px dashed red;
+    outline-offset: 3px;
   }
   #snake{
     font-style: italic;
