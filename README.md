@@ -1,2 +1,2 @@
-# INT19_20_Gr14
-Projekti ne Internet
+# PI_Gr19
+Projekti ne lenden Programimi ne Internet
