@@ -58,7 +58,7 @@
     <div class="wrapper col3">
       <div id="container" class="clear">
 
-        <form id="contact" action="" method="post" autocomplete="on">
+        <form id="contact" action="<?php echp $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="on">
           <h3>Rezervo</h3>
           <h4>Jepni te dhenat e meposhtme</h4>
           <fieldset>
@@ -77,10 +77,10 @@
               tabindex="2" required>
           </fieldset>
           <fieldset>
-            <input placeholder="Your Phone Number" type="tel" tabindex="3" pattern="[0-9]{9}" required>
+            <input placeholder="Your Phone Number" type="tel" name="tel" tabindex="3" pattern="[0-9]{9}" required>
           </fieldset>
           <fieldset>
-            Birthday: <input type="date" tabindex="4" required>
+            Birthday: <input type="date" tabindex="4" name ="birthday" required>
 
           </fieldset>
           <fieldset>
@@ -104,7 +104,7 @@
           </fieldset>
 
           <fieldset>
-            <input placeholder="Shenoni regjionin ose hotelin" type="text" tabindex="7">
+            <input placeholder="Shenoni regjionin ose hotelin" type="text" name="hotel" tabindex="7">
           </fieldset>
           <fieldset>
             Net&euml;: <input type="number" name="nata" min="1" max="8" required>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -112,7 +112,7 @@
             Numri i f&euml;mij&euml;ve: <input type="number" name="femija" min="0" max="4" required>
           </fieldset>
           <fieldset>
-            Data e nisjes: <input type="date" tabindex="8" required>
+            Data e nisjes: <input type="date" tabindex="8" name="nisja" required>
           </fieldset>
           <fieldset>
             Udhetimi: <br />
