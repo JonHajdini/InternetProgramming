@@ -1,4 +1,17 @@
-﻿<html>
+﻿<?php
+
+if(isset($_POST['submit'])){
+
+ $emri = $_POST['name'];
+
+ echo "Faleminderit " . $emri; 
+ echo "Mesazhi i juaj u pranua me sukses";
+
+}
+
+?>
+
+<html>
 
 <head>
   <title>Gallery</title>
@@ -336,11 +349,11 @@ text-decoration: none; " title="Ketu do te ndryshohet atributi">
         <div class="footer-left">
           <div class="footer-box">
             <h6 id="kontakti">CONTACT US</h6>
-            <form id="contact-form" method="post" action="" autocomplete="on">
+            <form id="contact-form" method="post" action="gallery.php" autocomplete="on">
               <input type="text" id="name" name="name" placeholder="Name" class="required">
               <input type="text" id="email" name="email" placeholder="Email" class="required">
               <textarea name="message" placeholder="Message" rows="6" class="required"></textarea><br>
-              <input type="submit" name="SUBMIT" value="SUBMIT">
+              <input type="submit" name="submit" value="SUBMIT">
             </form>
           </div>
         </div>
