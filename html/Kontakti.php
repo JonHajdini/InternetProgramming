@@ -9,9 +9,82 @@
     $nisja = $_POST['nisja'];
   }
 ?>
+<?php
+
+/*  ---- Indexed array ---- */
+$name = array("HOME", "SHERBIMET", "KONTAKTONI", "FUN");
+$arrlength = count($name);
+
+for($x = 0; $x < $arrlength; $x++) 
+{
+
+    if($name[$x] == "HOME")
+    {
+        continue;
+    }
+}
+/* ------------------------- */
+
+/* --- Associative arrays --- */
+
+$assoArray = array("Agency" => "JOLILU", "Contact" => "CONTACT US");
+
+/* -------------------------- */
+
+/* --- Multidimensional arrays --- */
+$contact = array
+(
+    array("Number: ",0101404101),
+    array("Address: ","Julian Park st.101"),
+    array("City: ", "Prishtine"),
+);
+
+for ($row = 0; $row < 3; $row++)
+{
+    for ($col = 0; $col < 2; $col++)
+    {
+        //echo "\n".$contact[$row][$col]."\n";
+    }
+
+}
+
+/* ------------------------------------- */
+
+/* --- Sorting Arrays --- */
+$numbers = array(5, 24, -3, 11, 6);
+rsort($numbers);  // descending order
+
+/* ---- Manual sorting(Manupilimi me vargje) ---- */
+$arrlength = count($numbers);
+for($x = 0; $x < $arrlength; $x++)
+{
+    for ($y = $x + 1; $y < $arrlength; $y++)
+    {
+        if($numbers[$x] < $numbers[$y])
+        {
+            $tempValue = $numbers[$y];
+            $numbers[$y] = $numbers[$x];
+            $numbers[$x] = $tempValue;
+            // ascending order
+        }
+    }
+}
+/* --------------------------------------------- */
+
+/* ---- Sorting associatove arrays --- */
+$costumers = "Costumers: ";
+$age = array("John" => "20", "Paul" => "31", "Angela" => "22");
+$Aarrsorted = asort($age); // Ascending order according to the value(age)
+$Darrsorted = krsort($age); // Descending order according to the key(Name)
+/* ---------------------------------------------- */
+
+
+?>
 <!DOCTYPE html>
 <html>
+<?php 
 
+?>
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Rezervo</title>
@@ -48,11 +121,11 @@
         </div>
         <nav>
           <ul>
-            <li><a href="../index.html">HOME</a></li>
-            <li><a href="Sherbimet.html">SHERBIMET</a></li>
-            <li><a href="#kontakti">KONTAKTONI</a></li>
+            <li><a href="../index.html"></a></li>
+            <li><a href="Sherbimet.html"><?php echo $name[1] ?></a></li>
+            <li><a href="#kontakti"><?php echo $name[2] ?></a></li>
             <li><a href="Kontakti.html" class="active">REZERVO</a></li>
-            <li><a href="#">FUN</a>
+            <li><a href="#"><?php echo $name[3] ?></a>
               <ul>
                 <li><a href="Chooselanguage.html">LANGUAGE</a></li>
                 <li><a href="game.html">GAME</a></li>
@@ -69,7 +142,7 @@
     <div class="wrapper col3">
       <div id="container" class="clear">
 
-        <form id="contact" action="<?php echp $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="on">
+        <form id="contact" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="on">
           <h3>Rezervo</h3>
           <h4>Jepni te dhenat e meposhtme</h4>
           <fieldset>
@@ -186,7 +259,7 @@
               <img src="../images/372.jpg" width="215px" height="90px" />
 
 
-              <p> JOLILU travel është një udhëzues gjithëpërfshirës për destinacionet
+              <p> <?php echo $assoArray['Agency']?> travel është një udhëzues gjithëpërfshirës për destinacionet
                 më të mira të udhëtimit në botë.Ne ofrojmë përmbajtje të detajuar
                 dhe të saktë të udhëtimit, të dizajnuara për të frymëzuar udhëtarët globalë.</p>
               <a style="float: left" href="Sherbimet.html">Read more &raquo</a>
@@ -256,7 +329,7 @@
         </div>
         <div class="footer-left">
           <div class="footer-box">
-            <h6 id="kontakti">CONTACT US</h6>
+            <h6 id="kontakti"><?php echo $assoArray['Contact']?></h6>
             <form id="contact-form" method="post" action="" autocomplete="on">
               <input type="text" id="name" name="name" placeholder="Name" class="required">
               <input type="text" id="email" name="email" placeholder="Email" class="required">
@@ -273,6 +346,7 @@
 
   <script src="../js/backtotop.js"></script>
   <script src="../js/rregullat.js"></script>
+
 
 
 </body>
