@@ -10,12 +10,62 @@
   }
 ?>
 <?php
+class Vargjet
+{
+    public $IndexedArray;
+    public $AssociativeArray;
+    public $MulDimArray;
 
-/*  ---- Indexed array ---- */
-$name = array("HOME", "SHERBIMET", "KONTAKTONI", "FUN");
-$arrlength = count($name);
 
-for($x = 0; $x < $arrlength; $x++) 
+    function __construct($IndexedArray, $AssociativeArray, $MulDimArray)
+    {
+        $this->indexed = $IndexedArray;
+        $this->associative = $AssociativeArray;
+        $this->multidimensional = $MulDimArray;
+        $this->length = count($IndexedArray);
+
+    }
+    function get_indexed()
+    {
+        return $this->indexed;
+    }
+    function get_associative()
+    {
+        return $this->associative;
+    }
+    function get_length()
+    {
+        return $this->length;
+    }
+    function get_multidimensional()
+    {
+        return $this->multidimensional;
+    }
+
+    function __destruct()
+    {
+        //echo "Klasa u prish!";
+    }
+}
+
+$indArray = array("HOME", "SHERBIMET", "KONTAKTONI", "FUN");
+
+$assoArray = array("Agency" => "JOLILU", "Contact" => "CONTACT US");
+
+$mulArray = array
+(
+    array("Number: ",0101404101),
+    array("Address: ","Julian Park st.101"),
+    array("City: ", "Prishtine"),
+);
+
+$vargjet = new Vargjet($indArray, $assoArray, $mulArray);
+$name =  $vargjet->get_indexed();
+$arrlength = $vargjet->get_length();
+$agency = $vargjet->get_associative();
+$contact = $vargjet->get_multidimensional();
+
+for($x = 0; $x < $arrlength; $x++)
 {
 
     if($name[$x] == "HOME")
@@ -23,21 +73,6 @@ for($x = 0; $x < $arrlength; $x++)
         continue;
     }
 }
-/* ------------------------- */
-
-/* --- Associative arrays --- */
-
-$assoArray = array("Agency" => "JOLILU", "Contact" => "CONTACT US");
-
-/* -------------------------- */
-
-/* --- Multidimensional arrays --- */
-$contact = array
-(
-    array("Number: ",0101404101),
-    array("Address: ","Julian Park st.101"),
-    array("City: ", "Prishtine"),
-);
 
 for ($row = 0; $row < 3; $row++)
 {
@@ -48,17 +83,54 @@ for ($row = 0; $row < 3; $row++)
 
 }
 
-/* ------------------------------------- */
+/*-----------------------------------------------------------------*/
 
-/* --- Sorting Arrays --- */
-$numbers = array(5, 24, -3, 11, 6);
-rsort($numbers);  // descending order
-
-/* ---- Manual sorting(Manupilimi me vargje) ---- */
-$arrlength = count($numbers);
-for($x = 0; $x < $arrlength; $x++)
+class SortinArrays
 {
-    for ($y = $x + 1; $y < $arrlength; $y++)
+    public $IndexedArray;
+    public $AssociativeArray;
+    function __construct($IndexedArray, $AsscociativeArray)
+    {
+        $this->numbers = $IndexedArray;
+        $this->assort = sort($IndexedArray);
+        $this->dessort = rsort($IndexedArray);
+        $this->Kdessort = krsort($AsscociativeArray);
+        $this->Aassort = asort($AsscociativeArray);
+    }
+    function get_numbers()
+    {
+        return $this->numbers;
+    }
+    function get_assort()
+    {
+        return $this->assort;
+    }
+    function get_dessort()
+    {
+        return $this->dessort;
+    }
+    function get_Aassort()
+    {
+        return $this->Aassort;
+    }
+    function get_Kdessort()
+    {
+        return $this->Kdessort;
+    }
+}
+
+
+$indarrays = array(5, 24, -3, 11, 6);
+$assarrays = array("John" => "20", "Paul" => "31", "Angela" => "22");
+$sortoVargjet = new SortinArrays($indarrays, $assarrays);
+
+$numbers = $sortoVargjet->get_numbers();
+$sort = $sortoVargjet->get_dessort();      //descending order numbers
+
+// manual sorting (Manupilimi me vargje)
+for($x = 0; $x < count($numbers); $x++)
+{
+    for ($y = $x + 1; $y < count($numbers); $y++)
     {
         if($numbers[$x] < $numbers[$y])
         {
@@ -66,23 +138,18 @@ for($x = 0; $x < $arrlength; $x++)
             $numbers[$y] = $numbers[$x];
             $numbers[$x] = $tempValue;
             // ascending order
+
         }
     }
 }
-/* --------------------------------------------- */
 
-/* ---- Sorting associatove arrays --- */
-$costumers = "Costumers: ";
-$age = array("John" => "20", "Paul" => "31", "Angela" => "22");
-$Aarrsorted = asort($age); // Ascending order according to the value(age)
-$Darrsorted = krsort($age); // Descending order according to the key(Name)
-/* ---------------------------------------------- */
-
+$Aarrsorted = $sortoVargjet->get_Aassort();  // Ascending order according to the value(age)
+$Darrsorted = $sortoVargjet->get_Kdessort(); // Descending order according to the key(Name)
 
 ?>
 <!DOCTYPE html>
 <html>
-<?php 
+<?php
 
 ?>
 <head>
@@ -259,7 +326,7 @@ $Darrsorted = krsort($age); // Descending order according to the key(Name)
               <img src="../images/372.jpg" width="215px" height="90px" />
 
 
-              <p> <?php echo $assoArray['Agency']?> travel është një udhëzues gjithëpërfshirës për destinacionet
+              <p> <?php echo $agency['Agency']?> travel është një udhëzues gjithëpërfshirës për destinacionet
                 më të mira të udhëtimit në botë.Ne ofrojmë përmbajtje të detajuar
                 dhe të saktë të udhëtimit, të dizajnuara për të frymëzuar udhëtarët globalë.</p>
               <a style="float: left" href="Sherbimet.html">Read more &raquo</a>
@@ -329,7 +396,7 @@ $Darrsorted = krsort($age); // Descending order according to the key(Name)
         </div>
         <div class="footer-left">
           <div class="footer-box">
-            <h6 id="kontakti"><?php echo $assoArray['Contact']?></h6>
+            <h6 id="kontakti"><?php echo $agency['Contact']?></h6>
             <form id="contact-form" method="post" action="" autocomplete="on">
               <input type="text" id="name" name="name" placeholder="Name" class="required">
               <input type="text" id="email" name="email" placeholder="Email" class="required">
