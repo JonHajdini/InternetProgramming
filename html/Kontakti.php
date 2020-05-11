@@ -10,10 +10,76 @@
   }
 ?>
 <?php
-class Vargjet
+
+/* *OOP in PHP* */
+/*-----------------------------------------------------------------*/
+// Sort indexed or Associative Arrays
+class SortedArrays
 {
     public $IndexedArray;
     public $AssociativeArray;
+
+
+    public function set_numbers($IndexedArray)                                  // set indexed array
+    {
+        $this->numbers = $IndexedArray;
+    }
+    public function set_people($AssociativeArray)                               // set associative array
+    {
+        $this->people = $AssociativeArray;
+    }
+    /* gets constructed and setted members */
+    public function get_numbers()
+    {
+        return $this->numbers;
+    }
+    public function get_people()
+    {
+        return $this->people;
+    }
+
+    /* ------------------------------------- */
+}
+
+
+$indarrays = array(5, 24, -3, 11, 6);
+$assarrays = array("John" => "20", "Paul" => "31", "Angela" => "22");
+
+$sortoVargjet = new SortedArrays();                       // declare new object from class
+$sortoVargjet -> set_numbers($indarrays);                 // set indexed array  in object
+$sortoVargjet -> set_people($assarrays);                  // set associative array in object
+$numbers = $sortoVargjet->get_numbers();                  // gets indexed array from class
+$people = $sortoVargjet->get_people();                    // gets associative array from class
+
+
+$sort = rsort($numbers);                           // gets descending order of indexed array from class
+$Aarrsorted = asort($people);                      // Ascending order according to the value(age)
+$Darrsorted = krsort($people);                     // Descending order according to the key(Name)
+
+
+// manual sorting (Manupilimi me vargje)                  // manual sorting of indexed array
+for($x = 0; $x < count($numbers); $x++)
+{
+    for ($y = $x + 1; $y < count($numbers); $y++)
+    {
+        if($numbers[$x] < $numbers[$y])
+        {
+            $tempValue = $numbers[$y];
+            $numbers[$y] = $numbers[$x];
+            $numbers[$x] = $tempValue;
+            // ascending order
+
+        }
+    }
+}
+
+
+
+/* ------------------------------------------------------------------------- */
+
+// PHP OOP - Inheritance //
+class Vargjet extends SortedArrays
+{
     public $MulDimArray;
 
 
@@ -23,8 +89,9 @@ class Vargjet
         $this->associative = $AssociativeArray;
         $this->multidimensional = $MulDimArray;
         $this->length = count($IndexedArray);
-
     }
+
+    /*      get constructed variables       */
     function get_indexed()
     {
         return $this->indexed;
@@ -41,30 +108,34 @@ class Vargjet
     {
         return $this->multidimensional;
     }
-
+    /* ------------------------------------ */
+    //--------- Destruct object ------------//
     function __destruct()
     {
         //echo "Klasa u prish!";
     }
 }
 
-$indArray = array("HOME", "SHERBIMET", "KONTAKTONI", "FUN");
 
-$assoArray = array("Agency" => "JOLILU", "Contact" => "CONTACT US");
+$indArray = array("HOME", "SHERBIMET", "KONTAKTONI", "FUN");             //  indexed array
 
-$mulArray = array
+$assoArray = array("Agency" => "JOLILU", "Contact" => "CONTACT US");     //  associative array
+
+$mulArray = array                                                        // multidimensional array
 (
     array("Number: ",0101404101),
     array("Address: ","Julian Park st.101"),
     array("City: ", "Prishtine"),
 );
 
-$vargjet = new Vargjet($indArray, $assoArray, $mulArray);
-$name =  $vargjet->get_indexed();
-$arrlength = $vargjet->get_length();
-$agency = $vargjet->get_associative();
-$contact = $vargjet->get_multidimensional();
 
+$vargjet = new Vargjet($indArray, $assoArray, $mulArray);               // construct object
+$name =  $vargjet->get_indexed();                                       // declare indexed array from class
+$arrlength = $vargjet->get_length();                                    // declare length of indexed array from class
+$agency = $vargjet->get_associative();                                  // declare associative array from class
+$contact = $vargjet->get_multidimensional();                            // declare multidimensional array from class
+
+// basic loop
 for($x = 0; $x < $arrlength; $x++)
 {
 
@@ -74,78 +145,15 @@ for($x = 0; $x < $arrlength; $x++)
     }
 }
 
+// echo out multidimensional array
 for ($row = 0; $row < 3; $row++)
 {
     for ($col = 0; $col < 2; $col++)
     {
-        //echo "\n".$contact[$row][$col]."\n";
+        // echo "\n".$contact[$row][$col]."\n";
     }
 
 }
-
-/*-----------------------------------------------------------------*/
-
-class SortinArrays
-{
-    public $IndexedArray;
-    public $AssociativeArray;
-    function __construct($IndexedArray, $AsscociativeArray)
-    {
-        $this->numbers = $IndexedArray;
-        $this->assort = sort($IndexedArray);
-        $this->dessort = rsort($IndexedArray);
-        $this->Kdessort = krsort($AsscociativeArray);
-        $this->Aassort = asort($AsscociativeArray);
-    }
-    function get_numbers()
-    {
-        return $this->numbers;
-    }
-    function get_assort()
-    {
-        return $this->assort;
-    }
-    function get_dessort()
-    {
-        return $this->dessort;
-    }
-    function get_Aassort()
-    {
-        return $this->Aassort;
-    }
-    function get_Kdessort()
-    {
-        return $this->Kdessort;
-    }
-}
-
-
-$indarrays = array(5, 24, -3, 11, 6);
-$assarrays = array("John" => "20", "Paul" => "31", "Angela" => "22");
-$sortoVargjet = new SortinArrays($indarrays, $assarrays);
-
-$numbers = $sortoVargjet->get_numbers();
-$sort = $sortoVargjet->get_dessort();      //descending order numbers
-
-// manual sorting (Manupilimi me vargje)
-for($x = 0; $x < count($numbers); $x++)
-{
-    for ($y = $x + 1; $y < count($numbers); $y++)
-    {
-        if($numbers[$x] < $numbers[$y])
-        {
-            $tempValue = $numbers[$y];
-            $numbers[$y] = $numbers[$x];
-            $numbers[$x] = $tempValue;
-            // ascending order
-
-        }
-    }
-}
-
-$Aarrsorted = $sortoVargjet->get_Aassort();  // Ascending order according to the value(age)
-$Darrsorted = $sortoVargjet->get_Kdessort(); // Descending order according to the key(Name)
-
 ?>
 <!DOCTYPE html>
 <html>
