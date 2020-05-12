@@ -1,5 +1,5 @@
 <?php
-  if(filter_has_var)(INPUT_POST, 'submit'){
+  if(filter_has_var(INPUT_POST, 'submit')){
     $firstname = $_POST['emri'];
     $lastname = $_POST['mbiemri'];
     $gjinia = $_POST['gender'];
@@ -192,22 +192,22 @@ for ($row = 0; $row < 3; $row++)
     <div class="wrapper row1">
       <header id="header" class="clear">
         <div id="hgroup">
-          <h1><a href="../index.html">AUTONOMOUS</a></h1>
+          <h1><a href="../index.php">AUTONOMOUS</a></h1>
         </div>
         <nav>
           <ul>
-            <li><a href="../index.html"></a></li>
-            <li><a href="Sherbimet.html"><?php echo $name[1] ?></a></li>
+            <li><a href="../index.php"></a></li>
+            <li><a href="Sherbimet.php"><?php echo $name[1] ?></a></li>
             <li><a href="#kontakti"><?php echo $name[2] ?></a></li>
-            <li><a href="Kontakti.html" class="active">REZERVO</a></li>
+            <li><a href="Kontakti.php" class="active">REZERVO</a></li>
             <li><a href="#"><?php echo $name[3] ?></a>
               <ul>
-                <li><a href="Chooselanguage.html">LANGUAGE</a></li>
-                <li><a href="game.html">GAME</a></li>
+                <li><a href="Chooselanguage.php">LANGUAGE</a></li>
+                <li><a href="game.php">GAME</a></li>
               </ul>
             </li>
-            <li><a href="portfolio.html">OFERTA</a></li>
-            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="portfolio.php">OFERTA</a></li>
+            <li><a href="gallery.php">GALLERY</a></li>
 
           </ul>
         </nav>
@@ -337,7 +337,7 @@ for ($row = 0; $row < 3; $row++)
               <p> <?php echo $agency['Agency']?> travel është një udhëzues gjithëpërfshirës për destinacionet
                 më të mira të udhëtimit në botë.Ne ofrojmë përmbajtje të detajuar
                 dhe të saktë të udhëtimit, të dizajnuara për të frymëzuar udhëtarët globalë.</p>
-              <a style="float: left" href="Sherbimet.html">Read more &raquo</a>
+              <a style="float: left" href="Sherbimet.php">Read more &raquo</a>
             </div>
           </div>
           <div class="footer-left">
@@ -354,7 +354,7 @@ for ($row = 0; $row < 3; $row++)
                     target="_blank">&raquo
                     FlyFrontier</a>
                 </li>
-                <li style="border-bottom: 1px solid #919090"><a href="https://www.skyscanner.co.in/airlines-all.html"
+                <li style="border-bottom: 1px solid #919090"><a href="https://www.skyscanner.co.in/airlines-all.php"
                     target="_blank">&raquo AirlineInformation</a>
                 </li>
                 <li style="border-bottom: 1px solid #919090"><a href="https://www.expedia.com/Flights"
@@ -368,7 +368,7 @@ for ($row = 0; $row < 3; $row++)
                     Wizzair</a>
                 </li>
                 <li style="border-bottom: 1px solid #919090"><a
-                    href="https://www.booking.com/index.en.html?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB"
+                    href="https://www.booking.com/index.en.php?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB"
                     target="_blank">&raquo
                     Hotels and More</a>
                 </li>
@@ -385,7 +385,7 @@ for ($row = 0; $row < 3; $row++)
 
               <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e Dubait.It was popularised in the 1960s with
                 the release of </p>
-              <a style="float: left" href="lavdatat.html">Read more &raquo</a>
+              <a style="float: left" href="lavdatat.php">Read more &raquo</a>
               <br>
 
 
@@ -394,7 +394,7 @@ for ($row = 0; $row < 3; $row++)
 
                 <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e Shkupit . It was popularised in the 1960s
                   with the release otaining</p>
-                <a style="float: left" href="lavdata2.html">Read more &raquo</a>
+                <a style="float: left" href="lavdata2.php">Read more &raquo</a>
                 <br>
                 <br>
 

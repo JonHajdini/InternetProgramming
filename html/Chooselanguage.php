@@ -58,7 +58,7 @@
 			</div>
 			<h2 class="trigger">Our server is on a break</h2>
 			<p>We are still working on this!</p>
-			<a href="../index.html">Go To Homepage</a>
+			<a href="../index.php">Go To Homepage</a>
 		</div>
 	</div>
 

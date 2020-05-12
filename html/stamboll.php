@@ -92,22 +92,22 @@
         <div class="wrapper row1">
             <header id="header" class="clear">
                 <div id="hgroup">
-                    <h1><a href="../index.html">AUTONOMOUS</a></h1>
+                    <h1><a href="../index.php">AUTONOMOUS</a></h1>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="../index.html">HOME</a></li>
-                        <li><a href="Sherbimet.html">SHERBIMET</a></li>
+                        <li><a href="../index.php">HOME</a></li>
+                        <li><a href="Sherbimet.php">SHERBIMET</a></li>
                         <li><a href="#kontakti">KONTAKTONI</a></li>
-                        <li><a href="Kontakti.html">REZERVO</a></li>
+                        <li><a href="Kontakti.php">REZERVO</a></li>
                         <li><a href="#">FUN</a>
                             <ul>
-                                <li><a href="Chooselanguage.html">LANGUAGE</a></li>
-                                <li><a href="game.html">GAME</a></li>
+                                <li><a href="Chooselanguage.php">LANGUAGE</a></li>
+                                <li><a href="game.php">GAME</a></li>
                             </ul>
                         </li>
-                        <li><a href="portfolio.html" class="active">OFERTA</a></li>
-                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="portfolio.php" class="active">OFERTA</a></li>
+                        <li><a href="gallery.php">GALLERY</a></li>
 
                     </ul>
                 </nav>
@@ -450,7 +450,7 @@
                             <p> JOLILU travel është një udhëzues gjithëpërfshirës për destinacionet
                                 më të mira të udhëtimit në botë.Ne ofrojmë përmbajtje të detajuar
                                 dhe të saktë të udhëtimit, të dizajnuara për të frymëzuar udhëtarët globalë.</p>
-                            <a style="float: left" href="Sherbimet.html">Read more &raquo</a>
+                            <a style="float: left" href="Sherbimet.php">Read more &raquo</a>
                         </div>
                     </div>
                     <div class="footer-left">
@@ -470,7 +470,7 @@
                                         FlyFrontier</a>
                                 </li>
                                 <li style="border-bottom: 1px solid #919090"><a
-                                        href="https://www.skyscanner.co.in/airlines-all.html" target="_blank">&raquo
+                                        href="https://www.skyscanner.co.in/airlines-all.php" target="_blank">&raquo
                                         AirlineInformation</a>
                                 </li>
                                 <li style="border-bottom: 1px solid #919090"><a href="https://www.expedia.com/Flights"
@@ -486,7 +486,7 @@
                                         Wizzair</a>
                                 </li>
                                 <li style="border-bottom: 1px solid #919090"><a
-                                        href="https://www.booking.com/index.en.html?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB"
+                                        href="https://www.booking.com/index.en.php?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB"
                                         target="_blank">&raquo
                                         Hotels and More</a>
                                 </li>
@@ -503,7 +503,7 @@
 
                             <p>Spanja ka qenë gjithmonë destinacion i preferuar për shumëkënd,
                                 dhe ende mbetet një nga vendet..
-                                <a style="float: left" href="lavdatat.html">Read more &raquo</a>
+                                <a style="float: left" href="lavdatat.php">Read more &raquo</a>
                                 <br>
                                 <br>
 
@@ -511,7 +511,7 @@
                                     <h4>Vizitë në Britani</h4>
                                     <p>Asnjë listë destinacionesh pushimi nuk do ishte e plotë pa përfshirë
                                         aty Britaninë e Madhe: jo vetëm Anglinë, por edhe Skocinë...</p>
-                                    <a style="float: left" href="lavdata2.html">Read more &raquo</a>
+                                    <a style="float: left" href="lavdata2.php">Read more &raquo</a>
                                 </div>
                         </div>
                     </div>
