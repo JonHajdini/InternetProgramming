@@ -53,21 +53,19 @@
                         <p style="font-size: 24px;">
 
                             <?php
-                            //------------------------substr and strl------------------------------------------
+                            //----------------substr Function ------------------------------------------------------------------
                             echo substr("5 Udhetime te paharrueshme !", 1) . "<br>";
-
-
                             ?>
                         </p>
                     </blockquote>
 
                     <?php
-                    //-----------------Implode Function-----------------------------------------------------------------------
+                    //-----------------------------Implode Function-----------------------------------------------------
+
                     $rooms = array('Rehati','Komoditet','Mrekulli!');
-                    $mewstring=implode(',',$rooms);
-                    echo $mewstring.'<br/>';
-                    ?>
-                    <?php
+                    $newstring=implode(',',$rooms);
+                    echo $newstring.'<br/>';
+
                     //------------------printf Function-----------------------------------------------------------------
 
                     $cmimi ="120$";
@@ -76,16 +74,7 @@
                     $PriceArray=array ('price'=>"120$",'qty'=>"7");
                     printf("Kurse cmimi qe qendruam per 7 nete ishte  $%d",($PriceArray['price']*$PriceArray['qty']));
                     ?>
-                    </br>
-                    <?php
-                    $stre="Mrekullueshem !!";
-
-                    echo $stre. "<br>";
-                    echo trim($stre,"!");
-                    ?>
-
                     <br />
-
                     <p>
 
                         Vlera e jashtëzakonshme për para - e vendosur në zemër të Tryavna, fillimisht duket se po hyni në një shtëpi të vjetër, por
@@ -93,6 +82,17 @@
                         wi-fi.
 
                     </p>
+
+
+                    <?php
+                    //-----------------------------Explode Function-----------------------------------------------------
+
+                    $string ='Best Regards!';
+                    $newArray=explode(' ',$string,);
+                    foreach($newArray as $value)
+                        echo $value.'<br/>';
+                    echo '<br/>';
+                    ?>
 
                 </div>
             </div>
@@ -106,7 +106,7 @@
                         <p style="font-size: 24px;">
 
                             <?php
-                            //------------------------substr and strl------------------------------------------
+                            //------------------------substr function--------------------------------------------------
                             // Positive numbers:
                             echo substr("***********************************************************", 1) . "<br>";
                             echo substr("Aty Ju do te gjeni rehati !", 3) . "<br>";
@@ -114,7 +114,9 @@
                             ?>
 
                         <p>
-                            Ngjyra, diell, tapas, det, art. Nëse mbyllim sytë dhe mendojme për Barcelonën, këto janë
+                            <?php
+                            //-------------------------substr function -----------------------------------------------
+                            $fulltext= " Ngjyra, diell, tapas, det, art. Nëse mbyllim sytë dhe mendojme për Barcelonën, këto janë
                             elementet
                             që do ju vijne në mendje. Barcelona është ajo që ne e quajme qytet i përsosur: ajo ka
                             një klimë ideale,
@@ -122,19 +124,23 @@
                             dhe detit. Per ata
                             që po planifikojnë të shpenzojnë vetëm një fundjavë, kemi 10 këshilla se çfarë të bëni
                             dhe ku të shkoni
-                            dhe shpresojme se do të jenë të dobishme për ju!
+                            dhe shpresojme se do të jenë të dobishme për ju!";
+
+                            //------------------------------strlen Function-------------------------------------------------
+                            $textpart = substr($fulltext, 0, 1000);
+                            echo $textpart;
+                            echo "<br>";
+                            echo  "Ne kete tekst jane shkruar " .strlen($textpart). " karaktere"
+                            ?>
+
                         </p>
                         </br>
                         <?php
-                        //trim
-                        $stre = "My best regards !";
-                        echo trim($stre,"My");
-                        ?>
+                        //----------------------------trim function-----------------------------------------------------
+                        $text = "My best regards !";
+                        echo trim($text,"My");
 
-
-                        <?php
-
-                        //str_replace
+                        //---------------------------str_replace function-----------------------------------------------
                         echo "<br>";
                         echo "<br>";
                         echo str_replace("world","Written","world by : ");
@@ -161,38 +167,7 @@
                      alt="">
             </div>
 
-            <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
-                        style="font-size: 18px;">
-                            <p>Klikoni butonin per ta formatuar numrin '13.3714' me 'toPrecision(5)' </p>
 
-                            <button onclick="myFunction()">Formatoje</button>
-
-                            <p id="demo"></p>
-
-                            <script>
-                                function myFunction() {
-                                    var num1 = 13.3714;
-
-                                    document.getElementById("demo").innerHTML = num1.toPrecision(5);
-
-                                }
-                            </script>
-            </div>
-
-            <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
-                        style="font-size: 18px;">
-                    <p>Numri 1000000 ne formatin e 'currency Euro' me "de-DE" metoda 'toLocaleString'. </p>
-
-                    <script>
-                        var n = new Number(1000000);
-                        var myObj = {
-                            style: "currency",
-                            currency: "EUR"
-                        }
-
-                        document.write(n.toLocaleString("de-DE", myObj));
-                    </script>
-            </div>
 
             <div class="icons" style="margin-top: -60px;">
                 <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
@@ -316,4 +291,5 @@
 <script src="../js/rregullat.js"></script>
 
 </body>
+
 
