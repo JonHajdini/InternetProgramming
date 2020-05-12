@@ -1,3 +1,5 @@
+<?php include "db.php" ?>
+
 <html>
 
 <head>
@@ -38,20 +40,35 @@
       </header>
     </div>
 
+    <?php
+    // I merr te gjitha te dhenat nga tabela ofertat
+    $query = "SELECT * FROM ofertat";
+    $select_all_ofertat_query = mysqli_query($connection, $query);
+
+    // Me while loop e mbush tere faqen me te dhenat e marra nga databaza
+    while($row = mysqli_fetch_assoc($select_all_ofertat_query)) {
+
+      // Ruaj te dhenat e fushave ne variabla te reja
+      $oferta_id = $row['oferta_id']; // 'oferta_id' eshte emri i kolones ne tabelen ofertat
+      $emri_oferta = $row['emri_oferta'];
+      $foto_oferta = $row['foto_oferta'];
+
+    ?>
+
+
     <div class="wrapper col3" >
       <div id="container" class="clear">
-        <h1 style="text-align: center; color:steelblue; font-size: 30px; padding-top: 35px;"><strong> Zgjedhni vendin e
-            &euml;ndrrave</strong></h1>
+        <h1 style="text-align: center; color:steelblue; font-size: 30px; padding-top: 35px;"><strong> Oferta <?php echo $oferta_id ?></strong></h1>
         <section id="portfolio" class="clear">
           <ul>
             <li>
               <article>
-                <figure><a href="dubai.php"><img src="../images/dubai.jpg" alt=""></a>
-                  <figcaption><strong>Dubai</strong></figcaption>
+                <figure><a href="<?php echo $emri_oferta; ?>.php"><img src="../images/<?php echo $foto_oferta; ?>" alt=""></a>
+                  <figcaption><strong> <?php echo ucfirst($emri_oferta); ?> </strong></figcaption>
                 </figure>
               </article>
             </li>
-            <li>
+            <!-- <li>
               <article>
                 <figure><a href="stamboll.php"><img src="../images/stamboll.jpg" alt=""></a>
                   <figcaption><strong>Stambolli</strong></figcaption>
@@ -85,7 +102,7 @@
                   <figcaption><strong>Parisi</strong></figcaption>
                 </figure>
               </article>
-            </li>
+            </li> -->
 
             <div class="icons">
               <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
@@ -96,8 +113,12 @@
             </div>
       </div>
     </div>
+    <?php }?>
 
-    <footer>
+    <!-- Thirre file 'footer.php', ku eshte i ruajtur footer-i -->
+    <?php include "footer.php" ?>
+    
+    <!-- <footer>
       <div class="footer-main">
         <div class="footer-inner">
           <div class="footer-left">
@@ -188,7 +209,7 @@
         </div>
         <div class="clr"></div>
       </div>
-    </footer>
+    </footer> -->
   </div>
   <script src="../js/backtotop.js"></script>
   <script src="../js/rregullat.js"></script>
