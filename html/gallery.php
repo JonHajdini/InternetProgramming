@@ -41,7 +41,7 @@ if(isset($_POST['submit'])){
     });
   </script>
   <!--JQuery qe mundeson "Fade to" te imazhave-->
-  <!--<script>
+  <script>
     $(document).ready(function () {
       $("#img1").click(function () {
         $("#img1").fadeTo(1000, 0.7);
@@ -77,7 +77,7 @@ if(isset($_POST['submit'])){
           $("#img11").fadeTo(1000, 0.7);
         });
     });
-  </script>-->
+  </script>
 
   <style>
     .heading {
@@ -180,7 +180,7 @@ if(isset($_POST['submit'])){
             <li><a href="Kontakti.php">REZERVO</a></li>
             <li><a href="#">FUN</a>
               <ul>
-               
+                <li><a href="Chooselanguage.php">LANGUAGE</a></li>
                 <li><a href="game.php">GAME</a></li>
               </ul>
             </li>
@@ -197,7 +197,7 @@ if(isset($_POST['submit'])){
         <figure>
           <h1 style="text-align: center; color:steelblue; font-size: 30px; padding-top: 35px;"><strong>Disa foto
               fantastike</strong></h1>
-        <!--  <button id="butoni1"
+          <button id="butoni1"
             style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; margin-right: 20px;">Slide</button>
           <button id="butoni2"
             style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; margin-right: 20px;">Shfaq
@@ -208,38 +208,38 @@ if(isset($_POST['submit'])){
             tek G+!!</button>
           <button id="butoni4"
             style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; ">Heqe foton e trete!
-          </button>-->
+          </button>
           <ul class="nospace clear">
-            <li class="one_quarter first"><a target="_blank"><img id="img1" src="../images/f1.jpg" width="210" height="210"
+            <li class="one_quarter first"><a href="../images/f1.jpg" target="_blank"><img id="img1" src="../images/f1.jpg" width="210" height="210"
                   alt=""></a>
             </li>
-            <li class="one_quarter"><a  target="_blank"><img id="img2" src="../images/f2.jpg" width="210" height="210"
+            <li class="one_quarter"><a href="../images/f2.jpg" target="_blank"><img id="img2" src="../images/f2.jpg" width="210" height="210"
                   alt=""></a></li>
-            <li class="one_quarter"><a  target="_blank"><img id="img3" src="../images/f3.jpg" width="210" height="210"
+            <li class="one_quarter"><a href="../images/f3.jpg" target="_blank"><img id="img3" src="../images/f3.jpg" width="210" height="210"
                   alt=""></a></li>
-            <li class="one_quarter"><a  target="_blank"><img id="img4" src="../images/f4.jpg" width="210" height="210"
+            <li class="one_quarter"><a href="../images/f4.jpg" target="_blank"><img id="img4" src="../images/f4.jpg" width="210" height="210"
                   alt=""></a></li>
-            <li class="one_quarter first"><a  target="_blank"><img id="img5" src="../images/f5.jpg" width="210" height="210"
+            <li class="one_quarter first"><a href="../images/f5.jpg" target="_blank"><img id="img5" src="../images/f5.jpg" width="210" height="210"
                   alt=""></a>
             </li>
-            <li class="one_quarter"><a  target="_blank"><img id="img6" src="../images/f6.jpg" width="210" height="210"
+            <li class="one_quarter"><a href="../images/f6.jpg" target="_blank"><img id="img6" src="../images/f6.jpg" width="210" height="210"
                   alt=""></a></li>
-            <li class="one_quarter"><a  target="_blank"><img id="img7" src="../images/italy.jpg" width="210" height="210"
+            <li class="one_quarter"><a href="../images/italy.jpg" target="_blank"><img id="img7" src="../images/italy.jpg" width="210" height="210"
                   alt=""></a></li>
-            <li class="one_quarter"><a  target="_blank"><img id="img8" src="../images/dubai.jpg" width="210" height="210"
+            <li class="one_quarter"><a href="../images/grecce.jpg" target="_blank"><img id="img8" src="../images/grecce.jpg" width="210" height="210"
                   alt="Imazhi nuk mund te shfaqet"></a></li>
-            <li class="one_quarter first"><a  target="_blank"><img id="img9" src="../images/f12.jpg" width="210" height="210"
+            <li class="one_quarter first"><a href="../images/f12.jpg" target="_blank"><img id="img9" src="../images/f12.jpg" width="210" height="210"
                     alt=""></a>      
-            <li class="one_quarter"><a  target="_blank"><img id="img6" src="../images/ushqim2.jpg" width="210" height="210"
+            <li class="one_quarter"><a href="../images/ushqim2.jpg" target="_blank"><img id="img6" src="../images/ushqim2.jpg" width="210" height="210"
                     alt=""></a></li>
-            <li class="one_quarter"><a target="_blank"><img id="img7" src="../images/ushqim1.jpg" width="210" height="210"
+            <li class="one_quarter"><a href="../images/ushqim1.jpg" target="_blank"><img id="img7" src="../images/ushqim1.jpg" width="210" height="210"
                     alt=""></a></li>
-            <li class="one_quarter"><a  target="_blank"><img id="img8" src="../images/barca.jpg" width="210" height="210"
+            <li class="one_quarter"><a href="../images/barca.jpg" target="_blank"><img id="img8" src="../images/barca.jpg" width="210" height="210"
                     alt="barca"></a></li>
-            <li class="one_quarter first"><a  target="_blank"><img id="img9" src="../images/f7.jpg" width="210" height="210"
+            <li class="one_quarter first"><a href="../images/f7.jpg" target="_blank"><img id="img9" src="../images/f7.jpg" width="210" height="210"
                   alt=""></a>
             </li>
-            <li class="one_quarter"><a target="_blank"><img id="img10" src="../images/f8.jpg" width="210" height="210"
+            <li class="one_quarter"><a href="../images/f8.jpg" target="_blank"><img id="img10" src="../images/f8.jpg" width="210" height="210"
                   alt=""></a></li>
             <li style="border: 1px solid black; width:210px; height:210px;
             display:inline-block; margin:6px; float: left;" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -253,24 +253,114 @@ if(isset($_POST['submit'])){
 
           </ul>
         </figure>
-        <div class="description"><span id="highlight"><abbr style="border: none;text-decoration: none;" title="Gallery description">Gallery D.</abbr></span>
+        <div class="description"><span id="highlight"><abbr style="border: none;
+text-decoration: none;" title="Gallery description">Gallery D.</abbr></span>
           <div class="icons">
             <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
             <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
             <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
-            <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a><abbr style="border: none;
+text-decoration: none; " title="Ketu do te ndryshohet atributi">
               <a id="hrefvalue" href="https://plus.google.com/discover" target="_blank"
-                class="fab fa-google"></a>
+                class="fab fa-google"></a></abbr>
           </div>
         </div>
 
       </div>
     </div>
-      <?php
+    <footer>
+      <div class="footer-main">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <div class="footer-box">
 
-      include "footer.php";
+              <h6>ABOUT US</h6>
+              <img src="../images/372.jpg" width="215px" height="90px" />
 
-      ?>
+
+              <p> JOLILU travel është një udhëzues gjithëpërfshirës për destinacionet
+                më të mira të udhëtimit në botë.Ne ofrojmë përmbajtje të detajuar
+                dhe të saktë të udhëtimit, të dizajnuara për të frymëzuar udhëtarët globalë.</p>
+              <a style="float: left" href="Sherbimet.php">Read more &raquo</a>
+            </div>
+          </div>
+          <div class="footer-left">
+            <div class="footer-box">
+              <h6>LINK BLOCK</h6>
+              <ul>
+                <li style="border-bottom: 1px solid #919090"><a href="https://aria-travel.com/" target="_blank">&raquo
+                    AriaTravelAlbania</a>
+                </li>
+                <li style="border-bottom: 1px solid #919090"><a href="https://travel.com/" target="_blank">&raquo
+                    Travel</a>
+                </li>
+                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyfrontier.com/"
+                    target="_blank">&raquo
+                    FlyFrontier</a>
+                </li>
+                <li style="border-bottom: 1px solid #919090"><a href="https://www.skyscanner.co.in/airlines-all.php"
+                    target="_blank">&raquo AirlineInformation</a>
+                </li>
+                <li style="border-bottom: 1px solid #919090"><a href="https://www.expedia.com/Flights"
+                    target="_blank">&raquo
+                    CheapFlights</a>
+                </li>
+                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyksa.com/Fr/" target="_blank">&raquo
+                    KosovaAirline</a>
+                </li>
+                <li style="border-bottom: 1px solid #919090"><a href="https://wizzair.com/en-gb" target="_blank">&raquo
+                    Wizzair</a>
+                </li>
+                <li style="border-bottom: 1px solid #919090"><a
+                    href="https://www.booking.com/index.en.php?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB"
+                    target="_blank">&raquo
+                    Hotels and More</a>
+                </li>
+                <li style="border-bottom: 1px solid #919090"><a href="../README.md" target="_blank">&raquo Readme</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-left">
+            <div class="footer-box">
+              <h6>ME TE REJAT</h6>
+
+              <h4>Dubai - 6 ditë - €629</h4>
+
+              <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e Dubait.It was popularised in the 1960s with
+                the release of </p>
+              <a style="float: left" href="lavdatat.php">Read more &raquo</a>
+              <br>
+
+
+              <div class="latestb">
+                <h4>Dubai - 6 ditë - €629</h4>
+
+                <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e Shkupit . It was popularised in the 1960s
+                  with the release otaining</p>
+                <a style="float: left" href="lavdata2.php">Read more &raquo</a>
+                <br>
+                <br>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-left">
+          <div class="footer-box">
+            <h6 id="kontakti">CONTACT US</h6>
+            <form id="contact-form" method="post" action="gallery.php" autocomplete="on">
+              <input type="text" id="name" name="name" placeholder="Name" class="required">
+              <input type="text" id="email" name="email" placeholder="Email" class="required">
+              <textarea name="message" placeholder="Message" rows="6" class="required"></textarea><br>
+              <input type="submit" name="submit" value="SUBMIT">
+            </form>
+          </div>
+        </div>
+        <div class="clr"></div>
+      </div>
+
+    </footer>
   </div>
 
   <script src="../js/backtotop.js"></script>
