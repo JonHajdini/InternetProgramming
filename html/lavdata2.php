@@ -51,13 +51,24 @@
                 <div class="three_quarter">
                     <blockquote>
                         <p style="font-size: 24px;">
-                        <p>Dita e Parë: Nisja nga Prishtina 08.00 me autobus për në Aeroportin e Shkupit. Pushime
 
+                            <?php
+                            //------------------------substr and strl------------------------------------------
+                            echo substr("5 Udhetime te paharrueshme !", 1) . "<br>";
+
+
+                            ?>
                         </p>
                     </blockquote>
-                    </br>
+
                     <?php
-                    //printf Function
+                    //-----------------Implode Function-----------------------------------------------------------------------
+                    $rooms = array('Rehati','Komoditet','Mrekulli!');
+                    $mewstring=implode(',',$rooms);
+                    echo $mewstring.'<br/>';
+                    ?>
+                    <?php
+                    //------------------printf Function-----------------------------------------------------------------
 
                     $cmimi ="120$";
                     print ("Nje cmim i arsyeshem per nje nate qe kushton $cmimi");
@@ -93,13 +104,15 @@
                 <div class="three_quarter">
                     <blockquote>
                         <p style="font-size: 24px;">
+
                             <?php
-                            //substr and strl
+                            //------------------------substr and strl------------------------------------------
                             // Positive numbers:
                             echo substr("***********************************************************", 1) . "<br>";
                             echo substr("Aty Ju do te gjeni rehati !", 3) . "<br>";
                             echo "<br>";
                             ?>
+
                         <p>
                             Ngjyra, diell, tapas, det, art. Nëse mbyllim sytë dhe mendojme për Barcelonën, këto janë
                             elementet
@@ -149,7 +162,7 @@
             </div>
 
             <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
-                            style="font-size: 18px;">
+                        style="font-size: 18px;">
                             <p>Klikoni butonin per ta formatuar numrin '13.3714' me 'toPrecision(5)' </p>
 
                             <button onclick="myFunction()">Formatoje</button>
@@ -167,7 +180,7 @@
             </div>
 
             <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
-                            style="font-size: 18px;">
+                        style="font-size: 18px;">
                     <p>Numri 1000000 ne formatin e 'currency Euro' me "de-DE" metoda 'toLocaleString'. </p>
 
                     <script>
@@ -226,7 +239,7 @@
                                     FlyFrontier</a>
                             </li>
                             <li style="border-bottom: 1px solid #919090"><a
-                                        href="https://www.skyscanner.co.in/airlines-all.php" target="_blank">&raquo
+                                    href="https://www.skyscanner.co.in/airlines-all.php" target="_blank">&raquo
                                     AirlineInformation</a>
                             </li>
                             <li style="border-bottom: 1px solid #919090"><a href="https://www.expedia.com/Flights"
@@ -242,8 +255,8 @@
                                     Wizzair</a>
                             </li>
                             <li style="border-bottom: 1px solid #919090"><a
-                                        href="https://www.booking.com/index.en.php?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB"
-                                        target="_blank">&raquo
+                                    href="https://www.booking.com/index.en.php?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB"
+                                    target="_blank">&raquo
                                     Hotels and More</a>
                             </li>
                             <li style="border-bottom: 1px solid #919090"><a href="../README.md"
@@ -304,4 +317,3 @@
 
 </body>
 
-</html>
