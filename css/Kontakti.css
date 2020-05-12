@@ -11,17 +11,17 @@
 #contact {
   background: #F9F9F9;
   padding: 45px;
-  margin: 0px 150px;
+  margin: 0px 200px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   width: 50%;
-  -webkit-animation: myframe1 2s ease-in-out 0s 1;
-  -webkit-animation-fill-mode: forwards;
+  "-webkit-animation: myframe1 2s ease-in-out 0s 1;
+  "-webkit-animation-fill-mode: forwards;
 }
-#contact:hover
+/*#contact:hover
 {
   -webkit-animation: myframe2 2s ease-in-out 0s 1;
   -webkit-animation-fill-mode: forwards;
-}
+}*/
 @-webkit-keyframes myframe1
 {
   0% {  background: lightblue;}

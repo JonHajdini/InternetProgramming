@@ -19,26 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2077bb3-8727-4b37-97c1-cae82212b3d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/html/Amsterdam.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/Amsterdam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Barcelona.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/Barcelona.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Chooselanguage.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/Chooselanguage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Kontakti.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/Kontakti.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Paris.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/Paris.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/Sherbimet.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/Sherbimet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/doha.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/doha.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/dubai.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/dubai.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/gallery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/game.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/lavdata2.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/lavdata2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/lavdata3.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/lavdata3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/lavdatat.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/lavdatat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/portfolio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/stamboll.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/stamboll.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slideri.html" beforeDir="false" afterPath="$PROJECT_DIR$/slideri.html" afterDir="false" />
-    </list>
+    <list default="true" id="b2077bb3-8727-4b37-97c1-cae82212b3d7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589228762544</updated>
       <workItem from="1589228767706" duration="5813000" />
-      <workItem from="1589294637493" duration="206000" />
+      <workItem from="1589294637493" duration="923000" />
     </task>
     <servers />
   </component>
