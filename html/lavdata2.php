@@ -14,204 +14,141 @@
 </head>
 
 <body>
-    <button id="back-to-top-btn"><i class="fa fa-chevron-circle-up"></i></button>
+<button id="back-to-top-btn"><i class="fa fa-chevron-circle-up"></i></button>
 
-    <div class="wrapper">
-        <div class="wrapper row1">
-            <header id="header" class="clear">
-                <div id="hgroup">
-                    <h1><a href="../index.php">AUTONOMOUS</a></h1>
+<div class="wrapper">
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1><a href="../index.php">AUTONOMOUS</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.php">HOME</a></li>
+                    <li><a href="Sherbimet.php">SHERBIMET</a></li>
+                    <li><a href="#kontakti">KONTAKTONI</a></li>
+                    <li><a href="Kontakti.php">REZERVO</a></li>
+                    <li><a href="#">FUN</a>
+                        <ul>
+                            <li><a href="Chooselanguage.php">LANGUAGE</a></li>
+                            <li><a href="game.php">GAME</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="portfolio.php">OFERTA</a></li>
+                    <li><a href="gallery.php">GALLERY</a></li>
+                </ul>
+            </nav>
+            <div class="clear"></div>
+        </header>
+    </div>
+
+    <div class="wrapper col3" >
+        <div id="container" style="background-image: linear-gradient(to bottom right , rgba(198, 233, 159, 0), rgb(231, 233, 143));">
+            <h1 style="font-size: 40px; text-align: center; color: blueviolet;">Lavdatat nga konsumatoret tane</h1>
+            <div class="testimonial push50 clear">
+                <img src="../images/profile-pic.png" style="float:left; padding: 20px; width:200px; height:200px;"
+                     alt="">
+                <div class="three_quarter">
+                    <blockquote>
+                        <p style="font-size: 24px;">
+                        <p>Dita e Parë: Nisja nga Prishtina 08.00 me autobus për në Aeroportin e Shkupit. Pushime
+
+                        </p>
+                    </blockquote>
+                    </br>
+                    <?php
+                    //printf Function
+
+                    $cmimi ="120$";
+                    print ("Nje cmim i arsyeshem per nje nate qe kushton $cmimi");
+                    echo '<br/>';
+                    $PriceArray=array ('price'=>"120$",'qty'=>"7");
+                    printf("Kurse cmimi qe qendruam per 7 nete ishte  $%d",($PriceArray['price']*$PriceArray['qty']));
+                    ?>
+                    </br>
+                    <?php
+                    $stre="Mrekullueshem !!";
+
+                    echo $stre. "<br>";
+                    echo trim($stre,"!");
+                    ?>
+
+                    <br />
+
+                    <p>
+
+                        Vlera e jashtëzakonshme për para - e vendosur në zemër të Tryavna, fillimisht duket se po hyni në një shtëpi të vjetër, por
+                        brenda çdo gjëje është e mobiluar dhe paraqitur moderne. Dhomat ishin të pastra dhe të rehatshme, kishte një lidhje të fortë
+                        wi-fi.
+
+                    </p>
+
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="../index.php">HOME</a></li>
-                        <li><a href="Sherbimet.php">SHERBIMET</a></li>
-                        <li><a href="#kontakti">KONTAKTONI</a></li>
-                        <li><a href="Kontakti.php">REZERVO</a></li>
-                        <li><a href="#">FUN</a>
-                            <ul>
-                                <li><a href="Chooselanguage.php">LANGUAGE</a></li>
-                                <li><a href="game.php">GAME</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="portfolio.php">OFERTA</a></li>
-                        <li><a href="gallery.php">GALLERY</a></li>
-                    </ul>
-                </nav>
-                <div class="clear"></div>
-            </header>
-        </div>
-
-        <div class="wrapper col3" >
-            <div id="container" style="background-image: linear-gradient(to bottom right , rgba(198, 233, 159, 0), rgb(231, 233, 143));">
-                <h1 style="font-size: 40px; text-align: center; color: blueviolet;">Datat e Nisjeve</h1>
-                <div class="testimonial push50 clear">
-                    <img src="../images/profile-pic.png" style="float:left; padding: 20px; width:200px; height:200px;"
-                        alt="">
-                    <div class="three_quarter">
-                        <blockquote>
-                            <p style="font-size: 24px;">
-                                Datat e nisjeve – Me poshte gjeni cmimet per cdo date nisjeje:
-                                <br>
-                                ► 21, dhe 28 Gusht
-
-                                <br>
-                                ► 4 dhe 11 Shtator.
-                                </br>
-                                Dita e Parë: Nisja nga Prishtina 08.00 me autobus për në Aeroportin e Shkupit. Pushime
-                                të shkurtra gjatë rrugës. Fluturimi Direkt Shkup – Barcelonë. Nisja në orë 18.05.
-                                Mbrritja në Barcelonë në orën 21.00. Transferta për në Hotel. Sistemimi në Hotel. Darkë
-                                dhe Fjetje.
-
-                                Dita e Dytë: Mëngjes, Të lirë për në Plazh, Drekë, Darkë dhe Fjetje.
-
-                                Dita e Tretë: Mëngjes, Gjithë ditën, Shëtitje Panoramike në Barcelonë me Autobus dhe
-                                Shoqërues, Darkë dhe Fjetje.
-
-                                Dita e Katërt: Mëngjes, Të lirë për në Plazh, Drekë, Darkë dhe Fjetje.
-
-                                Dita e Pestë: Mëngjes, Të lirë për në Plazh, Drekë, Darkë dhe Fjetje.
-
-                                Dita e Gjashtë: Mëngjes, Të lirë për në Plazh, Drekë, Darkë dhe Fjetje.
-
-                                Dita e Shtatë:Mëngjes, Të lirë për në Plazh, Drekë, Darkë dhe Fjetje.
-
-                                Dita e Tetë: Mëngjes, Të lirë për në Plazh. Drekë. Pasdite, vonë transferta për në
-                                Aeroportin e Barcelonës. Fluturimi Direkt Barcelonë – Shkup. Nisja nga Barcelona në orën
-                                21.35. Mbrritja në Shkup në orën 24.20. Udhëtimi i kthimit me autobus për në Tiranë.
-                                Pushime të shkurtra gjatë rrugës. Mbërritja në Tiranë.
+            </div>
+            <p style="text-align: center; padding: 20px 0;"><iframe width="760px" height="430"
+                                                                    src="https://www.youtube.com/embed/IbmrqYjyBnU" frameborder="0" allowfullscreen></iframe></p>
+            <div class="testimonial clear">
+                <img src="../images/profile-pic.png"
+                     style=" float:right;  width:200px; height:200px; padding: 20px;" alt="">
+                <div class="three_quarter">
+                    <blockquote>
+                        <p style="font-size: 24px;">
+                            <?php
+                            //substr and strl
+                            // Positive numbers:
+                            echo substr("***********************************************************", 1) . "<br>";
+                            echo substr("Aty Ju do te gjeni rehati !", 3) . "<br>";
+                            echo "<br>";
+                            ?>
+                        <p>
+                            Ngjyra, diell, tapas, det, art. Nëse mbyllim sytë dhe mendojme për Barcelonën, këto janë
+                            elementet
+                            që do ju vijne në mendje. Barcelona është ajo që ne e quajme qytet i përsosur: ajo ka
+                            një klimë ideale,
+                            njerëzit janë të ngrohtë dhe, sigurisht që nuk mund të neglizhojme, pranine e plazhit
+                            dhe detit. Per ata
+                            që po planifikojnë të shpenzojnë vetëm një fundjavë, kemi 10 këshilla se çfarë të bëni
+                            dhe ku të shkoni
+                            dhe shpresojme se do të jenë të dobishme për ju!
+                        </p>
+                        </br>
+                        <?php
+                        //trim
+                        $stre = "My best regards !";
+                        echo trim($stre,"My");
+                        ?>
 
 
-                                <br />
-                                Me Shume Detaje: Në pagesë përfshihen:
-                                – Fjetje 7 Netë në Hotel 2*S, 3* dhe 4*, Mëngjes, Drekë dhe Darkë në Hotel (pa pije te
-                                perfshira ne cmim).
-                                – Shëtitje Panoramike në Barcelonë,
-                                – Fluturimi Direkt Shkup – Barcelonë – Shkup (5 kg cante dore dhe 23 kg bagazh i
-                                perfshire ne cmim)
-                                – Transfertat vajtje Ardhje nga Tirana në Aeroportin e Shkupit dhe nga Aeroporti
-                                Barcelonës në Hotel.
-                                Shenim:
+                        <?php
 
-                                Krevati mund te mos jete dopio, por 2 krevate tek te bashkuar.Cmimet sipas datave dhe
-                                hoteleve perkatese:
-                            </p>
-                        </blockquote>
+                        //str_replace
+                        echo "<br>";
+                        echo "<br>";
+                        echo str_replace("world","Written","world by : ");
+                        echo str_replace('old', 'new', 'John Doe');
+                        ?>
 
-                    </div>
+                        <address >
+                            Visit us at:<br>
+                            Jolilu.com<br>
+                            FIEK, Prishtine<br>
+                            KOSOVE
+                        </address>
+                        </br>
+                    </blockquote>
                 </div>
-                <p style="text-align: center; padding: 20px 0;"><iframe width="760px" height="430"
-                        src="https://www.youtube.com/embed/IbmrqYjyBnU" frameborder="0" allowfullscreen></iframe></p>
-                <div class="testimonial clear">
-                    <img src="../images/profile-pic.png"
-                        style=" float:right;  width:200px; height:200px; padding: 20px;" alt="">
-                    <div class="three_quarter">
-                        <blockquote>
-                            <p style="font-size: 24px;">
-                                Ngjyra, diell, tapas, det, art. Nëse mbyllim sytë dhe mendojme për Barcelonën, këto janë
-                                elementet
-                                që do ju vijne në mendje. Barcelona është ajo që ne e quajme qytet i përsosur: ajo ka
-                                një klimë ideale,
-                                njerëzit janë të ngrohtë dhe, sigurisht që nuk mund të neglizhojme, pranine e plazhit
-                                dhe detit. Per ata
-                                që po planifikojnë të shpenzojnë vetëm një fundjavë, kemi 10 këshilla se çfarë të bëni
-                                dhe ku të shkoni
-                                dhe shpresojme se do të jenë të dobishme për ju!
-                                <br>
-                                1. Vizitoni nga brenda La Sagrada Familia . Duket e parëndësishme, por vetëm kur të hyni
-                                do të jeni në gjendje
-                                të kuptoni madhësinë e saj të pafund. Jam te sigurt qe do mbeteni pa frymë nga
-                                madheshtia saj dhe ne ju keshillojme
-                                te shkoni në një ditë me diell për të shijuar reflektimet e bukura te diellit nga
-                                dritaret.
-                                La Sagrada Familia 😍 ❤
-                                </br>
-                                <br>
-                                2. Ecni nëpër rrugët e Barrios Gótico. Përkufizuar si zemra e “Ciudad Vella”, qyteti i
-                                vjetër, këtu është një atmosferë
-                                unike me pallatet e saj gotike, katedralen e vjetër dhe dyqanet artizanale që vijnë në
-                                çdo cep. Mos ndiqni ndonjë hartë
-                                por ndaluni në një nga restorantet për të shijuar tapas të shijshëm!
-                                Barrios Gótico
-                                </br>
-                                <br>
-                                3.Shikoni nga afër Casa Milà. Eshte shpallur nga Unesco Trashëgimi Botërore e
-                                njerezimit, kjo ndërtesë është e habitshme për formën e saj, me skulptur0a
-                                të vërteta, ku nuk mund te mos magjepseni nga gjithe kjo mrekulli
-                                Casa Mila
-                                </br>
-                                <br>
-                                4. Shkoni në Güell Park. Një punë vërtet unike e këtij lloji. Një park i mrekullueshëm,
-                                mbreselenes, i gjallë, olot ngjyra, origjinal me kolonat e tij të zhdrejtë, plot
-                                mozaikë, salamandër në hyrjen e saj dhe sallë e mrekullueshme me 100 kolona. Doni një
-                                keshille? Hyni në Park nga pika më e lartë e tij: Pamja e qytetit është e mrekullueshme!
-                                Park Güell
-                                </br>
-                                <br>
-                                5. Merrni pjese ne spektaklin Font màgica de Montjuïc. Shfaqja plot ngjyra e ujit te
-                                shatervanit qe “kercejne” nen tingujt e muzikes eshte per te mos u humbur. Zhvillohet
-                                nga muaji prill ne shtator (te enjte dhe te premte) dhe ne tetor (te shtunen dhe te
-                                dielen) Mos e humbni per asnje arsye 🙂
-                                Font màgica de Montjuïc
-                                </br>
-                                <br>
-                                6. Nje vizite ne Boqueria. Ky treg, përveç të qenit më i famshmi në Barcelonë, është
-                                ndoshta me i famshmi ne te gjihe Spanjen. Ndaloni këtu për të shijuar shumë të
-                                specialiteteve gastonomike ose të pini një nga smoothies me fruta te fresketa. Nuk keni
-                                uri ? Atehere ndaloni vetëm për të bërë një udhëtim brenda, sepse të shkosh në Boqueria
-                                është një domosdoshmëri!
-                                Boqueria
-                                </br>
-                                <br>
-                                7. Gezoni Barceloneten. Kjo lagje bregdetare ka shume statuja te vecanta, eshte me shume
-                                se nje lungomare klasike, do tju duket me shume si nje muze ne qiell te hapur.
-                                Roy Lichtenstein me statujen e quajtur “Barcelona Face” , karkaleci gjigand i Javier
-                                Mariscal ose La Pareja (cifti) nga Lautaro Díaz ju presin ti vizitoni !
-                                Barceloneta
-                                </br>
-                                <br>
-                                8. Lejojani vetes privilegjin te magjepseni para Casa Batlló. Gjithmonë një veper e
-                                Gaudit, e shpallur gjithashtu Trashëgimie Botërore nga UNESCO , Casa Batlló është një
-                                kënaqësi me vete . Hyrja në një vepër të Gaudit është gjithmonë një përvojë unike e
-                                këtij lloji, e pamundur për tu përshkruar: duhet ta jetosh atë.
-                                Casa Batlló
-                                </br>
-                                <br>
+            </div>
 
-                                9. Merrni Tramvajin blua në Tibidabo. Tibidabo Hill ofron pamje spektakolare mbi
-                                qytetin, por gjëja më e bukur për të bërë këtu është të marrësh tramvajin Blau,ne
-                                ngjyrën blu qe e karakterizon, më i vjetri në qytet. Mendoni qe eshte inauguruar në
-                                vitin 1901!
-                                Tibidabo hill-Tram Blau
-                                </br>
-                                <br>
-                                10. Ngjituni ne maje të Mirador de Colom. Pas ecjes në të gjithë Ramblën, do të vini
-                                disa hapa larg nga deti. Para se të zhyteni në klimën e Barcelonës, ndaluni në këmbët e
-                                kolonës që strehon statujën e Cristoforo Colombo në krye të saj. Brenda, ka një ashensor
-                                ku mund të ngjitesh në majë të monumentit. Panorama 360 ° e qytetit është e mahnitshme
-                                dhe do të jetë përfundimi i denjë i këtij udhëtimi për të zbuluar Barcelonën!</p>
-                                <address >
-                                    Written by John Doe.<br> 
-                                    Visit us at:<br>
-                                    Jolilu.com<br>
-                                    FIEK, Prishtine<br>
-                                    KOSOVE
-                                    </address>
-                            </bt>
-                        </blockquote>
-                    </div>
-                </div>
+            <div style="padding-bottom: 20px;">
+                <img src="../images/profile-pic.png" style="float:right; padding: 20px; width:200px; height:200px;"
+                     alt="">
+                <img src="../images/profile-pic.png" style=" padding: 20px; width:200px; height:200px;" alt="">
+                <img src="../images/profile-pic.png" style=" padding: 20px; width:200px; height:200px;" alt="">
+                <img src="../images/profile-pic.png" style="float:left; padding: 20px; width:200px; height:200px;"
+                     alt="">
+            </div>
 
-                <div style="padding-bottom: 20px;">
-                    <img src="../images/profile-pic.png" style="float:right; padding: 20px; width:200px; height:200px;"
-                        alt="">
-                    <img src="../images/profile-pic.png" style=" padding: 20px; width:200px; height:200px;" alt="">
-                    <img src="../images/profile-pic.png" style=" padding: 20px; width:200px; height:200px;" alt="">
-                    <img src="../images/profile-pic.png" style="float:left; padding: 20px; width:200px; height:200px;"
-                        alt="">
-                </div>
-
-                <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
+            <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
                             style="font-size: 18px;">
                             <p>Klikoni butonin per ta formatuar numrin '13.3714' me 'toPrecision(5)' </p>
 
@@ -227,10 +164,10 @@
 
                                 }
                             </script>
-                </div>
+            </div>
 
-                <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
-                    style="font-size: 18px;">
+            <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
+                            style="font-size: 18px;">
                     <p>Numri 1000000 ne formatin e 'currency Euro' me "de-DE" metoda 'toLocaleString'. </p>
 
                     <script>
@@ -242,128 +179,128 @@
 
                         document.write(n.toLocaleString("de-DE", myObj));
                     </script>
-                </div>
-
-                <div class="icons" style="margin-top: -60px;">
-                    <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
-                    <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
-                    <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
-                    <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
-                    <a href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a>
-                </div>
             </div>
 
+            <div class="icons" style="margin-top: -60px;">
+                <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
+                <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
+                <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
+                <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
+                <a href="https://plus.google.com/discover" target="_blank" class="fab fa-google"></a>
+            </div>
         </div>
 
-
-        <footer>
-            <div class="footer-main">
-                <div class="footer-inner">
-                    <div class="footer-left">
-                        <div class="footer-box">
-
-                            <h6>ABOUT US</h6>
-                            <img src="../images/372.jpg" width="215px" height="90px" />
+    </div>
 
 
-                            <p> JOLILU travel është një udhëzues gjithëpërfshirës për destinacionet
-                                më të mira të udhëtimit në botë.Ne ofrojmë përmbajtje të detajuar
-                                dhe të saktë të udhëtimit, të dizajnuara për të frymëzuar udhëtarët globalë.</p>
-                            <a style="float: left" href="Sherbimet.php">Read more &raquo</a>
-                        </div>
-                    </div>
-                    <div class="footer-left">
-                        <div class="footer-box">
-                            <h6>LINK BLOCK</h6>
-                            <ul>
-                                <li style="border-bottom: 1px solid #919090"><a href="https://aria-travel.com/"
-                                        target="_blank">&raquo
-                                        AriaTravelAlbania</a>
-                                </li>
-                                <li style="border-bottom: 1px solid #919090"><a href="https://travel.com/"
-                                        target="_blank">&raquo
-                                        Travel</a>
-                                </li>
-                                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyfrontier.com/"
-                                        target="_blank">&raquo
-                                        FlyFrontier</a>
-                                </li>
-                                <li style="border-bottom: 1px solid #919090"><a
-                                        href="https://www.skyscanner.co.in/airlines-all.php" target="_blank">&raquo
-                                        AirlineInformation</a>
-                                </li>
-                                <li style="border-bottom: 1px solid #919090"><a href="https://www.expedia.com/Flights"
-                                        target="_blank">&raquo
-                                        CheapFlights</a>
-                                </li>
-                                <li style="border-bottom: 1px solid #919090"><a href="https://www.flyksa.com/Fr/"
-                                        target="_blank">&raquo
-                                        KosovaAirline</a>
-                                </li>
-                                <li style="border-bottom: 1px solid #919090"><a href="https://wizzair.com/en-gb"
-                                        target="_blank">&raquo
-                                        Wizzair</a>
-                                </li>
-                                <li style="border-bottom: 1px solid #919090"><a
-                                        href="https://www.booking.com/index.en.php?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB"
-                                        target="_blank">&raquo
-                                        Hotels and More</a>
-                                </li>
-                                <li style="border-bottom: 1px solid #919090"><a href="../README.md"
-                                        target="_blank">&raquo Readme</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-left">
-                        <div class="footer-box">
-                            <h6>ME TE REJAT</h6>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-inner">
+                <div class="footer-left">
+                    <div class="footer-box">
 
-                            <h4>Dubai - 6 ditë - €629</h4>
-
-                            <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e Dubait.It was popularised in
-                                the 1960s with
-                                the release of </p>
-                            <a style="float: left" href="lavdatat.php">Read more &raquo</a>
-                            <br>
+                        <h6>ABOUT US</h6>
+                        <img src="../images/372.jpg" width="215px" height="90px" />
 
 
-                            <div class="latestb">
-                                <h4>Dubai - 6 ditë - €629</h4>
-
-                                <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e Shkupit . It was
-                                    popularised in the 1960s
-                                    with the release otaining</p>
-                                <a style="float: left" href="lavdata3.php">Read more &raquo</a>
-                                <br>
-                                <br>
-
-                            </div>
-                        </div>
+                        <p> JOLILU travel është një udhëzues gjithëpërfshirës për destinacionet
+                            më të mira të udhëtimit në botë.Ne ofrojmë përmbajtje të detajuar
+                            dhe të saktë të udhëtimit, të dizajnuara për të frymëzuar udhëtarët globalë.</p>
+                        <a style="float: left" href="Sherbimet.php">Read more &raquo</a>
                     </div>
                 </div>
                 <div class="footer-left">
                     <div class="footer-box">
-                        <h6 id="kontakti">CONTACT US</h6>
-                        <form id="contact-form" method="post" action="" autocomplete="on">
-                            <input type="text" id="name" name="name" placeholder="Name" class="required">
-                            <input type="text" id="email" name="email" placeholder="Email" class="required">
-                            <textarea name="message" placeholder="Message" rows="6" class="required"></textarea><br>
-                            <input type="submit" name="SUBMIT" value="SUBMIT">
-                        </form>
+                        <h6>LINK BLOCK</h6>
+                        <ul>
+                            <li style="border-bottom: 1px solid #919090"><a href="https://aria-travel.com/"
+                                                                            target="_blank">&raquo
+                                    AriaTravelAlbania</a>
+                            </li>
+                            <li style="border-bottom: 1px solid #919090"><a href="https://travel.com/"
+                                                                            target="_blank">&raquo
+                                    Travel</a>
+                            </li>
+                            <li style="border-bottom: 1px solid #919090"><a href="https://www.flyfrontier.com/"
+                                                                            target="_blank">&raquo
+                                    FlyFrontier</a>
+                            </li>
+                            <li style="border-bottom: 1px solid #919090"><a
+                                        href="https://www.skyscanner.co.in/airlines-all.php" target="_blank">&raquo
+                                    AirlineInformation</a>
+                            </li>
+                            <li style="border-bottom: 1px solid #919090"><a href="https://www.expedia.com/Flights"
+                                                                            target="_blank">&raquo
+                                    CheapFlights</a>
+                            </li>
+                            <li style="border-bottom: 1px solid #919090"><a href="https://www.flyksa.com/Fr/"
+                                                                            target="_blank">&raquo
+                                    KosovaAirline</a>
+                            </li>
+                            <li style="border-bottom: 1px solid #919090"><a href="https://wizzair.com/en-gb"
+                                                                            target="_blank">&raquo
+                                    Wizzair</a>
+                            </li>
+                            <li style="border-bottom: 1px solid #919090"><a
+                                        href="https://www.booking.com/index.en.php?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB"
+                                        target="_blank">&raquo
+                                    Hotels and More</a>
+                            </li>
+                            <li style="border-bottom: 1px solid #919090"><a href="../README.md"
+                                                                            target="_blank">&raquo Readme</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="clr"></div>
+                <div class="footer-left">
+                    <div class="footer-box">
+                        <h6>ME TE REJAT</h6>
+
+                        <h4>Dubai - 6 ditë - €629</h4>
+
+                        <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e Dubait.It was popularised in
+                            the 1960s with
+                            the release of </p>
+                        <a style="float: left" href="lavdatat.php">Read more &raquo</a>
+                        <br>
+
+
+                        <div class="latestb">
+                            <h4>Dubai - 6 ditë - €629</h4>
+
+                            <p>Dita e Parë: Nisja me Autobus nga Prishtina në Aeroportin e Shkupit . It was
+                                popularised in the 1960s
+                                with the release otaining</p>
+                            <a style="float: left" href="lavdata3.php">Read more &raquo</a>
+                            <br>
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
+            <div class="footer-left">
+                <div class="footer-box">
+                    <h6 id="kontakti">CONTACT US</h6>
+                    <form id="contact-form" method="post" action="" autocomplete="on">
+                        <input type="text" id="name" name="name" placeholder="Name" class="required">
+                        <input type="text" id="email" name="email" placeholder="Email" class="required">
+                        <textarea name="message" placeholder="Message" rows="6" class="required"></textarea><br>
+                        <input type="submit" name="SUBMIT" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </footer>
 
-    </div>
+</div>
 
 
-    </div>
+</div>
 
-    <script src="../js/backtotop.js"></script>
-    <script src="../js/rregullat.js"></script>
+<script src="../js/backtotop.js"></script>
+<script src="../js/rregullat.js"></script>
 
 </body>
 
