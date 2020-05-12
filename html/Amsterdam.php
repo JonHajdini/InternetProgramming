@@ -471,7 +471,7 @@
             </div>
 
         </div>
-        <footer>
+        <!-- <footer>
             <div class="footer-main">
                 <div class="footer-inner">
                     <div class="footer-left">
@@ -571,7 +571,14 @@
                 <div class="clr"></div>
             </div>
 
-        </footer>
+        </footer> -->
+
+        <?php
+
+        include "footer.php";
+
+        ?>
+
     </div>
 
     <script src="../js/rregullat.js"></script>
