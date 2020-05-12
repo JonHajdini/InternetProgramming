@@ -6,7 +6,7 @@
 .first{margin-left:2px; clear:left;}
 
 #gallery{position: relative; width:970px; display:block; margin-top: -70px; margin-bottom: -60px; position: relative; z-index: 999; background-color: #FFFFFF;}
-#gallery ul li:hover{transform: scale(1.2,1.2) rotateX(30deg) rotateY(30deg) translate(-20px); }
+#gallery ul li:hover{transform: scale(1.05,1.05) rotateX(1deg) rotateY(1deg) translate(-2px); }
 #gallery figure figcaption{display:block; clear:both;}
 #gallery ul{padding-inline-start: 0px; }
 #gallery li{margin-bottom:30px;}
