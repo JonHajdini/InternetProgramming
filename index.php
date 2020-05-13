@@ -426,6 +426,8 @@
   </footer>
   <div id="counter" style="text-align: center; color:black; font-size: 18px; padding-bottom: 30px;"></div>
 
+<?php 
+echo("
   <script>
     var visits = localStorage.getItem('on_load_counter');
     var sessionVisits = sessionStorage.getItem('session_counter');
@@ -440,12 +442,13 @@
     sessionVisits++;
     visits++;
 
-    localStorage.setItem("on_load_counter", visits);
-    sessionStorage.setItem("session_counter", sessionVisits)
+    localStorage.setItem('on_load_counter', visits);
+    sessionStorage.setItem('session_counter', sessionVisits)
 
-    document.getElementById('counter').innerHTML = "Ju e keni vizituar kete faqe " + visits + " here (" + sessionVisits + " here ne kete sesion). ";
+    document.getElementById('counter').innerHTML = 'Ju e keni vizituar kete faqe ' + visits + ' here (' + sessionVisits + ' here ne kete sesion). ';
   </script>
-  </div>
+  </div> ");
+  ?>
   <script src="js/backtotop.js"></script>
   <script src="js/rregullat.js"></script>
 
