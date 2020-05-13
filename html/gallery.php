@@ -225,7 +225,7 @@ if(isset($_POST['submit'])){
             </li>
             <Button   name="inputi" style="border: 0px;" value="Stambolli" > <li class="one_quarter first""><img id="img6" src="../images/f6.jpg" width="200" height="200"
                   alt=""></li></button>
-            <Button   name="inputi" style="border: 0px;" value="Stambolli" > <li class="one_quarter first""><img id="img7" src="../images/italy.jpg" width="200" height="200"
+            <Button   name="inputi" style="border: 0px;" value="Parisi" > <li class="one_quarter first""><img id="img7" src="../images/italy.jpg" width="200" height="200"
                   alt=""></li></button>
            <Button  name="inputi" style="border: 0px;" value="Amsterdam" > <li class="one_quarter first"><img id="img9" src="../images/f12.jpg" width="200" height="200"
                     alt=""></button>     
@@ -238,8 +238,6 @@ if(isset($_POST['submit'])){
             <button  name="inputi" style="border: 0px;" value="Parisi" > <li class="one_quarter"><img id="img9" src="../images/f7.jpg" width="200" height="200"
                   alt=""></button>
             </li>
-            <Button name="inputi" style="border: 0px;" value="Parisi" > <li class="one_quarter"><img id="img10" src="../images/f8.jpg" width="200" height="200"
-                  alt=""></a></li></button>
 			</form>
           </ul>
         </figure>
