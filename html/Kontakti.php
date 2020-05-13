@@ -1,14 +1,37 @@
+<?php include "db.php"; ?>
+
 <?php
-  if(filter_has_var(INPUT_POST, 'submit')){
-    $firstname = $_POST['emri'];
+
+  if(isset($_POST['submitii'])){
+
+    $firstname = $_POST['emripercookies'];
     $lastname = $_POST['mbiemri'];
     $gjinia = $_POST['gender'];
-    $email = $_POST['email'];
-    $tel = $_POST['tel'];
     $birthday = $_POST['birthday'];
-    $nisja = $_POST['nisja'];
+    $nisja = $_POST['nis'];
+    $destinacioni = $_POST['vendi'];
+    $hotel = $_POST['hotel'];
+    $netet = $_POST['nata'];
+    $dhoma = $_POST['dhoma'];
+    $femijet = $_POST['femija'];
+    $data_nisjes = $_POST['nisja'];
+    $mesazhi = $_POST['mesazhi'];
+    
+    
+    $query = "INSERT INTO rezervimet(user_emri, user_mbiemri, user_gjinia, user_birthday, user_nisja, user_destinacion, hoteli, user_nete, user_dhoma, user_femije, user_data_nisjes, user_koment) ";
+    $query .= "VALUES ('$firstname', '$lastname', '$gjinia', '$birthday', '$nisja', '$destinacioni', '$hotel', '$netet', '$dhoma', '$femijet', '$data_nisjes', '$mesazhi')";
+
+    $result = mysqli_query($connection, $query);
+
+      if(!$result){
+        die('Query Failed' . mysqli_error());
+      } else {
+        echo "Te dhenat u ruajten ne db";
+      }
+
   }
 ?>
+
 <?php
 
 /* *OOP in PHP* */
@@ -335,13 +358,7 @@ if (isset($_POST['submitii'])){
             Data e nisjes: <input type="date" tabindex="8" name="nisja" required>
           </fieldset>
           <fieldset>
-            Udhetimi: <br />
-            <input type="checkbox" name="udhetimi" value="aeroplan"> Aeroplan<br />
-            <input type="checkbox" name="udhetimi" value="autobus"> Autobus<br />
-            <input type="checkbox" name="udhetimi" value="anije"> Anije
-          </fieldset>
-          <fieldset>
-            <textarea placeholder="Type your message here...." tabindex="9"></textarea>
+            <textarea name ="mesazhi" placeholder="Type your message here...." tabindex="9"></textarea>
           </fieldset>
           <fieldset>
             <h4><span style="color:blue">Gjeni lokacionin tuaj. Shtyp butonin </span></h4>
