@@ -326,7 +326,7 @@
                   <div class="card">
                     <img
                       src="https://scontent.fprn3-1.fna.fbcdn.net/v/t1.0-9/70349862_2877915908904493_2950854458923286528_n.jpg?_nc_cat=105&_nc_ohc=IJW5Iu_eyp8AQn9dEJ6KPhbaAElZ2qlIY_mtHQMQmp_JQbuQJ89O7dXgg&_nc_ht=scontent.fprn3-1.fna&oh=9337ee3b5c94989eb4ce3fe6b8fca910&oe=5EA59BB0"
-                      alt="Jane" style="width:100%">
+                      alt="Jane" style="width:100%" style="height:25%">
                     <div class="bashkimi">
                       <h2>Lum Pireva</h2>
                       <p class="title">Student and part time Web Developer</p>
@@ -365,6 +365,21 @@
                       <a href="https://www.facebook.com/lirim.beka.4000" target="_blank" style="margin-top:25px"
                         class="fab fa-facebook-f"></a>
                       <p><a href="mailto:beka.lirim@gmail.com"><button class="button">Contact</button></a></p>
+                    </div>
+                  </div>
+                </div>
+				<div class="column">
+                  <div class="card">
+                    <img
+                      src="https://scontent.fprn4-1.fna.fbcdn.net/v/t1.0-9/67153572_1125954954281970_3124587037097721856_n.jpg?_nc_cat=105&_nc_sid=85a577&_nc_ohc=_6I6sUuw-vwAX9zkr61&_nc_ht=scontent.fprn4-1.fna&oh=c5e3aa0755f12644ecf8961af37339c0&oe=5EDA79B2"
+                      alt="John" style="width:100%">
+                    <div class="bashkimi">
+                      <h2>Mergim Graiqevci</h2>
+                      <p class="title">Student and part time Web Developer</p>
+                      <p>Lenda Interneti </p>
+                      <a href="https://www.facebook.com/mergimgraiqevci" target="_blank" style="margin-top:25px"
+                        class="fab fa-facebook-f"></a>
+                      <p><a href="mailto:mergograiqevci@gmail.com"><button class="button">Contact</button></a></p>
                     </div>
                   </div>
                 </div>
