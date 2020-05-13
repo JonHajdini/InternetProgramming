@@ -152,6 +152,7 @@
               <ul>
                 <li><a href="html/Chooselanguage.php">LANGUAGE</a></li>
                 <li><a href="html/game.php">GAME</a></li>
+                <li><a href="html/sendmail.php">SendMail</a></li> /*Mergo E Shtuar*/
               </ul>
             </li>
             <li><a href="html/portfolio.php">OFERTA</a></li>
