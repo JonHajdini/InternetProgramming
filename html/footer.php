@@ -91,19 +91,20 @@
         <?php
         if(isset($_POST['email']))
         {
-            $email_to = "jon_hajdini@hotmail.com";
-            $email_subject = "Summarized propose of the email";
-            //Errors to show if there is a problem in form fields.
+
             function died($error)
             {
                 echo "<script type='text/javascript'>alert('$error');</script>";  //not showing an alert box.
-                die();
+
             }
+            // po
             // validation expected data exists
             if(!isset($_POST['first_name']) || !isset($_POST['email']) || !isset($_POST['comments']))
             {
+
                 died('We are sorry to proceed your request due to error within form entries');
             }
+
             $first_name = $_POST['first_name']; // required
             $email_from = $_POST['email']; // required
             $comments = $_POST['comments']; // required
@@ -130,27 +131,19 @@
             {
                 died($error_message);
             }
-            $email_message = "Form details below.\n\n";
-            function clean_string($string)
-            {
-                $bad = array("content-type","bcc:","to:","cc:","href");
-                return str_replace($bad,"",$string);
-            }
-            $email_message .= "First Name: ".clean_string($first_name)."\n";
-            $email_message .= "Email: ".clean_string($email_from)."\n";
-            $email_message .= "Comments: ".clean_string($comments)."\n";
-            // create email headers
-            $headers = 'From: '.$email_from."\r\n".
-                'Reply-To: '.$email_from."\r\n" .
-                'X-Mailer: PHP/' . phpversion();
-            @mail($email_to, $email_subject, $email_message, $headers);
+            else
+                {
+                    echo '<script type="text/javascript">';
+                    echo ' alert("Ju faleminderit qe kontaktuat me Ne")';  //not showing an alert box.
+                    echo '</script>';
+                }
+
             ?>
             <!-- include your own success html here -->
             <?php
-            echo '<script type="text/javascript">';
-            echo ' alert("Ju faleminderit qe kontaktuat me Ne")';  //not showing an alert box.
-            echo '</script>';
+
             }
+
             ?>
             <div class="footer-left">
                 <div class="footer-box">
