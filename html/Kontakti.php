@@ -157,6 +157,79 @@ for ($row = 0; $row < 3; $row++)
 ?>
 <!DOCTYPE html>
 <html>
+<html>
+<?php 
+/*Mergo E Shtuar Per cookies...*/
+if (isset($_POST['submitii'])){
+	$emri123=$_POST['emripercookies'];
+	setcookie("username",$emri123,time()+24*3600);
+}
+?>
+<style>
+/*Mergo E Shtuar Per cookies...*/
+#pop{
+    background-image: url(https://i.stack.imgur.com/XZDsP.jpg);
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    transform: translate(-50%,-50%);
+    border:2px solid rgb(189, 94, 94);
+    position: fixed;
+    border-radius: 20px;
+           
+    background-color: rgb(177, 158, 158);
+    }
+#close{
+    float:right;
+    border: 0px;
+    padding: 2px;
+	margin-right:10px;
+    text-align: center;
+    background: none;
+    border-radius: 17px;
+    }
+
+#wlccookies {
+	margin-top:20px;
+	margin-left:50px;
+	font-size:20px;
+	color:white;
+	}
+#buttonclearcookies{
+	width:120px;
+	height:40px;
+	border-radius:10px;
+	float:left;	
+	font-size:16px;
+	color:blue;
+	}		
+#buttoncookies{
+	width:120px;
+	height:40px;
+	border-radius:10px;
+	float:left;	
+	font-size:16px;
+	color:blue;
+	}
+#buttonareadcookies{
+	width:120px;
+	height:40px;
+	border-radius:10px;
+	float:right;
+	font-size:16px;
+	color:blue;
+		
+	}
+#paragrafcookies {
+	font-size:15px;
+	color:black;
+	padding: 4px;
+	color:white;
+		
+	}
+
+</style>
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Rezervo</title>
@@ -208,17 +281,16 @@ for ($row = 0; $row < 3; $row++)
 
           </ul>
         </nav>
-        <div class="clear"></div>
+      <div class="clear"></div>
       </header>
     </div>
     <div class="wrapper col3">
-      <div id="container" class="clear">
-
-        <form id="contact" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="on">
+      <div id="container" class="clear" method="post">
+        <form id="contact" method="post" autocomplete="on">
           <h3>Rezervo</h3>
           <h4>Jepni te dhenat e meposhtme</h4>
           <fieldset>
-            <input placeholder="Your firstname" type="text" name="emri" tabindex="1" required autofocus>
+            <input placeholder="Your firstname" type="text" name="emripercookies" tabindex="1" required autofocus>
             <input placeholder="Your lastname" type="text" name="mbiemri" tabindex="1" required>
           </fieldset>
           <fieldset>
@@ -226,14 +298,6 @@ for ($row = 0; $row < 3; $row++)
             <input type="radio" name="gender" value="male" checked> Male &nbsp;
             <input type="radio" name="gender" value="female"> Female &nbsp;
             <input type="radio" name="gender" value="other"> Other
-          </fieldset>
-          <fieldset>
-            <input placeholder="Your Email Address" type="email" name="email"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Ju lutem shenojeni emailin ne formatin e duhur"
-              tabindex="2" required>
-          </fieldset>
-          <fieldset>
-            <input placeholder="Your Phone Number" type="tel" name="tel" tabindex="3" pattern="[0-9]{9}" required>
           </fieldset>
           <fieldset>
             Birthday: <input type="date" tabindex="4" name ="birthday" required>
@@ -283,7 +347,6 @@ for ($row = 0; $row < 3; $row++)
             <h4><span style="color:blue">Gjeni lokacionin tuaj. Shtyp butonin </span></h4>
 
             <button onclick="getLocation()"> Lokacioni im </button>
-
             <p id="demo"><br /></p>
 
             <script>
@@ -304,10 +367,44 @@ for ($row = 0; $row < 3; $row++)
             </script>
 
           </fieldset>
+		  /*Mergo E Shtuar Per cookies...*/
+		  <div id="pop">
+        <button id="close" onclick="document.getElementById('pop').style.display='none'">X</button>
+        
+		<?php 
+		try{
+			if(isset($_COOKIE["username"])){
+			echo strtoupper("<h2 id='wlccookies' 
+			style='	margin-top:20px;
+			margin-left:50px;
+			font-size:20px;
+			color:white;'
+			>Welcome Back " . $_COOKIE["username"] . "!</h2> </br>");
+			echo ("</br></br></br></br><button onclick='fshijcookies()'id='buttonclearcookies'> Clear Cookies </button>
+				<button onclick='opencookiespolicy()' id='buttonareadcookies'>Cookies Policy</button>");
+        } 
+		else{
+        echo strtoupper("<h2 id='wlccookies' 
+			style='	margin-top:20px;
+			margin-left:50px;
+			font-size:20px;
+			color:white;'>Welcome Guest!</h2>");
+		echo ("<p id='paragrafcookies'>By Continuing to browse or by clicking 'Accept',you agree to the storing of cookies on your device to enhance your 
+		site experience and for analytical purposes.To learn more about how we use the cookies,please see our cookies policy.</p>");
+		echo ("
+		<button onclick='opencookiespolicy()' id='buttonareadcookies'>Cookies Policy</button>");
+        }
+		} 
+		catch (Exception $e)
+		{echo $e.getMessage();
+		}?> </br> 
+		
+        </div>
           <fieldset>
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            <button name="submitii" type="submit" id="contact-submit">Submit</button>
           </fieldset>
         </form>
+		
         <div class="icons">
           <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
           <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
@@ -330,7 +427,15 @@ for ($row = 0; $row < 3; $row++)
 
   <script src="../js/backtotop.js"></script>
   <script src="../js/rregullat.js"></script>
+<script>
+  function fshijcookies(){
+	  window.open("deletecookies1.php"); 
+  }
+  function opencookiespolicy() {
+	   window.open("cookiespolicy.php");
+  }
 
+</script>
 
 
 </body>
