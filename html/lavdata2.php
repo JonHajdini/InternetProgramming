@@ -127,14 +127,15 @@
                             dhe shpresojme se do të jenë të dobishme për ju!";
 
                             //------------------------------strlen Function-------------------------------------------------
+                            echo "<br>";
                             $textpart = substr($fulltext, 0, 1000);
                             echo $textpart;
+                            echo "<br>";
                             echo "<br>";
                             echo  "Ne kete tekst jane shkruar " .strlen($textpart). " karaktere"
                             ?>
 
                         </p>
-                        </br>
                         <?php
                         //----------------------------trim function-----------------------------------------------------
                         $text = "My best regards !";
@@ -214,7 +215,7 @@
                                     FlyFrontier</a>
                             </li>
                             <li style="border-bottom: 1px solid #919090"><a
-                                    href="https://www.skyscanner.co.in/airlines-all.php" target="_blank">&raquo
+                                        href="https://www.skyscanner.co.in/airlines-all.php" target="_blank">&raquo
                                     AirlineInformation</a>
                             </li>
                             <li style="border-bottom: 1px solid #919090"><a href="https://www.expedia.com/Flights"
@@ -230,8 +231,8 @@
                                     Wizzair</a>
                             </li>
                             <li style="border-bottom: 1px solid #919090"><a
-                                    href="https://www.booking.com/index.en.php?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB"
-                                    target="_blank">&raquo
+                                        href="https://www.booking.com/index.en.php?aid=1725925;label=en-hc-s4glC*wNOeGEZ7B_fjY56gS336411372683:pl:ta:p1:p2:ac:ap1t1:neg:fi:tikwd-29738972:lp9070165:li:dec:dm;ws=&gclid=Cj0KCQiAr8bwBRD4ARIsAHa4YyLVGbHhMLxOMak9qpd0ujKJ9cfnMF8B3yjazKJZ-lNSBOCK3-zLs8gaAuC-EALw_wcB"
+                                        target="_blank">&raquo
                                     Hotels and More</a>
                             </li>
                             <li style="border-bottom: 1px solid #919090"><a href="../README.md"
@@ -291,5 +292,4 @@
 <script src="../js/rregullat.js"></script>
 
 </body>
-
 
