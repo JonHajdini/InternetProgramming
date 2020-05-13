@@ -210,50 +210,75 @@ if(isset($_POST['submit'])){
             style="background-color:lightblue; border: 1px solid black; padding: 2px 2px 2px 2px; ">Heqe foton e trete!
           </button>-->
           <ul class="nospace clear">
-            <li class="one_quarter first"><a target="_blank"><img id="img1" src="../images/f1.jpg" width="210" height="210"
-                  alt=""></a>
+           		 <form method="post" style='margin-left:10%; margin-right:10%;'>
+            <Button name="inputi" style="border: 0px;" value="Dubai" > <li class="one_quarter first"><img id="img1" src="../images/f1.jpg" width="200" height="200"
+                  alt=""></button>
             </li>
-            <li class="one_quarter"><a  target="_blank"><img id="img2" src="../images/f2.jpg" width="210" height="210"
-                  alt=""></a></li>
-            <li class="one_quarter"><a  target="_blank"><img id="img3" src="../images/f3.jpg" width="210" height="210"
-                  alt=""></a></li>
-            <li class="one_quarter"><a  target="_blank"><img id="img4" src="../images/f4.jpg" width="210" height="210"
-                  alt=""></a></li>
-            <li class="one_quarter first"><a  target="_blank"><img id="img5" src="../images/f5.jpg" width="210" height="210"
-                  alt=""></a>
+           <Button name="inputi" style="border: 0px;" value="Barcelona" > <li class="one_quarter first""><img id="img2" src="../images/f2.jpg" width="200" height="200"
+                  alt=""></li></button>
+            <Button  name="inputi" style="border: 0px;" value="Parisi" > <li class="one_quarter"><img id="img3" src="../images/f3.jpg" width="200" height="200"
+                  alt=""></li></button>
+            <Button name="inputi" style="border: 0px;" value="Dubai" > <li class="one_quarter"><img id="img4" src="../images/f4.jpg" width="200" height="200"
+                  alt=""></li></button>
+            <Button   name="inputi" style="border: 0px;" value="Stambolli" > <li class="one_quarter first"><img id="img5" src="../images/f5.jpg" width="200" height="200"
+                  alt=""> </button>
             </li>
-            <li class="one_quarter"><a  target="_blank"><img id="img6" src="../images/f6.jpg" width="210" height="210"
-                  alt=""></a></li>
-            <li class="one_quarter"><a  target="_blank"><img id="img7" src="../images/italy.jpg" width="210" height="210"
-                  alt=""></a></li>
-            <li class="one_quarter"><a  target="_blank"><img id="img8" src="../images/dubai.jpg" width="210" height="210"
-                  alt="Imazhi nuk mund te shfaqet"></a></li>
-            <li class="one_quarter first"><a  target="_blank"><img id="img9" src="../images/f12.jpg" width="210" height="210"
-                    alt=""></a>      
-            <li class="one_quarter"><a  target="_blank"><img id="img6" src="../images/ushqim2.jpg" width="210" height="210"
-                    alt=""></a></li>
-            <li class="one_quarter"><a target="_blank"><img id="img7" src="../images/ushqim1.jpg" width="210" height="210"
-                    alt=""></a></li>
-            <li class="one_quarter"><a  target="_blank"><img id="img8" src="../images/barca.jpg" width="210" height="210"
-                    alt="barca"></a></li>
-            <li class="one_quarter first"><a  target="_blank"><img id="img9" src="../images/f7.jpg" width="210" height="210"
-                  alt=""></a>
+            <Button   name="inputi" style="border: 0px;" value="Stambolli" > <li class="one_quarter first""><img id="img6" src="../images/f6.jpg" width="200" height="200"
+                  alt=""></li></button>
+            <Button   name="inputi" style="border: 0px;" value="Stambolli" > <li class="one_quarter first""><img id="img7" src="../images/italy.jpg" width="200" height="200"
+                  alt=""></li></button>
+           <Button  name="inputi" style="border: 0px;" value="Amsterdam" > <li class="one_quarter first"><img id="img9" src="../images/f12.jpg" width="200" height="200"
+                    alt=""></button>     
+            <Button  name="inputi" style="border: 0px;" value="Amsterdam" > <li class="one_quarter"><img id="img6" src="../images/ushqim2.jpg" width="200" height="200"
+                    alt=""></li></button>
+            <Button  name="inputi" style="border: 0px;" value="Barcelona" > <li class="one_quarter first""><img id="img7" src="../images/ushqim1.jpg" width="200" height="200"
+                    alt=""></li></button>
+            <Button  name="inputi" style="border: 0px;" value="Barcelona" > <li class="one_quarter"><img id="img8" src="../images/barca.jpg" width="200" height="200"
+                    alt="barca"></li></button>
+            <button  name="inputi" style="border: 0px;" value="Parisi" > <li class="one_quarter"><img id="img9" src="../images/f7.jpg" width="200" height="200"
+                  alt=""></button>
             </li>
-            <li class="one_quarter"><a target="_blank"><img id="img10" src="../images/f8.jpg" width="210" height="210"
-                  alt=""></a></li>
-            <li style="border: 1px solid black; width:210px; height:210px;
-            display:inline-block; margin:6px; float: left;" ondrop="drop(event)" ondragover="allowDrop(event)">
-              <a href="#"><abbr title="Fotojo qe mund te zhvendoset">
-                  <img id="img11" src="../images/f9.jpg" width="210" height="210" id="drag1" src="img_logo.gif"
-                    draggable="true" ondragstart="drag(event)" alt="">
-                </abbr></a></li>
-            <li style="border: 0.2px solid black; width:210px; height:210px;
-             display:inline-block; margin:6px; float: left;" ondrop="drop(event)" ondragover="allowDrop(event)"><a
-                href="#"></a></li>
-
+            <Button name="inputi" style="border: 0px;" value="Parisi" > <li class="one_quarter"><img id="img10" src="../images/f8.jpg" width="200" height="200"
+                  alt=""></a></li></button>
+			</form>
           </ul>
         </figure>
-        <div class="description"><span id="highlight"><abbr style="border: none;text-decoration: none;" title="Gallery description">Gallery D.</abbr></span>
+ <?php 
+try {
+$_SESSION["Qytete"] = $_POST['inputi'];
+if(isset($_SESSION["Qytete"]))
+	{ 
+    echo "<h2 id='welcomeVizita' style=' 
+             text-align:center;
+             margin-left:auto;
+             margin-right:auto;
+             width:50%;
+			 color:red;
+			 font-size:30px;'>Vizita e fundit: ".$_SESSION["Qytete"] .$i ."</h2> </br></br>";
+	echo ("</br><button onclick='fshijsessionin()'id='buttonifshijsessionin'> Fshij Sessionin</button>"); 
+	}
+	
+else {
+	echo ("<h2 id='bla' style='color:white;' >Ende nuk keni vizituar ndonje nga qytetet </h2> </br>");
+}	
+} catch (Exception $e){
+	echo ($e.getMessage());
+	
+}
+?>
+
+
+<style> 
+#buttonifshijsessionin {
+	width:100px;
+	height:50px;
+	margin-left:45%;
+	margin-right:45%;
+	border-radius:15px;
+}
+
+</style>
+		</div> </br></br></br></br>
           <div class="icons">
             <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
             <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
@@ -275,7 +300,12 @@ if(isset($_POST['submit'])){
 
   <script src="../js/backtotop.js"></script>
   <script src="../js/rregullat.js"></script>
-
+<script>
+ function fshijsessionin(){
+	window.open("../html/deletesessions.php");
+}
+ 
+</script>
 </body>
 
 </html>
