@@ -145,11 +145,42 @@
             }
 
             ?>
+        <!-- Ajax - PHP -->
+        <script>
+
+            function showHint(str)
+            {
+                if (str.length == 0)
+                {
+                    document.getElementById("txtHint").innerHTML = "";
+                    return;
+                }
+                else
+                {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function()
+                    {
+                        if (this.readyState === 4 && this.status === 200)
+                        {
+                            document.getElementById("txtHint").innerHTML = this.responseText;
+
+
+                        }
+                    };
+                    xmlhttp.open("GET", "gethint.php?emri=" + str, true);
+
+                    xmlhttp.send();
+                }
+            }
+        </script>
             <div class="footer-left">
                 <div class="footer-box">
                     <h6 id="kontakti">CONTACT US</h6>
                     <form id="contact-form" method="post" action="" autocomplete="on">
-                        <input type="text" id="name" name="first_name" placeholder="Name" class="required">
+                        <input list = "Hint" type="text"  placeholder="Name" name="first_name"  oninput ="showHint(this.value)" tabindex="5" class="required">
+                        <datalist id="Hint">
+                            <div id = "txtHint"></div>
+                        </datalist>
                         <input type="text" id="email" name="email" placeholder="Email" class="required">
 
                         <textarea name="comments" placeholder="Message" rows="6" class="required"></textarea><br>
