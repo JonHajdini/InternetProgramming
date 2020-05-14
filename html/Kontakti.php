@@ -140,7 +140,7 @@ class Vargjet extends SortedArrays
 }
 
 
-$indArray = array("HOME", "SHERBIMET", "KONTAKTONI", "FUN");             //  indexed array
+$indArray = array("HOME", "SHERBIMET", "KONTAKTONI", "MORE");             //  indexed array
 
 $assoArray = array("Agency" => "JOLILU", "Contact" => "CONTACT US");     //  associative array
 
@@ -293,14 +293,16 @@ if (isset($_POST['submitii'])){
             <li><a href="Sherbimet.php"><?php echo $name[1] ?></a></li>
             <li><a href="#kontakti"><?php echo $name[2] ?></a></li>
             <li><a href="Kontakti.php" class="active">REZERVO</a></li>
+              <li><a href="portfolio.php">OFERTA</a></li>
+              <li><a href="gallery.php">GALLERY</a></li>
             <li><a href="#"><?php echo $name[3] ?></a>
               <ul>
                
                 <li><a href="game.php">GAME</a></li>
+                  <li><a href="game.php">SEND EMAIL</a></li>
               </ul>
             </li>
-            <li><a href="portfolio.php">OFERTA</a></li>
-            <li><a href="gallery.php">GALLERY</a></li>
+
 
           </ul>
         </nav>
