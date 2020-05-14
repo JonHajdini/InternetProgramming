@@ -62,13 +62,7 @@ if(isset($_POST['submit'])){
 
                     <div class="col-xs-6">
  
-                    <?php 
-
-                    // Marrja e informatave nga tabela kategorite 
-                    $query = "SELECT * FROM kategorite";
-                    $select_kategorite = mysqli_query($connection, $query);
-
-                    ?>
+                    
 
                     <table class="table table-bordered table-hover">
                         <thead>
@@ -80,6 +74,12 @@ if(isset($_POST['submit'])){
                         <tbody>
 
                     <?php 
+ 
+
+                    // Marrja e informatave nga tabela kategorite 
+                    $query = "SELECT * FROM kategorite";
+                    $select_kategorite = mysqli_query($connection, $query);
+
 
                     while($row = mysqli_fetch_assoc($select_kategorite)){
                         
@@ -89,8 +89,23 @@ if(isset($_POST['submit'])){
                         echo "<tr>";
                         echo "<td>{$kat_id}</td>";
                         echo "<td>{$kat_emri}</td>";
+                        echo "<td><a href='categories.php?delete={$kat_id}'>Delete</a></td>";
                         echo "</tr>";
 
+                    }
+
+                    ?>
+
+                    <?php 
+
+                    if(isset($_GET['delete'])){
+
+                        $get_kat_id = $_GET['delete']; 
+                        
+                        $query = "DELETE FROM kategorite WHERE kat_id = {$get_kat_id} ";
+                        $delete_query = mysqli_query($connection, $query);
+
+                        header("Location: categories.php"); //refresh page after delete
                     }
 
                     ?>
