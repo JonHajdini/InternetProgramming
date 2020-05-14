@@ -20,7 +20,35 @@
                        
                        
                         <div class="col-xs-6">
-                            <form action="">
+ <?php
+
+if(isset($_POST['submit'])){
+
+    $kat_emri = $_POST['cat_title'];
+
+    if($kat_emri == "" || empty($kat_emri)){
+
+        echo "This field should not be empty";
+
+    } else {
+
+        $query = "INSERT INTO kategorite(kat_emri) ";
+        $query .= "VALUE('{$kat_emri}')" ;
+
+        $create_category_query = mysqli_query($connection, $query);
+
+        if(!$create_category_query){
+
+            die('QUERY FAILED' . mysqli_error($connection));
+
+        }
+
+    }
+
+}
+
+?>
+                            <form action="" method="post">
                                 <div class="form-group">
                                     <label for="cat-title">Add Category</label>
                                     <input type="text" class="form-control" name="cat_title">
@@ -33,7 +61,7 @@
                     </div>
 
                     <div class="col-xs-6">
-
+ 
                     <?php 
 
                     // Marrja e informatave nga tabela kategorite 
