@@ -53,12 +53,14 @@
                         <p style="font-size: 24px;">
 
                             <?php
-                            //-----------------------------readfile function------------------------------------------
+                            //-----------------------------read / write a file function------------------------------------------
                             $myFile = "content.txt";
                             $fh = fopen($myFile, 'r');
                             $myFileContents = fread($fh, 200);
                             fclose($fh);
                             echo $myFileContents;
+
+
                             //----------------substr Function ------------------------------------------------------------------
                             echo substr("5 Udhetime te paharrueshme !", 1) . "<br>";
                             ?>
