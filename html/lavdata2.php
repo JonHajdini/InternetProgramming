@@ -53,6 +53,12 @@
                         <p style="font-size: 24px;">
 
                             <?php
+                            //-----------------------------readfile function------------------------------------------
+                            $myFile = "content.txt";
+                            $fh = fopen($myFile, 'r');
+                            $myFileContents = fread($fh, 200);
+                            fclose($fh);
+                            echo $myFileContents;
                             //----------------substr Function ------------------------------------------------------------------
                             echo substr("5 Udhetime te paharrueshme !", 1) . "<br>";
                             ?>
@@ -60,8 +66,40 @@
                     </blockquote>
 
                     <?php
-                    //-----------------------------Implode Function-----------------------------------------------------
+                   /*------Converting a file to a docx file in order to read/write it (joni)--------*
+                    *  function read_file_docx($filename){
+                        $striped_content = '';
+                        $content = '';
+                        if(!$filename || !file_exists($filename)) return false;
+                        $zip = zip_open($filename);
+                        if (!$zip || is_numeric($zip)) return false;
+                        while ($zip_entry = zip_read($zip)) {
+                            if (zip_entry_open($zip, $zip_entry) == FALSE) continue;
+                            if (zip_entry_name($zip_entry) != "word/document.xml") continue;
+                            $content .= zip_entry_read($zip_entry, zip_entry_filesize($zip_entry));
+                            zip_entry_close($zip_entry);
+                        }// end while
+                        zip_close($zip);
+                        $content = str_replace('</w:r></w:p></w:tc><w:tc>', " ", $content);
+                        $content = str_replace('</w:r></w:p>', "\r\n", $content);
+                        $striped_content = strip_tags($content);
+                        return $striped_content;
+                    }
+                    $filename = "content.txt";// or /var/www/html/file.docx
+                    $content = read_file_docx($filename);
+                    if($content !== false) {
+                        echo nl2br($content);
+                    }
+                    else {
+                        echo 'Couldn\'t the file. Please check that file.';
+                    }
 
+                     */ ?>
+
+
+                    <?php
+                    //-----------------------------Implode Function-----------------------------------------------------
+                    echo '<br>';
                     $rooms = array('Rehati','Komoditet','Mrekulli!');
                     $newstring=implode(',',$rooms);
                     echo $newstring.'<br/>';
