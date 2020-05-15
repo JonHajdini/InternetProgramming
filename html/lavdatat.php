@@ -1,5 +1,147 @@
+<?php
+
+    /* *OOP in PHP* */
+    /*-----------------------------------------------------------------*/
+    // Sort indexed or Associative Arrays
+    class SortedArrays
+    {
+        public $IndexedArray;
+        public $AssociativeArray;
+
+
+        public function set_numbers($IndexedArray)                                  // set indexed array
+        {
+            $this->numbers = $IndexedArray;
+        }
+        public function set_people($AssociativeArray)                               // set associative array
+        {
+            $this->people = $AssociativeArray;
+        }
+        /* gets constructed and setted members */
+        public function get_numbers()
+        {
+            return $this->numbers;
+        }
+        public function get_people()
+        {
+            return $this->people;
+        }
+
+        /* ------------------------------------- */
+    }
+
+
+    $indarrays = array(200, 220, 80, 120, 150);
+    $assarrays = array("Hotel Paradise" => 600, "Hotel Maria" => 400, "Hotel Aria" => 350);
+
+    $sortoVargjet = new SortedArrays();                       // declare new object from class
+    $sortoVargjet -> set_numbers($indarrays);                 // set indexed array  in object
+    $sortoVargjet -> set_people($assarrays);                  // set associative array in object
+    $numbers = $sortoVargjet->get_numbers();                  // gets indexed array from class
+    $people = $sortoVargjet->get_people();                    // gets associative array from class
+
+
+    rsort($numbers);                            // gets descending order of indexed array from class
+    asort($people);                             // Ascending order according to the value(price)
+    //arsort($people);                                 // Descending order according to the value(price)
+    //krsort($people);                                 // Descending order according to the key(Name)
+    //ksort($people);                                  // Ascending order according to the key(Name)
+
+
+    // manual sorting (Manupilimi me vargje)                  // manual sorting of indexed array
+    for($x = 0; $x < count($numbers); $x++)
+    {
+        for ($y = $x + 1; $y < count($numbers); $y++)
+        {
+            if($numbers[$x] < $numbers[$y])
+            {
+                $tempValue = $numbers[$y];
+                $numbers[$y] = $numbers[$x];
+                $numbers[$x] = $tempValue;
+                // ascending order
+
+            }
+        }
+    }
+
+
+
+    /* ------------------------------------------------------------------------- */
+
+    // PHP OOP - Inheritance //
+    class Vargjet extends SortedArrays
+    {
+        public $MulDimArray;
+
+        /*---Konstruktimi ne klasa---*/
+        function __construct($IndexedArray, $AssociativeArray, $MulDimArray)
+        {
+            $this->indexed = $IndexedArray;
+            $this->associative = $AssociativeArray;
+            $this->multidimensional = $MulDimArray;
+            $this->length = count($IndexedArray);
+        }
+
+        /*      get constructed variables       */
+        function get_indexed()
+        {
+            return $this->indexed;
+        }
+        function get_associative()
+        {
+            return $this->associative;
+        }
+        function get_length()
+        {
+            return $this->length;
+        }
+        function get_multidimensional()
+        {
+            return $this->multidimensional;
+        }
+        /* ------------------------------------ */
+        //--------- Destruct object ------------//
+        function __destruct()
+        {
+            return "Klasa u prish!";
+        }
+    }
+
+
+    $indArray = array("HOME", "SHERBIMET", "KONTAKTONI", "MORE");             //  indexed array
+
+    $assoArray = array("OPTION" => "(Opsionale)", "Data" => 18);              //  associative array
+
+    $mulArray = array                                                        // multidimensional array
+    (
+        array("No: ",0101404101),
+        array("Address: ","Julian Park st.101"),
+        array("City: ", "Prishtine"),
+    );
+
+
+    $vargjet = new Vargjet($indArray, $assoArray, $mulArray);               // construct object
+    $name =  $vargjet->get_indexed();                                       // declare indexed array from class
+    $arrlength = $vargjet->get_length();                                    // declare length of indexed array from class
+    $agency = $vargjet->get_associative();                                  // declare associative array from class
+    $contact = $vargjet->get_multidimensional();                            // declare multidimensional array from class
+
+    // basic loop
+    for($x = 0; $x < $arrlength; $x++)
+    {
+
+        if($name[$x] == "HOME")
+        {
+            continue;
+        }
+    }
+
+
+?>
+
+
 <!DOCTYPE html>
-<html>
+<html lang="">
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -24,13 +166,13 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="../index.php">HOME</a></li>
-                        <li><a href="Sherbimet.php">SHERBIMET</a></li>
-                        <li><a href="#kontakti">KONTAKTONI</a></li>
+                        <li><a href="../index.php"><?php echo $name[0] ?></a></li>
+                        <li><a href="Sherbimet.php"><?php echo $name[1] ?></a></li>
+                        <li><a href="#kontakti"><?php echo $name[2] ?></a></li>
                         <li><a href="Kontakti.php">REZERVO</a></li>
                         <li><a href="portfolio.php">OFERTA</a></li>
                         <li><a href="gallery.php">GALLERY</a></li>
-                        <li><a href="#">MORE</a>
+                        <li><a href="#"><?php echo $name[3] ?></a>
                             <ul>
                                 <li><a href="sendmail.php">SEND EMAIL</a></li>
                                 <li><a href="game.php">GAME</a></li>
@@ -46,11 +188,11 @@
             <div id="container">
                 <h1 style="font-size: 40px; text-align: center; color: blueviolet;">Dubai, 6 Dite - €629</h1>
                 <div class="testimonial push50 clear">
-                    <img src="../images/profile-pic.png" style="float:left; padding: 20px; width:200px; height:200px;"
+                    <img src="../images/dubai.jpg" style="float:left; padding: 20px; width:200px; height:200px;"
                         alt="">
                     <div class="three_quarter">
                         <blockquote>
-                            <p style="font-size: 24px;"><br>
+                            <p style="font-size: 24px;">
                                <?php $text = "Dita e Parë: Nisja me Áutobus nga Prishtina në Áeroportin e Shkupit. Fluturimi Shkup –
                                 Dubai. Paraqitja ne Check in 2 ore para nisjes dhe njohja me Guiden. Nisja nga Shkupi në
                                 orën 13.35, Mbrritja në Dubai në orën 20.35. Transferta me Áutobus nga Aeroporti në
@@ -59,8 +201,31 @@
                                //--------------------preg_replace function------------------------------------------
                             function remove_accent($text)
                             {
-                                $a = array('À', 'Á', 'Â', 'Ã', 'Ä', 'Å', 'Æ', 'Ç', 'È', 'É', 'Ê', 'Ë', 'Ì', 'Í', 'Î', 'Ï', 'Ð', 'Ñ', 'Ò', 'Ó', 'Ô', 'Õ', 'Ö', 'Ø', 'Ù', 'Ú', 'Û', 'Ü', 'Ý', 'ß', 'à', 'á', 'â', 'ã', 'ä', 'å', 'æ', 'ç', 'è', 'é', 'ê', 'ë', 'ì', 'í', 'î', 'ï', 'ñ', 'ò', 'ó', 'ô', 'õ', 'ö', 'ø', 'ù', 'ú', 'û', 'ü', 'ý', 'ÿ', 'Ā', 'ā', 'Ă', 'ă', 'Ą', 'ą', 'Ć', 'ć', 'Ĉ', 'ĉ', 'Ċ', 'ċ', 'Č', 'č', 'Ď', 'ď', 'Đ', 'đ', 'Ē', 'ē', 'Ĕ', 'ĕ', 'Ė', 'ė', 'Ę', 'ę', 'Ě', 'ě', 'Ĝ', 'ĝ', 'Ğ', 'ğ', 'Ġ', 'ġ', 'Ģ', 'ģ', 'Ĥ', 'ĥ', 'Ħ', 'ħ', 'Ĩ', 'ĩ', 'Ī', 'ī', 'Ĭ', 'ĭ', 'Į', 'į', 'İ', 'ı', 'Ĳ', 'ĳ', 'Ĵ', 'ĵ', 'Ķ', 'ķ', 'Ĺ', 'ĺ', 'Ļ', 'ļ', 'Ľ', 'ľ', 'Ŀ', 'ŀ', 'Ł', 'ł', 'Ń', 'ń', 'Ņ', 'ņ', 'Ň', 'ň', 'ŉ', 'Ō', 'ō', 'Ŏ', 'ŏ', 'Ő', 'ő', 'Œ', 'œ', 'Ŕ', 'ŕ', 'Ŗ', 'ŗ', 'Ř', 'ř', 'Ś', 'ś', 'Ŝ', 'ŝ', 'Ş', 'ş', 'Š', 'š', 'Ţ', 'ţ', 'Ť', 'ť', 'Ŧ', 'ŧ', 'Ũ', 'ũ', 'Ū', 'ū', 'Ŭ', 'ŭ', 'Ů', 'ů', 'Ű', 'ű', 'Ų', 'ų', 'Ŵ', 'ŵ', 'Ŷ', 'ŷ', 'Ÿ', 'Ź', 'ź', 'Ż', 'ż', 'Ž', 'ž', 'ſ', 'ƒ', 'Ơ', 'ơ', 'Ư', 'ư', 'Ǎ', 'ǎ', 'Ǐ', 'ǐ', 'Ǒ', 'ǒ', 'Ǔ', 'ǔ', 'Ǖ', 'ǖ', 'Ǘ', 'ǘ', 'Ǚ', 'ǚ', 'Ǜ', 'ǜ', 'Ǻ', 'ǻ', 'Ǽ', 'ǽ', 'Ǿ', 'ǿ');
-                                $b = array('A', 'A', 'A', 'A', 'A', 'A', 'AE', 'C', 'E', 'E', 'E', 'E', 'I', 'I', 'I', 'I', 'D', 'N', 'O', 'O', 'O', 'O', 'O', 'O', 'U', 'U', 'U', 'U', 'Y', 's', 'a', 'a', 'a', 'a', 'a', 'a', 'ae', 'c', 'e', 'e', 'e', 'e', 'i', 'i', 'i', 'i', 'n', 'o', 'o', 'o', 'o', 'o', 'o', 'u', 'u', 'u', 'u', 'y', 'y', 'A', 'a', 'A', 'a', 'A', 'a', 'C', 'c', 'C', 'c', 'C', 'c', 'C', 'c', 'D', 'd', 'D', 'd', 'E', 'e', 'E', 'e', 'E', 'e', 'E', 'e', 'E', 'e', 'G', 'g', 'G', 'g', 'G', 'g', 'G', 'g', 'H', 'h', 'H', 'h', 'I', 'i', 'I', 'i', 'I', 'i', 'I', 'i', 'I', 'i', 'IJ', 'ij', 'J', 'j', 'K', 'k', 'L', 'l', 'L', 'l', 'L', 'l', 'L', 'l', 'l', 'l', 'N', 'n', 'N', 'n', 'N', 'n', 'n', 'O', 'o', 'O', 'o', 'O', 'o', 'OE', 'oe', 'R', 'r', 'R', 'r', 'R', 'r', 'S', 's', 'S', 's', 'S', 's', 'S', 's', 'T', 't', 'T', 't', 'T', 't', 'U', 'u', 'U', 'u', 'U', 'u', 'U', 'u', 'U', 'u', 'U', 'u', 'W', 'w', 'Y', 'y', 'Y', 'Z', 'z', 'Z', 'z', 'Z', 'z', 's', 'f', 'O', 'o', 'U', 'u', 'A', 'a', 'I', 'i', 'O', 'o', 'U', 'u', 'U', 'u', 'U', 'u', 'U', 'u', 'U', 'u', 'A', 'a', 'AE', 'ae', 'O', 'o');
+                                $a = array
+                                ('À', 'Á', 'Â', 'Ã', 'Ä', 'Å', 'Æ', 'Ç', 'È', 'É', 'Ê', 'Ë', 'Ì', 'Í', 'Î', 'Ï', 'Ð', 'Ñ', 'Ò', 'Ó',
+                                    'Ô', 'Õ', 'Ö', 'Ø', 'Ù', 'Ú', 'Û', 'Ü', 'Ý', 'ß', 'à', 'á', 'â', 'ã', 'ä', 'å', 'æ', 'ç', 'è', 'é',
+                                    'ê', 'ë', 'ì', 'í', 'î', 'ï', 'ñ', 'ò', 'ó', 'ô', 'õ', 'ö', 'ø', 'ù', 'ú', 'û', 'ü', 'ý', 'ÿ', 'Ā',
+                                    'ā', 'Ă', 'ă', 'Ą', 'ą', 'Ć', 'ć', 'Ĉ', 'ĉ', 'Ċ', 'ċ', 'Č', 'č', 'Ď', 'ď', 'Đ', 'đ', 'Ē', 'ē', 'Ĕ',
+                                    'ĕ', 'Ė', 'ė', 'Ę', 'ę', 'Ě', 'ě', 'Ĝ', 'ĝ', 'Ğ', 'ğ', 'Ġ', 'ġ', 'Ģ', 'ģ', 'Ĥ', 'ĥ', 'Ħ', 'ħ', 'Ĩ',
+                                    'ĩ', 'Ī', 'ī', 'Ĭ', 'ĭ', 'Į', 'į', 'İ', 'ı', 'Ĳ', 'ĳ', 'Ĵ', 'ĵ', 'Ķ', 'ķ', 'Ĺ', 'ĺ', 'Ļ', 'ļ', 'Ľ',
+                                    'ľ', 'Ŀ', 'ŀ', 'Ł', 'ł', 'Ń', 'ń', 'Ņ', 'ņ', 'Ň', 'ň', 'ŉ', 'Ō', 'ō', 'Ŏ', 'ŏ', 'Ő', 'ő', 'Œ', 'œ',
+                                    'Ŕ', 'ŕ', 'Ŗ', 'ŗ', 'Ř', 'ř', 'Ś', 'ś', 'Ŝ', 'ŝ', 'Ş', 'ş', 'Š', 'š', 'Ţ', 'ţ', 'Ť', 'ť', 'Ŧ', 'ŧ',
+                                    'Ũ', 'ũ', 'Ū', 'ū', 'Ŭ', 'ŭ', 'Ů', 'ů', 'Ű', 'ű', 'Ų', 'ų', 'Ŵ', 'ŵ', 'Ŷ', 'ŷ', 'Ÿ', 'Ź', 'ź', 'Ż',
+                                    'ż', 'Ž', 'ž', 'ſ', 'ƒ', 'Ơ', 'ơ', 'Ư', 'ư', 'Ǎ', 'ǎ', 'Ǐ', 'ǐ', 'Ǒ', 'ǒ', 'Ǔ', 'ǔ', 'Ǖ', 'ǖ', 'Ǘ',
+                                    'ǘ', 'Ǚ', 'ǚ', 'Ǜ', 'ǜ', 'Ǻ', 'ǻ', 'Ǽ', 'ǽ', 'Ǿ', 'ǿ');
+                                $b = array
+                                ('A', 'A', 'A', 'A', 'A', 'A', 'AE', 'C', 'E', 'E', 'E', 'E', 'I', 'I', 'I', 'I', 'D', 'N', 'O', 'O',
+                                    'O', 'O', 'O', 'O', 'U', 'U', 'U', 'U', 'Y', 's', 'a', 'a', 'a', 'a', 'a', 'a', 'ae', 'c', 'e',
+                                    'e', 'e', 'e', 'i', 'i', 'i', 'i', 'n', 'o', 'o', 'o', 'o', 'o', 'o', 'u', 'u', 'u', 'u', 'y',
+                                    'y', 'A', 'a', 'A', 'a', 'A', 'a', 'C', 'c', 'C', 'c', 'C', 'c', 'C', 'c', 'D', 'd', 'D', 'd',
+                                    'E', 'e', 'E', 'e', 'E', 'e', 'E', 'e', 'E', 'e', 'G', 'g', 'G', 'g', 'G', 'g', 'G', 'g', 'H',
+                                    'h', 'H', 'h', 'I', 'i', 'I', 'i', 'I', 'i', 'I', 'i', 'I', 'i', 'IJ', 'ij', 'J', 'j', 'K',
+                                    'k', 'L', 'l', 'L', 'l', 'L', 'l', 'L', 'l', 'l', 'l', 'N', 'n', 'N', 'n', 'N', 'n', 'n', 'O',
+                                    'o', 'O', 'o', 'O', 'o', 'OE', 'oe', 'R', 'r', 'R', 'r', 'R', 'r', 'S', 's', 'S', 's', 'S',
+                                    's', 'S', 's', 'T', 't', 'T', 't', 'T', 't', 'U', 'u', 'U', 'u', 'U', 'u', 'U', 'u', 'U', 'u',
+                                    'U', 'u', 'W', 'w', 'Y', 'y', 'Y', 'Z', 'z', 'Z', 'z', 'Z', 'z', 's', 'f', 'O', 'o', 'U', 'u',
+                                    'A', 'a', 'I', 'i', 'O', 'o', 'U', 'u', 'U', 'u', 'U', 'u', 'U', 'u', 'U', 'u', 'A', 'a', 'AE',
+                                    'ae', 'O', 'o');
                                 return str_replace($a, $b, $text);
 
                             }
@@ -72,12 +237,26 @@
                             }
                                    echo post_slug($text);
                             //------------------------preg_split-------------------------------------------------
-                                   $result = preg_split("/[\n]+/", "--Hotel Maria, \n --Hotel Aria, \n --Hotel Parajsa, ");
-                                   echo "<br>";
+                                   $result = preg_split("/[\n]+/", "Hotel Maria> \n Hotel Aria> \n Hotel Paradise> ");
+                                   echo "<br>Hotelet ne dispozicion: ";
                                    // Display result
                                    foreach($result as $a)
                                    {
                                        print $a;
+
+                                       foreach($people as $p)
+                                       {
+                                           print $p."$"."|\n";
+                                           break;
+                                       }
+
+
+                                   }
+
+                                   print "<br>Cmimet per person varojne nga: \n";
+                                   foreach($numbers as $s)
+                                   {
+                                        print $s . "$" . "**";
                                    }
                                    ?>
 
@@ -126,13 +305,13 @@
                                 <br>
                                 Dita e Pestë: Mëngjesi në Hotel. Dite e lirë për Plazh dhe Shopping.
                                 <br>
-                                (Opsionale), Hyrje ditore në Aquaparkun më të famshëm ne Dubai quajtur Aquaventure
+                                <?php echo $agency['OPTION']?>, Hyrje ditore në Aquaparkun më të famshëm ne Dubai quajtur Aquaventure
                                 Atlantis the Palm, në të cilin ndodhet rrëshkitsja me e famshme nënujore quajtur Leap of
                                 Faith, kompleks i cili ndodhet në ishullin më të madh articificial të ndërtuar
                                 ndonjëherë quajtur Palm Jumeirah.
                                 </br>
                                 <br>
-                                (Opsionale), Bilete hyrje për tek Dubai Frame (nga Anglishtja Korniza e Dubait)
+                                <?php echo $agency['OPTION']?>, Bilete hyrje për tek Dubai Frame (nga Anglishtja Korniza e Dubait)
                                 Eksperienca në këtë kompleks fillon me informimin mbi historine e qytetit, të tashmes së
                                 tij duke pasur nje panoramike të pjesës së re dhe të vjeter të Dubait dhe mbaron me të
                                 ardhmen e qytetit-mrekulli
@@ -146,9 +325,22 @@
                                 me Autobus për në Tiranë. Mbrritja ne Tirane.
                                 </br>
                                 <br>
-                                Nisja më 18 Maj.
+                                Nisja më <?php echo $agency['Data']?> Maj nga Vendi:
+                                <?php
+                                    // echo out multidimensional array
+                                    for ($row = 0; $row < 3; $row++)
+                                    {
+                                        for ($col = 0; $col < 2; $col++)
+                                        {
+                                             echo "\n".$contact[$row][$col]."\n";
+
+                                        }
+                                        echo ";";
+
+                                    }
+                                    ?>
                                 </br>
-                            </>
+                            </p>
                         </blockquote>
 
                     </div>
@@ -156,25 +348,12 @@
                 <p style="text-align: center; padding: 20px 0;"><iframe width="760px" height="430"
                         src="https://www.youtube.com/embed/9OwZo6xrWKE" frameborder="0" allowfullscreen></iframe></p>
                 <div class="testimonial clear">
-                    <img src="../images/profile-pic.png"
-                        style=" float:right;  width:200px; height:200px; padding: 20px;" alt="">
+
                     <div class="three_quarter">
                         <blockquote>
                             <br>
-                            <div
-                                style="column-count: 3; column-gap: 30px; column-rule-style: solid; column-rule-width: 1px; column-rule-color:forestgreen; font-size: 20px; color: black; background-image: url(../images/painting.jpg); background-origin: content-box;">
-                                "But I must explain to you how all this mistaken idea of denouncing pleasure and
-                                praising pain was born and I will give you a complete account of the system, and expound
-                                the actual teachings of the great explorer of the truth, the master-builder of human
-                                happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure,
-                                but because those who do not know how to pursue pleasure rationally encounter
-                                consequences that are extremely painful. Nor again is there anyone who loves or pursues
-                                or desires to obtain pain of itself, because it is pain, but because occasionally
-                                circumstances occur in which toil and pain can procure him some great pleasure. To take
-                                a trivial example, which of us ever undertakes laborious physical exercise, except to
-                                obtain some advantage from it? But who has any right to find fault with a man who
-                                chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain
-                                that produces no resultant pleasure?"
+                            <div style="column-count: 3; column-gap: 30px; column-rule-style: solid; column-rule-width: 1px; column-rule-color:forestgreen; font-size: 20px; color: black; background-image: url(../images/painting.jpg); background-origin: content-box;">
+
                             </div>
 
                         </blockquote>
@@ -183,61 +362,8 @@
 
 
 
-                <div style="padding-bottom: 20px;">
-                    <img src="../images/profile-pic.png" style="float:right; padding: 20px; width:200px; height:200px;"
-                        alt="">
-                    <img src="../images/profile-pic.png" style=" padding: 20px; width:200px; height:200px;" alt="">
-                    <img src="../images/profile-pic.png" style=" padding: 20px; width:200px; height:200px;" alt="">
-                    <img src="../images/profile-pic.png" style="float:left; padding: 20px; width:200px; height:200px;"
-                        alt="">
-                </div>
-
-                <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
-                            style="font-size: 18px;">
-
-                            <p>Kliko butonin per te shfaqur numrin 12 te formatuar 'toString'.</p>
-
-                            <button onclick="myFunction1()">Formato</button>
-
-                            <p id="demo2"></p>
-
-                            <script>
-                                function myFunction1() {
-                                    var num = 12;
-                                    var a = num.toString();
-                                    var b = num.toString(2);
-                                    var c = num.toString(8);
-                                    var d = num.toString(16);
-
-                                    var n = "String: " + a + "<br>" + "Binar: " + b + "<br>" + "Oktal: " + c + "<br>" + "Heksadecimal: " + d;
-
-                                    document.getElementById("demo2").innerHTML = n;
-                                }
-                            </script>
 
 
-                </div>
-
-
-                <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
-                            style="font-size: 18px;">
-
-                            <p>Klikoni butonin per te shfaqur exponential notation te numrit 8.123456 ne (4)
-                                'toExponential'.</p>
-
-                            <button onclick="myFunction()">Shfaq</button>
-
-                            <p id="demo"></p>
-
-                            <script>
-                                function myFunction() {
-                                    var num = 8.123456;
-                                    var n = num.toExponential(4);
-                                    document.getElementById("demo").innerHTML = n;
-                                }
-                            </script>
-                </div>
-                
 
                 <div class="icons" style="margin-top: -60px;">
                     <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
