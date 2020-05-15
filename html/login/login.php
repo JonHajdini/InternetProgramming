@@ -18,7 +18,18 @@ if(isset($_POST['login'])){
     }
 
     while($row = mysqli_fetch_array($select_user_query)){
-        echo $db_id = $row['user_id'];
+        $db_id = $row['user_id'];
+        $db_username = $row['username'];
+        $db_user_password = $row['password'];
+        $db_email = $row['user_email'];
+    }
+
+    if($username !== $db_username && $password !== $db_user_password){
+        header("Location: login.php");
+    } else if($username == $db_username && $password == $db_user_password){
+        header("Location: ../admin");
+    } else {
+        header("Location: login.php");
     }
 
 }
