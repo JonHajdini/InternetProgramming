@@ -1,3 +1,21 @@
+<?php include "../db.php"; ?>
+
+<?php 
+
+if(isset($_POST['submit'])){
+
+    $username = $_POST['username'];
+    $email    = $_POST['email'];
+    $password = $_POST['password'];
+
+    $username = mysqli_real_escape_string($connection, $username);
+    $email    = mysqli_real_escape_string($connection, $email);
+    $password = mysqli_real_escape_string($connection, $password);
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,10 +37,10 @@
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
-                    <form method="POST" id="signup-form" class="signup-form">
+                    <form method="post" action="register.php" id="signup-form" class="signup-form">
                         <h2 class="form-title">Create account</h2>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Username"/>
+                            <input type="text" class="form-input" name="username" id="name" placeholder="Your Username"/>
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
