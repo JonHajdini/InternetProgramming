@@ -1,3 +1,31 @@
+<?php include "../db.php"; ?>
+
+<?php
+
+if(isset($_POST['login'])){
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $username = mysqli_real_escape_string($connection, $username);
+    $password = mysqli_real_escape_string($connection, $password);
+
+    $query = "SELECT * FROM users where username = '{$username}' ";
+    $select_user_query = mysqli_query($connection, $query);
+
+    if(!$select_user_query){
+        die("QUERY FAILED" . mysqli_error($connection));
+    }
+
+    while($row = mysqli_fetch_array($select_user_query)){
+        echo $db_id = $row['user_id'];
+    }
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +51,7 @@
                     <form method="POST" id="signup-form" class="signup-form">
                         <h2 class="form-title">Log In</h2>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Username"/>
+                            <input type="text" class="form-input" name="username" id="name" placeholder="Your Username"/>
                         </div>
                         
                         <div class="form-group">
@@ -32,7 +60,7 @@
                         </div>
                            
                         <div class="form-group">
-                            <input type="submit" name="submit" id="submit" class="form-submit" value="Log In"/>
+                            <input type="submit" name="login" id="submit" class="form-submit" value="Log In"/>
                         </div>
                     </form>
                     <p class="loginhere">
