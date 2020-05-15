@@ -1,4 +1,5 @@
 <?php
+
 function insert_categories(){
     global $connection;
 
@@ -65,5 +66,20 @@ function deleteCategories(){
         header("Location: categories.php"); 
     }
 }
+
+
+function confirmQuery($result) {
+    
+    global $connection;
+
+    if(!$result ) {
+          
+          die("QUERY FAILED ." . mysqli_error($connection));
+    
+      }
+    
+
+}
+
 
 ?>
