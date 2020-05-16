@@ -167,12 +167,12 @@ function findAllMessages(){
         $msg_koha  = $row['koha'];
 
         echo "<tr>";
-        echo "<td>{$msg_id}</td>";
-        echo "<td>{$msg_emri}</td>";
-        echo "<td>{$msg_email}</td>";
-        echo "<td>{$msg_txt}</td>";
-        echo "<td>{$msg_koha}</td>";
-        echo "<td><a href='messages.php?delete={$msg_id}'>Delete</a></td>";
+        echo "<td class='text-center'>{$msg_id}</td>";
+        echo "<td class='text-center'>{$msg_emri}</td>";
+        echo "<td class='text-center'>{$msg_email}</td>";
+        echo "<td class='text-center'>{$msg_txt}</td>";
+        echo "<td class='text-center'>{$msg_koha}</td>";
+        echo "<td class='text-center'><a href='messages.php?delete={$msg_id}'>Delete</a></td>";
         
         echo "</tr>";
 
