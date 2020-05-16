@@ -140,7 +140,7 @@
     <div class="wrapper row1">
       <header id="header" class="clear">
         <div id="hgroup">
-          <img href="index.php" src=images/jlml.png /></h1>
+          <img href="index.php" src="images/jlml.png" width="200px" height="50px">
         </div>
         <nav>
           <ul>
