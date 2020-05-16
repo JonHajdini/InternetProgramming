@@ -1,3 +1,5 @@
+<?php include "html/db.php"; ?>
+
 <html manifest="cache.appcache">
 
 <head>
@@ -456,6 +458,19 @@
                   }
                   else
                   {
+
+                    $query = "INSERT INTO mesazhet(emri, emaili, mesazhi) ";
+                    $query .= "VALUES('{$first_name}','{$email_from}','{$comments}')";
+    
+                    $send_message_query = mysqli_query($connection, $query);
+
+                    if(!$send_message_query){
+
+                        die("QUERY FAILED" . mysqli_error($connection)); 
+
+                    }
+
+
                       echo '<script type="text/javascript">';
                       echo ' alert("Ju faleminderit qe kontaktuat me Ne")';  //not showing an alert box.
                       echo '</script>';
