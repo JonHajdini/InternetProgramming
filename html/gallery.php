@@ -40,44 +40,6 @@ if(isset($_POST['submit'])){
       });
     });
   </script>
-  <!--JQuery qe mundeson "Fade to" te imazhave-->
-  <!--<script>
-    $(document).ready(function () {
-      $("#img1").click(function () {
-        $("#img1").fadeTo(1000, 0.7);
-      }),
-        $("#img2").click(function () {
-          $("#img2").fadeTo(1000, 0.7);
-        }),
-        $("#img3").click(function () {
-          $("#img3").fadeTo(1000, 0.7);
-        }),
-        $("#img4").click(function () {
-          $("#img4").fadeTo(1000, 0.7);
-        }),
-        $("#img5").click(function () {
-          $("#img5").fadeTo(1000, 0.7);
-        }),
-        $("#img6").click(function () {
-          $("#img6").fadeTo(1000, 0.7);
-        }),
-        $("#img7").click(function () {
-          $("#img7").fadeTo(1000, 0.7);
-        }),
-        $("#img8").click(function () {
-          $("#img8").fadeTo(1000, 0.7);
-        }),
-        $("#img9").click(function () {
-          $("#img9").fadeTo(1000, 0.7);
-        }),
-        $("#img10").click(function () {
-          $("#img10").fadeTo(1000, 0.7);
-        }),
-        $("#img11").click(function () {
-          $("#img11").fadeTo(1000, 0.7);
-        });
-    });
-  </script>-->
 
   <style>
     .heading {
@@ -170,7 +132,7 @@ if(isset($_POST['submit'])){
     <div class="wrapper row1">
       <header id="header" class="clear">
         <div id="hgroup">
-          <h1><a href="../index.php">AUTONOMOUS</a></h1>
+            <a href="../index.php"><img src=../images/jlml.png /></a></h1>
         </div>
         <nav>
           <ul>

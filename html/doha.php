@@ -89,7 +89,7 @@
         <div class="wrapper row1">
             <header id="header" class="clear">
                 <div id="hgroup">
-                    <h1><a href="../index.php">AUTONOMOUS</a></h1>
+                    <a href="../index.php"><img src=../images/jlml.png /></a></h1>
                 </div>
                 <nav>
                     <ul>

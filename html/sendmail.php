@@ -1,5 +1,5 @@
 <html>
-/*Mergo E Shtuar Per SendMail...*/
+
 <style>
 *{
 
@@ -89,8 +89,9 @@
 <button type='submit' id='bt1' name='buttoni'>Submit</button> </br> </br> </br>
 <button type='submit' onclick='openphpini()' id='bt2'>Konfiguro PHP.ini</button></br> </br> </br>
 <button type='submit' onclick='opensendmail()' id='bt3'>Konfiguro SENDMAIL.ini</button>
-</div>
+
 </form>
+</div>
 </html>
 <?php
 try {

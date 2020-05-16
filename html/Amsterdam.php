@@ -88,21 +88,23 @@
         <div class="wrapper row1">
             <header id="header" class="clear">
                 <div id="hgroup">
-                    <h1><a href="../index.php">AUTONOMOUS</a></h1>
+                    <a href="../index.php"><img src=../images/jlml.png /></a></h1>
                 </div>
-                <nav>
-                    <li><a href="../index.php">HOME</a></li>
-                    <li><a href="Sherbimet.php">SHERBIMET</a></li>
-                    <li><a href="#kontakti">KONTAKTONI</a></li>
-                    <li><a href="Kontakti.php">REZERVO</a></li>
-                    <li><a href="portfolio.php" class="active">OFERTA</a></li>
-                    <li><a href="gallery.php">GALLERY</a></li>
-                    <li><a href="#">MORE</a>
-                        <ul>
-                            <li><a href="sendmail.php">SEND EMAIL</a></li>
-                            <li><a href="game.php">GAME</a></li>
-                        </ul>
-                    </li>
+                <nav><ul>
+                        <li><a href="../index.php">HOME</a></li>
+                        <li><a href="Sherbimet.php">SHERBIMET</a></li>
+                        <li><a href="#kontakti">KONTAKTONI</a></li>
+                        <li><a href="Kontakti.php">REZERVO</a></li>
+                        <li><a href="portfolio.php" class="active">OFERTA</a></li>
+                        <li><a href="gallery.php">GALLERY</a></li>
+                        <li><a href="#">MORE</a>
+                            <ul>
+                                <li><a href="sendmail.php">SEND EMAIL</a></li>
+                                <li><a href="game.php">GAME</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
                 </nav>
                 <div class="clear"></div>
             </header>
