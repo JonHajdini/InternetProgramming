@@ -8,6 +8,45 @@ function redirect($location){
 }
 
 
+function ifItIsMethod($method=null){
+
+    if($_SERVER['REQUEST_METHOD'] == strtoupper($method)){
+
+        return true;
+
+    }
+
+    return false;
+
+}
+
+
+
+function isLoggedIn(){
+
+    if(isset($_SESSION['user_role'])){
+
+        return true;
+
+    }
+
+   return false;
+
+}
+
+
+
+function checkIfUserIsLoggedInAndRedirect($redirectLocation=null){
+
+    if(isLoggedIn()){
+
+        redirect($redirectLocation);
+
+    }
+
+}
+
+
 
 function insert_categories(){
 
@@ -65,7 +104,7 @@ function findAllCategories(){
 
 
 function deleteCategories(){
-    
+
     global $connection;
 
     if(isset($_GET['delete'])){
