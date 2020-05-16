@@ -82,6 +82,40 @@
             background-color: rgb(255, 255, 255);
         }
     </style>
+
+
+    <style>
+
+
+        .report-container {
+            border: #E0E0E0 1px solid;
+            padding: 20px 40px 40px 40px;
+            border-radius: 2px;
+            width: 550px;
+            margin: 0 auto;
+        }
+
+        .weather-icon {
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        .weather-forecast {
+            color: #212121;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px 0px;
+        }
+
+        span.min-temperature {
+            margin-left: 15px;
+            color: #929292;
+        }
+
+        .time {
+            line-height: 25px;
+        }
+    </style>
 </head>
 
 <body>
@@ -434,31 +468,41 @@
             <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#80222e;"><span
                 style="font-size: 20px;">
 
-                <p>Klikoni butonin per te shtuar nje perkthyes qe do ju shoqeroj '(push array)'</p>
+
                 
-                <button onclick="myFunction()">Shto perkthyesin</button>
-                
-                <p id="demo"></p>
-                
-                <script>
-                var shoqeruesit = ["Shofer", "Ciceron", "Infermier"];
-                document.getElementById("demo").innerHTML = shoqeruesit;
-                
-                function myFunction() {
-                  shoqeruesit.push("Shofer");
-                  document.getElementById("demo").innerHTML = shoqeruesit;
-                }
-                </script>
+                <?php include "weatherAPI.php"; //API USE
+
+                    $apiKey = "4892e283b4adfa886c8aacde68dee349";
+                    $cityId = "292223";
+                    $Dubai = new GetCity($apiKey, $cityId);
+                    $response = $Dubai->get_response();
+                    $data = json_decode($response);
+                    date_default_timezone_set('Asia/Dubai');
+                    $currentTime = time();
+
+                ?>
+
+                 <div class="report-container">
+        <h2><?php echo $data->name; ?> Weather Status</h2>
+        <div class="time">
+            <div><?php echo date("l g:i a", $currentTime); ?></div>
+            <div><?php echo date("jS F, Y",$currentTime); ?></div>
+            <div><?php echo ucwords($data->weather[0]->description); ?></div>
+        </div>
+        <div class="weather-forecast">
+            <img
+                    src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
+                    class="weather-icon" /> <?php echo $data->main->temp_max; ?>&deg;C<span
+                    class="min-temperature"><?php echo $data->main->temp_min; ?>&deg;C</span>
+        </div>
+        <div class="time">
+            <div>Humidity: <?php echo $data->main->humidity; ?> %</div>
+            <div>Wind: <?php echo $data->wind->speed; ?> km/h</div>
+        </div>
+    </div>
             </div>
 
-            <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#02022b;"><span
-                style="font-size: 20px;">
-            <form onsubmit="return false" oninput="level.value = flevel.valueAsNumber">
-                <label for="flying">Notojeni kete <mark>oferte:</mark> &nbsp;&nbsp;</label>
-                <input name="flevel" id="flying" type="range" min="0" max="10" value="0">
-                <output for="flying" name="level">0</output>/10
-            </form>
-            </div>
+            
         </div>
 
         <?php
