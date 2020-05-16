@@ -20,7 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2077bb3-8727-4b37-97c1-cae82212b3d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/html/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Amsterdam.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/Amsterdam.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Kontakti.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/Kontakti.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/Sherbimet.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/Sherbimet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/gallery.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/gallery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/game.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/game.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/lavdata2.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/lavdata2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/lavdatat.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/lavdatat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/portfolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/portfolio.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,23 +36,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,7 +52,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/phpServer/PI_Gr19" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -94,24 +86,24 @@
       <workItem from="1589314867400" duration="67000" />
       <workItem from="1589581061090" duration="1143000" />
       <workItem from="1589600059831" duration="7000" />
+      <workItem from="1589651633719" duration="119000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="188" width="824" height="691" key="#CLI_Interpreters" timestamp="1589229055454">

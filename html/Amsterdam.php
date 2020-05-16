@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="../css/body.css" type="text/css">
     <link rel="stylesheet" href="../css/footeri.css" type="text/css">
     <link rel="stylesheet" href="../css/dropdown.css" type="text/css">
+    <link rel="stylesheet" href="../css/LikeDislike.css">
     <script src="https://kit.fontawesome.com/af9a262f2e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 
     <style>
@@ -431,42 +435,43 @@
                         </dl>
                     </span>
             </div>
-            <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
-                        style="font-size: 18px;">
-                        <p>Klikoni butonin per te bere nje global search tekstin "Ky eshte nje qytet i nje shteti"</p>
 
-                        <button onclick="myFunction()">Kerko</button>
-
-                        <p id="demo"></p>
-
-                        <script>
-                            function myFunction() {
-                                var str = "Ky eshte nje qytet i nje shteti";
-                                var patt1 = /nje/g;
-                                var result = str.match(patt1);
-                                document.getElementById("demo").innerHTML = result;
-                            }
-                        </script>
-            </div>
             <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
                         style="font-size: 18px;">
 
-                        <p>Klikoni butonin per te bere nje case sensitive search per "nje" ne tekstin "Ky eshte nje qytet i nje shteti"</p>
 
+                        <?php include('LikeDislike.php'); ?>
 
-                        <button onclick="myFunction1()">Try it</button>
+                         <div class="posts-wrapper">
+                        <?php foreach ($posts as $post): ?>
+                        <div class="post">
+                          <?php echo $post['text']; ?>
+                          <div class="post-info">
+                            <!-- if user likes post, style button differently -->
+                            <i <?php if (userLiked($post['id'])): ?>
+                                class="fa fa-thumbs-up like-btn"
+                            <?php else: ?>
+                                class="fa fa-thumbs-o-up like-btn"
+                            <?php endif ?>
+                              data-id="<?php echo $post['id'] ?>"></i>
+                            <span class="likes"><?php echo getLikes($post['id']); ?></span>
 
-                        <p id="demo1"></p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
 
-                        <script>
-                            function myFunction1() {
-                                var str = "Ky eshte nje qytet i nje shteti";
-                                var patt1 = /nje/i;
-                                var result = str.match(patt1);
-                                document.getElementById("demo1").innerHTML = result;
-                            }
-                        </script>
-
+                              <!-- if user dislikes post, style button differently -->
+                            <i
+                              <?php if (userDisliked($post['id'])): ?>
+                                  class="fa fa-thumbs-down dislike-btn"
+                              <?php else: ?>
+                                  class="fa fa-thumbs-o-down dislike-btn"
+                              <?php endif ?>
+                              data-id="<?php echo $post['id'] ?>"></i>
+                            <span class="dislikes"><?php echo getDislikes($post['id']); ?></span>
+                          </div>
+                        </div>
+                       <?php endforeach ?>
+                      </div>
+                      <script src="../js/LikeDislike.js"></script>
             </div>
 
         </div>
