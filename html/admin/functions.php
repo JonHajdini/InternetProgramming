@@ -151,6 +151,53 @@ function deleteCategories(){
 }
 
 
+function findAllMessages(){
+
+    global $connection;
+
+    $query = "SELECT * FROM mesazhet";
+    $select_messages = mysqli_query($connection, $query);
+
+    while($row = mysqli_fetch_assoc($select_messages)){
+                        
+        $msg_id    = $row['id'];
+        $msg_emri  = $row['emri'];
+        $msg_email = $row['emaili'];
+        $msg_txt   = $row['mesazhi'];
+        $msg_koha  = $row['koha'];
+
+        echo "<tr>";
+        echo "<td>{$msg_id}</td>";
+        echo "<td>{$msg_emri}</td>";
+        echo "<td>{$msg_email}</td>";
+        echo "<td>{$msg_txt}</td>";
+        echo "<td>{$msg_koha}</td>";
+        echo "<td><a href='messages.php?delete={$msg_id}'>Delete</a></td>";
+        
+        echo "</tr>";
+
+    }
+
+}
+
+
+function deleteMessages(){
+
+    global $connection;
+
+    if(isset($_GET['delete'])){
+
+        $get_msg_id = $_GET['delete']; 
+        
+        $query = "DELETE FROM mesazhet WHERE id = {$get_msg_id} ";
+        $delete_query = mysqli_query($connection, $query);
+
+        header("Location: messages.php"); 
+    }
+}
+
+
+
 function confirmQuery($result) {
     
     global $connection;
