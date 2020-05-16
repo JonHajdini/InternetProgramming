@@ -117,7 +117,38 @@ catch (Exception $e)
 //mail('@gmail.com','Test Subject','Hello there!','From: mergograiqevci@gmail.com');
 
 ?>
-
+<?php
+/*Per cookies ne array
+try{
+//$_COOKIE['mergo']=$_POST['buttoni'];
+if(isset($_POST['buttoni'])){
+$arr = array();
+array_push($arr,'Emaili i fundit i derguar </br>');
+if (strlen($_POST['emaili'])>0){
+array_push($arr,'Email:'.$_POST['emaili'] .'</br>');
+	}
+if (strlen($_POST['subjecti'])>0){
+array_push($arr,'Subject:'.$_POST['subjecti'].'</br>');
+	}
+if (strlen($_POST['messagee'])>0){
+array_push($arr,'Message:'.$_POST['messagee'].'</br>');
+	}	
+$arraystring=implode(" ",$arr);
+setcookie("Login",$arraystring,time()+24*3600);
+foreach ($arr as $shfaq) {
+    //echo ("'<h2 id='mergo'>' .$shfaq ." " .'</h2></br>'");4
+	echo ("<h2 id='mg' style='color:white;' >" .$shfaq ." ". "</h2> </br>");
+		}
+	}
+else {
+	echo ("Nuk keni ende te dhena");
+	}	
+}
+catch(Exception $e){
+	echo ($e.getMessage());
+}
+*/
+?>
 <script>
 
   function openphpini(){
