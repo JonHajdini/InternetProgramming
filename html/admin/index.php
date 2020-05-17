@@ -128,19 +128,19 @@
 
                                      <?php 
 
-                                    $query = "SELECT * FROM kategorite";
-                                    $select_all_categories = mysqli_query($connection,$query);
-                                    $category_count = mysqli_num_rows($select_all_categories);
+                                    $query = "SELECT * FROM ofertat";
+                                    $select_all_offers = mysqli_query($connection,$query);
+                                    $offers_count = mysqli_num_rows($select_all_offers);
 
-                                        echo  "<div class='huge'>{$category_count}</div>"
+                                        echo  "<div class='huge'>{$offers_count}</div>"
 
                                     ?>
 
-                                        <div>Kategorite</div>
+                                        <div>Ofertat</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="categories.php">
+                            <a href="ofertat.php">
                                 <div class="panel-footer">
                                     <span class="pull-left">View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -165,8 +165,8 @@
                 
                                 <?php
                                         
-                                $element_text = ['Reservations', 'Messages', 'Users', 'Categories'];       
-                                $element_count = [$reservation_count, $message_count, $user_count, $category_count];
+                                $element_text = ['Reservations', 'Messages', 'Users', 'Ofertat'];       
+                                $element_count = [$reservation_count, $message_count, $user_count, $offers_count];
 
                                 for($i =0; $i < 4; $i++) {
                                 
