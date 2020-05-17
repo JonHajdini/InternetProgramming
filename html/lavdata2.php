@@ -110,9 +110,9 @@
                     echo $newstring.'<br/>';
 
                     //------------------printf Function-----------------------------------------------------------------
-
-                    $cmimi ="120$";
-                    print ("Nje cmim i arsyeshem per nje nate qe kushton $cmimi");
+                    define("cmimi", "120$");
+                    //$cmimi ="120$";
+                    print ("Nje cmim i arsyeshem per nje nate qe kushton " .cmimi);
                     echo '<br/>';
                     $PriceArray=array ('price'=>"120$",'qty'=>"7");
                     printf("Kurse cmimi qe qendruam per 7 nete ishte  $%d",($PriceArray['price']*$PriceArray['qty']));
@@ -129,9 +129,9 @@
 
                     <?php
                     //-----------------------------Explode Function-----------------------------------------------------
+                    define("string", "Best Regards");
 
-                    $string ='Best Regards!';
-                    $newArray=explode(' ',$string,);
+                    $newArray=explode(' ',string,);
                     foreach($newArray as $value)
                         echo $value.'<br/>';
                     echo '<br/>';
@@ -181,8 +181,9 @@
                         </p>
                         <?php
                         //----------------------------trim function-----------------------------------------------------
-                        $text = "My best regards !";
-                        echo trim($text,"My");
+                        define("text", "My Best regards!");
+
+                        echo trim(text,"My");
 
                         //---------------------------str_replace function-----------------------------------------------
                         echo "<br>";
