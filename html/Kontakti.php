@@ -1,8 +1,14 @@
-<?php include "db.php"; ?>
+
 
 <?php
-
-  if(isset($_POST['submitii'])){
+$mysqli = new mysqli("localhost","root","","travel");
+if ($mysqli -> connect_errno) {
+  echo "Nuk u kyqem me database: " . $mysqli -> connect_error;
+  exit();
+}
+else { 
+	try {
+	if(isset($_POST['submitii'])){
 
     $firstname = $_POST['emripercookies'];
     $lastname = $_POST['mbiemri'];
@@ -16,22 +22,20 @@
     $femijet = $_POST['femija'];
     $data_nisjes = $_POST['nisja'];
     $mesazhi = $_POST['mesazhi'];
-    
-    
-    $query = "INSERT INTO rezervimet(user_emri, user_mbiemri, user_gjinia, user_birthday, user_nisja, user_destinacion, hoteli, user_nete, user_dhoma, user_femije, user_data_nisjes, user_koment) ";
-    $query .= "VALUES ('$firstname', '$lastname', '$gjinia', '$birthday', '$nisja', '$destinacioni', '$hotel', '$netet', '$dhoma', '$femijet', '$data_nisjes', '$mesazhi')";
-
-    $result = mysqli_query($connection, $query);
-
-      if(!$result){
-        die('Query Failed' . mysqli_error());
-      } else {
-        echo "Te dhenat u ruajten ne db";
-      }
-
-  }
+    //MYSQLI PREPARE
+    $stmt = $mysqli -> prepare("INSERT INTO rezervimet(user_emri, user_mbiemri, user_gjinia, user_birthday, user_nisja, user_destinacion, hoteli, user_nete, user_dhoma, user_femije, user_data_nisjes, user_koment) VALUES (?, ?, ?,?,?,?, ?, ?,?,?,?,?)");
+	$stmt -> bind_param("sssssssiiiss", $firstname, $lastname, $gjinia,$birthday,$nisja,$destinacioni,$hotel,$netet,$dhoma,$femijet,$data_nisjes,$mesazhi);
+	$stmt -> execute();
+	
+	$stmt -> close();
+	$mysqli -> close();
+		}
+	}
+	catch (Exception $e){
+		echo ($e.getMessage());
+	}
+}
 ?>
-
 <!DOCTYPE html>
 <html>
 <html>
