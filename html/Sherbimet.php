@@ -90,7 +90,7 @@
 
     .column {
       float: left;
-      width: 31%;
+      width: 22%;
       margin-bottom: 16px;
       padding: 0 9px;
     }
@@ -326,12 +326,12 @@
                 <div class="column">
                   <div class="card">
                     <img
-                      src="https://scontent.fprn3-1.fna.fbcdn.net/v/t1.0-9/70349862_2877915908904493_2950854458923286528_n.jpg?_nc_cat=105&_nc_ohc=IJW5Iu_eyp8AQn9dEJ6KPhbaAElZ2qlIY_mtHQMQmp_JQbuQJ89O7dXgg&_nc_ht=scontent.fprn3-1.fna&oh=9337ee3b5c94989eb4ce3fe6b8fca910&oe=5EA59BB0"
+                      src="https://scontent.fprn4-1.fna.fbcdn.net/v/t1.0-9/70349862_2877915908904493_2950854458923286528_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=YlrCTINRxwwAX__JXjV&_nc_ht=scontent.fprn4-1.fna&oh=9c641cd3dbc6a23ca23ef392e7b6c72c&oe=5EE73ED0"
                       alt="Jane" style="width:100%" style="height:25%">
                     <div class="bashkimi">
                       <h2>Lum Pireva</h2>
                       <p class="title">Student and part time Web Developer</p>
-                      <p>Lenda Interneti</p>
+                      <p></p>
                       <a href="https://www.facebook.com/lumprv" target="_blank" style="margin-top:25px"
                         class="fab fa-facebook-f"></a>
                       <p><a href="mailto:pireva.lum@hotmail.com"><button class="button">Contact</button></a></p>
@@ -342,12 +342,12 @@
                 <div class="column">
                   <div class="card">
                     <img
-                      src="https://scontent.fprn3-1.fna.fbcdn.net/v/t1.0-9/44336071_2389549424405498_7189547813510840320_n.jpg?_nc_cat=106&_nc_ohc=BGMjpETRNnkAQkM0deiye6vRlps6nwSnSF2UyEJms6k_k0XzZRn_FzcTA&_nc_ht=scontent.fprn3-1.fna&oh=ff2542c8c5355f6a54bfdcf8259e6370&oe=5EA051D9"
+                      src="https://scontent.fprn4-1.fna.fbcdn.net/v/t1.0-9/44336071_2389549424405498_7189547813510840320_n.jpg?_nc_cat=106&_nc_sid=174925&_nc_ohc=akWYYh19jl4AX_RHw9d&_nc_ht=scontent.fprn4-1.fna&oh=7b9eeb4827453e3335b3bb685c8bc4a3&oe=5EE89427"
                       alt="Mike" style="width:100%">
                     <div class="bashkimi">
                       <h2>Jon Hajdini</h2>
                       <p class="title">Student and part time Web Developer</p>
-                      <p>Lenda Interneti </p>
+                      <p></p>
                       <a href="https://www.facebook.com/jonhajdini" target="_blank" style="margin-top:25px;"
                         class="fab fa-facebook-f"></a>
                       <p><a href="mailto:jonhajdini99@gmail.com"><button class="button">Contact</button></a></p>
@@ -357,12 +357,12 @@
                 <div class="column">
                   <div class="card">
                     <img
-                      src="https://scontent.fprn3-1.fna.fbcdn.net/v/t1.0-1/p960x960/46489541_497845484061394_3819596995669000192_o.jpg?_nc_cat=106&_nc_ohc=G-rDkrTB9u4AQkAgbeOpl3L_UuD_ddw9GWHlbhpsrdtUtXMcIPta_QdEw&_nc_ht=scontent.fprn3-1.fna&oh=72066ec1e0887df6ebc650a18bf83bd0&oe=5E9ABCF7"
+                      src="https://scontent.fprn4-1.fna.fbcdn.net/v/t1.30497-1/c59.0.200.200a/p200x200/84241059_189132118950875_4138507100605120512_n.jpg?_nc_cat=1&_nc_sid=7206a8&_nc_ohc=SRoV1a8-7WkAX_zfPVP&_nc_ht=scontent.fprn4-1.fna&oh=12dfc3849150f6d0415e29fe9a369e2b&oe=5EE5AA04"
                       alt="John" style="width:100%">
                     <div class="bashkimi">
                       <h2>Lirim Beka</h2>
                       <p class="title">Student and part time Web Developer</p>
-                      <p>Lenda Interneti </p>
+                      <p> </p>
                       <a href="https://www.facebook.com/lirim.beka.4000" target="_blank" style="margin-top:25px"
                         class="fab fa-facebook-f"></a>
                       <p><a href="mailto:beka.lirim@gmail.com"><button class="button">Contact</button></a></p>
@@ -377,7 +377,7 @@
                     <div class="bashkimi">
                       <h2>Mergim Graiqevci</h2>
                       <p class="title">Student and part time Web Developer</p>
-                      <p>Lenda Interneti </p>
+                      <p></p>
                       <a href="https://www.facebook.com/mergimgraiqevci" target="_blank" style="margin-top:25px"
                         class="fab fa-facebook-f"></a>
                       <p><a href="mailto:mergograiqevci@gmail.com"><button class="button">Contact</button></a></p>
