@@ -1,23 +1,16 @@
 <?php
 // connect to database
-$conn = mysqli_connect('localhost', 'root', '', 'like_dislike');
-$connected = mysqli_connect('localhost', 'root', '', 'travel');
-$users = mysqli_query($connected, "SELECT user_id FROM users");
-
+$conn = mysqli_connect('localhost', 'root', '', 'travel');
+$users = mysqli_query($conn, "SELECT user_id FROM users");
+    //get user_id
     $user_id = "";
     while($row = mysqli_fetch_array($users, MYSQLI_ASSOC))
     {
         $user_id = $row['user_id'];
     }
-// lets assume a user is logged in with id $user_id
-/*---get_user_id----*/
-if (!$conn) {
-  die("Error connecting to database: " . mysqli_connect_error($conn));
-  exit();
-}
 
-    if (!$connected) {
-        die("Error connecting to database: " . mysqli_connect_error($connected));
+    if (!$conn) {
+        die("Error connecting to database: " . mysqli_connect_error($conn));
         exit();
     }
 

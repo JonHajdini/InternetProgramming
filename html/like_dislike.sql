@@ -1,5 +1,5 @@
-CREATE DATABASE like_dislike;
-USE like_dislike;
+
+USE travel;
 CREATE TABLE `posts` (
                          `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
                          `text` text NOT NULL
