@@ -20,6 +20,7 @@ if(isset($_POST['submit'])){
   <link rel="stylesheet" href="../css/dropdown.css" type="text/css">
   <link rel="stylesheet" href="../css/footeri.css" type="text/css">
   <link rel="stylesheet" href="../css/gallery.css" type="text/css">
+    <link rel="stylesheet" href="../css/LikeDislike.css" type="text/css">
   <script src="https://kit.fontawesome.com/af9a262f2e.js" crossorigin="anonymous"></script>
   <script src="../js/jquery.min.js"></script>
 
@@ -238,18 +239,49 @@ else {
 }
 
 </style>
-		</div> </br></br></br></br>
-          <div class="icons">
-            <a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook-f"></a>
-            <a href="https://www.pinterest.com/" target="_blank" class="fab fa-pinterest"></a>
-            <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin"></a>
-            <a href="https://twitter.com/" target="_blank" class="fab fa-twitter"></a>
-              <a id="hrefvalue" href="https://plus.google.com/discover" target="_blank"
-                class="fab fa-google"></a>
-          </div>
-        </div>
+
 
       </div>
+
+        <div style="padding-left: 70px; padding-top: 40px; margin-right: 20px"><span style="color:#0d0d53;"><span
+                        style="font-size: 18px; margin-left: 20px; margin-right: 20px; z-index: 999999;">
+
+
+                        <?php include('LikeDislike.php'); ?>
+
+                         <div class="posts-wrapperr">
+                        <?php foreach ($posts as $post): ?>
+                            <div class="postt">
+                          <?php echo $post['text']; ?>
+                          <div class="post-infoo">
+                            <!-- if user likes post, style button differently -->
+                            <i <?php if (userLiked($post['id'])): ?>
+                                class="fa fa-thumbs-up like-btn"
+                            <?php else: ?>
+                                class="fa fa-thumbs-o-up like-btn"
+                            <?php endif ?>
+                              data-id="<?php echo $post['id'] ?>"></i>
+                            <span class="likes"><?php echo getLikes($post['id']); ?></span>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+
+                              <!-- if user dislikes post, style button differently -->
+                            <i
+                              <?php if (userDisliked($post['id'])): ?>
+                                  class="fa fa-thumbs-down dislike-btn"
+                              <?php else: ?>
+                                  class="fa fa-thumbs-o-down dislike-btn"
+                              <?php endif ?>
+                              data-id="<?php echo $post['id'] ?>"></i>
+                            <span class="dislikes"><?php echo getDislikes($post['id']); ?></span>
+                          </div>
+                        </div>
+                        <?php endforeach ?>
+                      </div>
+                      <script src="../js/LikeDislike.js"></script>
+        </div>
+
+
     </div>
       <?php
 
