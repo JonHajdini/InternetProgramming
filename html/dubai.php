@@ -129,17 +129,17 @@
                     <ul>
                         <li><a href="../index.php">HOME</a></li>
                         <li><a href="Sherbimet.php">SHERBIMET</a></li>
-                        <li><a href="#kontakti">KONTAKTONI</a></li>
                         <li><a href="Kontakti.php">REZERVO</a></li>
                         <li><a href="portfolio.php" class="active">OFERTA</a></li>
                         <li><a href="gallery.php">GALLERY</a></li>
+
+                        <li><a href="login/login.php">LOGIN</a></li>
                         <li><a href="#">MORE</a>
                             <ul>
                                 <li><a href="sendmail.php">SEND EMAIL</a></li>
                                 <li><a href="game.php">GAME</a></li>
                             </ul>
                         </li>
-
                     </ul>
                 </nav>
                 <div class="clear"></div>
@@ -502,8 +502,80 @@
     </div>
             </div>
 
+            <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
+                            style="font-size: 18px;">
+          <style type="text/css">
+
+
+        .container{
+            width: 50%;
+            margin: 0 auto;
+        }
+        table#fetch tr, th, td {
+            border: 1px solid #e3e3e3;
+            padding: 10px;
+        }
+
+        </style>
+                        <p style="color: red;" id="demo1"></p>
+
+                       <div class = "container" >
+
+
+
+        <p><strong>Shfaq klientet qe kane zgjedhur kete qytet!</strong></p>
+
+        <div id="records"></div>
+
+        <p>
+            <input style= "margin-right: 100px; margin-left: 100px;"  type="button" id = "getusers" value = "Shfaq Klientet" />
+        </p>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(function(){
+
+            $("#getusers").on('click', function(){
+
+                $.ajax({
+
+                    method: "GET",
+
+                    url: "getrecords_ajax.php",
+
+                    data: "function=Dubai"
+
+                }).done(function( data ) {
+
+                    var result= $.parseJSON(data);
+
+                    var string='<table width="100%" id = "fetch"><tr> <th>Emri</th><th>Mbiemri</th>';
+
+                    /* from result create a string of data and append to the div */
+
+                    $.each( result, function( key, value ) {
+
+                        string += "<tr> <td>"+value['user_emri'] + "</td><td>"+value['user_mbiemri'] + "</td></tr>";
+
+                    });
+
+                    string += '</table>';
+
+                    $("#records").html(string);
+                });
+            });
+        });
+    </script>
+
+            </div>
             
         </div>
+
+
 
         <?php
 

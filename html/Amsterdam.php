@@ -14,7 +14,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <style>
 
+
+        .report-container {
+            border: #E0E0E0 1px solid;
+            padding: 20px 40px 40px 40px;
+            border-radius: 2px;
+            width: 550px;
+            margin: 0 auto;
+        }
+
+        .weather-icon {
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        .weather-forecast {
+            color: #212121;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 20px 0px;
+        }
+
+        span.min-temperature {
+            margin-left: 15px;
+            color: #929292;
+        }
+
+        .time {
+            line-height: 25px;
+        }
+    </style>
 
     <style>
         table#t00 {
@@ -97,17 +128,17 @@
                 <nav><ul>
                         <li><a href="../index.php">HOME</a></li>
                         <li><a href="Sherbimet.php">SHERBIMET</a></li>
-                        <li><a href="#kontakti">KONTAKTONI</a></li>
                         <li><a href="Kontakti.php">REZERVO</a></li>
                         <li><a href="portfolio.php" class="active">OFERTA</a></li>
                         <li><a href="gallery.php">GALLERY</a></li>
+
+                        <li><a href="login/login.php">LOGIN</a></li>
                         <li><a href="#">MORE</a>
                             <ul>
                                 <li><a href="sendmail.php">SEND EMAIL</a></li>
                                 <li><a href="game.php">GAME</a></li>
                             </ul>
                         </li>
-
                     </ul>
                 </nav>
                 <div class="clear"></div>
@@ -435,43 +466,112 @@
                         </dl>
                     </span>
             </div>
+            <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#80222e;"><span
+                            style="font-size: 20px;">
+
+
+
+                <?php include "weatherAPI.php"; //API USE
+
+                    $apiKey = "4892e283b4adfa886c8aacde68dee349";
+                    $cityId = "2759793";
+                    $Dubai = new GetCity($apiKey, $cityId);
+                    $response = $Dubai->get_response();
+                    $data = json_decode($response);
+                    date_default_timezone_set('Europe/Amsterdam');
+                    $currentTime = time();
+
+                ?>
+
+                 <div class="report-container">
+        <h2><?php echo $data->name; ?> Weather Status</h2>
+        <div class="time">
+            <div><?php echo date("l g:i a", $currentTime); ?></div>
+            <div><?php echo date("jS F, Y",$currentTime); ?></div>
+            <div><?php echo ucwords($data->weather[0]->description); ?></div>
+        </div>
+        <div class="weather-forecast">
+            <img
+                    src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
+                    class="weather-icon" /> <?php echo $data->main->temp_max; ?>&deg;C<span
+                    class="min-temperature"><?php echo $data->main->temp_min; ?>&deg;C</span>
+        </div>
+        <div class="time">
+            <div>Humidity: <?php echo $data->main->humidity; ?> %</div>
+            <div>Wind: <?php echo $data->wind->speed; ?> km/h</div>
+        </div>
+    </div>
+            </div>
 
             <div style="padding-left: 40px; padding-bottom: 30px;"><span style="color:#0d0d53;"><span
-                        style="font-size: 18px;">
+                            style="font-size: 18px;">
+          <style type="text/css">
 
 
-                        <?php include('LikeDislike.php'); ?>
+        .container{
+            width: 50%;
+            margin: 0 auto;
+        }
+        table#fetch tr, th, td {
+            border: 1px solid #e3e3e3;
+            padding: 10px;
+        }
 
-                         <div class="posts-wrapper">
-                        <?php foreach ($posts as $post): ?>
-                        <div class="post">
-                          <?php echo $post['text']; ?>
-                          <div class="post-info">
-                            <!-- if user likes post, style button differently -->
-                            <i <?php if (userLiked($post['id'])): ?>
-                                class="fa fa-thumbs-up like-btn"
-                            <?php else: ?>
-                                class="fa fa-thumbs-o-up like-btn"
-                            <?php endif ?>
-                              data-id="<?php echo $post['id'] ?>"></i>
-                            <span class="likes"><?php echo getLikes($post['id']); ?></span>
+        </style>
+                        <p style="color: red;" id="demo1"></p>
 
-                            &nbsp;&nbsp;&nbsp;&nbsp;
+                       <div class = "container" >
 
-                              <!-- if user dislikes post, style button differently -->
-                            <i
-                              <?php if (userDisliked($post['id'])): ?>
-                                  class="fa fa-thumbs-down dislike-btn"
-                              <?php else: ?>
-                                  class="fa fa-thumbs-o-down dislike-btn"
-                              <?php endif ?>
-                              data-id="<?php echo $post['id'] ?>"></i>
-                            <span class="dislikes"><?php echo getDislikes($post['id']); ?></span>
-                          </div>
-                        </div>
-                       <?php endforeach ?>
-                      </div>
-                      <script src="../js/LikeDislike.js"></script>
+
+
+        <p><strong>Shfaq klientet qe kane zgjedhur kete qytet!</strong></p>
+
+        <div id="records"></div>
+
+        <p>
+            <input style= "margin-right: 100px; margin-left: 100px;"  type="button" id = "getusers" value = "Shfaq Klientet" />
+        </p>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(function(){
+
+            $("#getusers").on('click', function(){
+
+                $.ajax({
+
+                    method: "GET",
+
+                    url: "getrecords_ajax.php",
+
+                    data: "function=Amsterdam"
+
+                }).done(function( data ) {
+
+                    var result= $.parseJSON(data);
+
+                    var string='<table width="100%" id = "fetch"><tr> <th>Emri</th><th>Mbiemri</th>';
+
+                    /* from result create a string of data and append to the div */
+
+                    $.each( result, function( key, value ) {
+
+                        string += "<tr> <td>"+value['user_emri'] + "</td><td>"+value['user_mbiemri'] + "</td></tr>";
+
+                    });
+
+                    string += '</table>';
+
+                    $("#records").html(string);
+                });
+            });
+        });
+    </script>
+
             </div>
 
         </div>
