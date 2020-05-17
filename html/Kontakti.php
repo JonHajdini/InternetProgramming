@@ -136,20 +136,12 @@ if (isset($_POST['submitii'])){
         <nav>
           <ul>
             <li><a href="../index.php">HOME</a></li>
-            <li><a href="Sherbimet.php">SHERBIMET</a></li>
-            <li><a href="#kontakti">KONTAKTONI</a></li>
+            <li><a href="Sherbimet.php">SHERBIMET</a></li>      
             <li><a href="Kontakti.php" class="active">REZERVO</a></li>
-              <li><a href="portfolio.php">OFERTA</a></li>
-              <li><a href="gallery.php">GALLERY</a></li>
-            <li><a href="#">MORE</a>
-              <ul>
-               
-                <li><a href="game.php">GAME</a></li>
-                  <li><a href="game.php">SEND EMAIL</a></li>
-              </ul>
-            </li>
-
-
+            <li><a href="portfolio.php">OFERTA</a></li>
+            <li><a href="gallery.php">GALLERY</a></li>
+            <li><a href="sendmail.php">SEND EMAIL</a></li>
+            <li><a href="login/login.php">LOGIN</a></li>
           </ul>
         </nav>
       <div class="clear"></div>
