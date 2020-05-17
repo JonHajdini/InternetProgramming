@@ -47,6 +47,10 @@
                     <li>
                         <a href="categories.php"><i class="fa fa-fw fa-wrench"></i> Categories</a>
                     </li>
+
+                    <li>
+                        <a href="reservations.php"><i class="fa fa-fw fa-wrench"></i> Reservations</a>
+                    </li>
                     
                     <li class="active">
                         <a href="messages.php"><i class="fa fa-fw fa-file"></i> Messages</a>

@@ -33,12 +33,20 @@
                                         <i class="fa fa-file-text fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class='huge'>23</div>
+                                    <?php 
+
+                                    $query = "SELECT * FROM rezervimet";
+                                    $select_all_reservations = mysqli_query($connection,$query);
+                                    $reservation_count = mysqli_num_rows($select_all_reservations);
+
+                                    echo  "<div class='huge'>{$reservation_count}</div>"
+
+                                    ?>
                                             <div> Rezervimet</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="index.php">
+                            <a href="reservations.php">
                                 <div class="panel-footer">
                                     <span class="pull-left">View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -144,6 +152,56 @@
                 </div>
                 <!-- /.row -->
                 
+
+                <div class="row">
+                    
+                    <script type="text/javascript">
+                        google.charts.load('current', {'packages':['bar']});
+                        google.charts.setOnLoadCallback(drawChart);
+
+                        function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                                ['Data', 'Count'],
+                
+                                <?php
+                                        
+                                $element_text = ['Reservations', 'Messages', 'Users', 'Categories'];       
+                                $element_count = [$reservation_count, $message_count, $user_count, $category_count];
+
+                                for($i =0; $i < 4; $i++) {
+                                
+                                    echo "['{$element_text[$i]}'" . "," . "{$element_count[$i]}],";
+                        
+                                }
+                                                                                    
+                                ?>
+               
+                             ]);
+
+                                var options = {
+                                    chart: {
+                                        title: 'Te dhenat ne databaze',
+                                        subtitle: 'Grafiku',
+                                    }
+                                };
+
+                                var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+                                chart.draw(data, google.charts.Bar.convertOptions(options));
+                        }
+
+                    </script>
+                                
+                    <div id="columnchart_material" style="width: 'auto'; height: 500px;"></div>
+                    
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+
 
             </div>
             <!-- /.container-fluid -->
