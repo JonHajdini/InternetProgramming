@@ -197,6 +197,58 @@ function deleteMessages(){
 }
 
 
+function findAllReservations(){
+
+    global $connection;
+
+    $query = "SELECT * FROM rezervimet";
+    $select_rezervimet = mysqli_query($connection, $query);
+
+    while($row = mysqli_fetch_assoc($select_rezervimet)){
+                        
+        $rez_id = $row['id'];
+        $user_emri = $row['user_emri'];
+        $user_mbiemri = $row['user_mbiemri'];
+        $user_nisja = $row['user_nisja'];
+        $user_destinacion = $row['user_destinacion'];
+        $user_nete = $row['user_nete'];
+        $user_dhoma = $row['user_dhoma'];
+        $user_femije = $row['user_femije'];
+        $user_data_nisjes = $row['user_data_nisjes'];
+
+        echo "<tr>";
+        //echo "<td class='text-center'>{$rez_id}</td>";
+        echo "<td class='text-center'>{$user_emri}</td>";
+        echo "<td class='text-center'>{$user_mbiemri}</td>";
+        echo "<td class='text-center'>{$user_nisja}</td>";
+        echo "<td class='text-center'>{$user_destinacion}</td>";
+        echo "<td class='text-center'>{$user_nete}</td>";
+        echo "<td class='text-center'>{$user_dhoma}</td>";
+        echo "<td class='text-center'>{$user_femije}</td>";
+        echo "<td class='text-center'>{$user_data_nisjes}</td>";
+        echo "<td class='text-center'><a href='reservations.php?delete={$rez_id}'>Delete</a></td>";
+        echo "</tr>";
+
+    }
+
+}
+
+
+function deleteReservations(){
+
+    global $connection;
+
+    if(isset($_GET['delete'])){
+
+        $get_reservation_id = $_GET['delete']; 
+        
+        $query = "DELETE FROM rezervimet WHERE id = {$get_reservation_id} ";
+        $delete_query = mysqli_query($connection, $query);
+
+        header("Location: reservations.php"); 
+    }
+}
+
 
 function confirmQuery($result) {
     
