@@ -277,15 +277,7 @@ function findAllOffers(){
                 $kat_id = $row['kat_id'];
                 $kat_emri = $row['kat_emri'];                                
             }
-
-            $query = "SELECT * FROM rezervimet WHERE user_destination = {$vendi_oferta}";
-            $select_rezervimet = mysqli_query($connection, $query);
-            while($row = mysqli_fetch_assoc($select_kategorite)){                           
-                $_id = $row['kat_id'];
-                $kat_emri = $row['kat_emri'];                                
-            }
-
-
+            
         echo "<td class='text-center'>{$kat_emri}</td>";
         echo "<td class='text-center'><img width='100px' src='../../images/{$foto_oferta}'</td>";
         echo "<td class='text-center'>{$cmimi_oferta}</td>";
