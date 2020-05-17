@@ -1,3 +1,4 @@
+<?php include "db.php"; ?>
 <html>
 
 <head>
@@ -220,10 +221,10 @@
           <ul>
               <li><a href="../index.php">HOME</a></li>
               <li><a href="Sherbimet.php" class="active">SHERBIMET</a></li>
-              <li><a href="#kontakti">KONTAKTONI</a></li>
               <li><a href="Kontakti.php">REZERVO</a></li>
               <li><a href="portfolio.php">OFERTA</a></li>
               <li><a href="gallery.php">GALLERY</a></li>
+              <li><a href="login/login.php">LOGIN</a></li>
               <li><a href="#">MORE</a>
                   <ul>
                       <li><a href="sendmail.php">SEND EMAIL</a></li>

@@ -142,16 +142,16 @@
     <div class="wrapper row1">
       <header id="header" class="clear">
         <div id="hgroup">
-          <img href="index.php" src="images/jlml.png" width="200px" height="50px">
+        <a href="index.php"><img src=images/jlml.png  width="200px" height="50px"/></a>
         </div>
         <nav>
           <ul>
             <li><a href="index.php" class="active">HOME</a></li>
             <li><a href="html/Sherbimet.php">SHERBIMET</a></li>
-            <li><a href="#kontakti">KONTAKTONI</a></li>
             <li><a href="html/Kontakti.php">REZERVO</a></li>
-              <li><a href="html/portfolio.php">OFERTA</a></li>
+            <li><a href="html/portfolio.php">OFERTA</a></li>
             <li><a href="html/gallery.php">GALLERY</a></li>
+            <li><a href="html/login/login.php">LOGIN</a></li>
               <li><a href="#">MORE</a>
                   <ul>
                       <li><a href="html/sendmail.php">SEND EMAIL</a></li>

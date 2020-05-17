@@ -1,3 +1,5 @@
+<?php include "db.php"; ?>
+
 <?php
 
     /* *OOP in PHP* */
@@ -108,7 +110,7 @@
     }
 
 
-    $indArray = array("HOME", "SHERBIMET", "KONTAKTONI", "MORE");             //  indexed array
+    $indArray = array("HOME", "SHERBIMET", "REZERVO", "MORE");             //  indexed array
 
     $assoArray = array("OPTION" => "(Opsionale)", "Data" => 18);              //  associative array
 
@@ -141,6 +143,8 @@
 
 
 <!DOCTYPE html>
+
+
 <html lang="">
 
 <head>
@@ -162,16 +166,16 @@
         <div class="wrapper row1">
             <header id="header" class="clear">
                 <div id="hgroup">
-                    <a href="../index.php"><img src=../images/jlml.png /></a></h1>
+                    <a href="../index.php"><img src=../images/jlml.png  width="200px" height="50px"/></a></h1>
                 </div>
                 <nav>
                     <ul>
                         <li><a href="../index.php"><?php echo $name[0] ?></a></li>
                         <li><a href="Sherbimet.php"><?php echo $name[1] ?></a></li>
-                        <li><a href="#kontakti"><?php echo $name[2] ?></a></li>
-                        <li><a href="Kontakti.php">REZERVO</a></li>
+                        <li><a href="Kontakti.php"><?php echo $name[2] ?></a></li>
                         <li><a href="portfolio.php">OFERTA</a></li>
                         <li><a href="gallery.php">GALLERY</a></li>
+                        <li><a href="login/login.php">LOGIN</a></li>                        
                         <li><a href="#"><?php echo $name[3] ?></a>
                             <ul>
                                 <li><a href="sendmail.php">SEND EMAIL</a></li>

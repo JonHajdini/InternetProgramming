@@ -140,8 +140,13 @@ if (isset($_POST['submitii'])){
             <li><a href="Kontakti.php" class="active">REZERVO</a></li>
             <li><a href="portfolio.php">OFERTA</a></li>
             <li><a href="gallery.php">GALLERY</a></li>
-            <li><a href="sendmail.php">SEND EMAIL</a></li>
             <li><a href="login/login.php">LOGIN</a></li>
+            <li><a href="#">MORE</a>
+                <ul>
+                  <li><a href="sendmail.php">SEND EMAIL</a></li>
+                  <li><a href="game.php">GAME</a></li>
+                </ul>
+            </li>
           </ul>
         </nav>
       <div class="clear"></div>
@@ -224,7 +229,6 @@ if (isset($_POST['submitii'])){
             </script>
 
           </fieldset>
-		  /*Mergo E Shtuar Per cookies...*/
 		  <div id="pop">
         <button id="close" onclick="document.getElementById('pop').style.display='none'">X</button>
         
