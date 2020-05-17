@@ -162,7 +162,7 @@
         <div class="wrapper row1">
             <header id="header" class="clear">
                 <div id="hgroup">
-                    <a href="../index.php"><img src=../images/jlml.png  width="200px" height="50px"/></a>
+                    <a href="../index.php"><img src=../images/jlml.png /></a></h1>
                 </div>
                 <nav>
                     <ul>
@@ -262,6 +262,15 @@
 
                                 <br />
                                 <br />
+                                <?php
+                                //-------------------------/write function -------------------------------
+                                $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+                                $txt = "Dita e dyte\n";
+                                fwrite($myfile, $txt);
+                                $txt = "Dita e dyte\n";
+                                fwrite($myfile, $txt);
+                                fclose($myfile);
+                                ?>
                                 Dita e Dytë: Mëngjesi në Hotel. Një vizitë panoramike në Dubai ku vizitohen: Pallati e
                                 Sheikut të Dubait Mohammed Al-Maktum, lagja me e vjetër në Dubai Al Bastakiya, Hoteli me
                                 7 yje Burj Al Arab, Qëndra Madinat Jumeirah, Palma e Jumeiras, Sheikh Zayed Road, Qëndra
