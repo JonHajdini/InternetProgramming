@@ -73,7 +73,7 @@
 
                     <h1 class="page-header">
                         Welcome to admin
-                        <small>Author</small>
+                        <small><?php echo $_SESSION['username']; ?></small>
                     </h1>
                             
                     <form action="" method="post" enctype="multipart/form-data">    
