@@ -1,2 +1,2 @@
-# PI_Gr19
+#php
 Projekti ne lenden Programimi ne Internet
